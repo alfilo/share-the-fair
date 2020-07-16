@@ -1,0 +1,57 @@
+<recipes>
+    <recipe>
+        <name>Collard Green Pie</name>
+        <category>Main Course</category>
+        <ingredients>
+            <crust>
+                <ingredient>1 1/2 cups flour</ingredient>
+                <ingredient>1/4 tsp salt</ingredient>
+                <ingredient>4 tbsp butter</ingredient>
+                <ingredient>1/4 cup oil (pref. safflower)</ingredient>
+                <ingredient>Enough water to form a ball</ingredient>
+            </crust>
+            <filling>
+                <ingredient>1 onion</ingredient>
+                <ingredient>2 cups Collard Greens</ingredient>
+                <ingredient>1 large egg or two medium eggs</ingredient>
+                <ingredient>1/2 tsp salt</ingredient>
+                <ingredient>1/2 cup grated Asiago or Parmesan cheese</ingredient>
+            </filling>
+        </ingredients>
+        <directions>
+            <crust>
+                <direction>Stir together flour and salt.  Cut in butter until only
+                fine balls appear.</direction>
+                <direction>Cut in oil until evenly distributed.</direction>
+                <direction>Pour in water and form dough into ball.  Roll out and
+                put into pan.  Poke holes in bottom of crust.</direction>
+            </crust>
+            <filling>
+                <direction>Put Collard Greens in food processor until finely chopped
+                (a bit coarser than pesto).</direction>
+                <direction>Chop onion and saute until golden brown.</direction>
+                <direction>Combine Collard Greens, onion, egg, salt, and half the
+                cheese.  Pour into crust.</direction>
+                <direction>Grate remaining cheese on pie.</direction>
+            </filling>
+            <baking>
+                <direction>Bake on 425F for 15 minutes.  Turn down to 375F and bake
+                for another 30 minutes.</direction>
+                <direction>To check if done:  Check if crust is golden brown and
+                poke knife into filling.  The knife should come out clean.</direction>
+            </baking>
+        </directions>
+    </recipe>
+    <recipe>
+        <name>Spinach Soup</name>
+        <category>Soup</category>
+        <ingredients>
+            <ingredient>Spinach</ingredient>
+            <ingredient>Coconut milk</ingredient>
+            <coconut-milk-notes>
+                <note>Don't use Xanthum Gum</note>
+                <note>Use one with Guar Gum</note>
+            </coconut-milk-notes>
+        </ingredients>
+    </recipe>
+</recipes>
