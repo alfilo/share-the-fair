@@ -123,13 +123,12 @@ function generateDetailsPage(data, idKeys) {
 }
 
 
-/* Generate links for all data items in main column */
+/* Generate links for data items and add to list */
 
-function generateLinks(data, idKeys) {
-    var $ul = $("<ul>").appendTo($(".column.main"));
+function generateLinks(list, data, idKeys) {
     for (var i = 0; i < data.length; i++) {
         var link = makeDetailsLink(data[i], idKeys);
-        $("<li>").append(link).appendTo($ul);
+        $("<li>").append(link).appendTo(list);
     }
 }
 
@@ -295,8 +294,11 @@ function clearFilters() {
     curFilters = {};  // Remove all filter settings
     // Clear selected style for all filter buttons
     $("#filter-group").find(".selected").removeClass("selected");
-    $("#filter-results").empty();  // Empty the list of matching items
     $(this).hide();  // Hide the clear-all-filters button
+
+    // Empty the list of matching items and make links for all items
+    var $frUl = $("#filter-results").empty();
+    generateLinks($frUl, xmlData, xmlKeys);
 }
 
 function updateFilter() {
@@ -323,17 +325,12 @@ function updateFilter() {
         $(filterBtn).addClass("selected");
     }
 
-    // Empty the list of matching results
-    var $frUl = $("#filter-results").empty();
-
-    // If no filter is set, hide the clear-all-filters button and return
+    // Hide the clear-all-filters button, if no filter is set; otherwise show
     if ($.isEmptyObject(curFilters)) {
         $("#clear-filters").hide();
-        return;
+    } else {
+        $("#clear-filters").show();
     }
-
-    // At least one filter is set, show the clear-all-filters button
-    $("#clear-filters").show();
 
     // Recompute the array of items matching the filters from scratch
     var filteredData = $.grep(xmlData, function(item) {
@@ -346,11 +343,10 @@ function updateFilter() {
         }
         return true;  // Passed all filters: keep item
     });
-    // Add links for all matching items to the result list
-    for (var i = 0; i < filteredData.length; i++) {
-        var link = makeDetailsLink(filteredData[i], xmlKeys);
-        $("<li>").append(link).appendTo($frUl);
-    }
+
+    // Empty the list of matching items and make links for matching items
+    var $frUl = $("#filter-results").empty();
+    generateLinks($frUl, filteredData, xmlKeys);
 };
 
 
@@ -389,7 +385,8 @@ function handleXMLData() {
             generateDetailsPage(xmlData, xmlKeys);
         } else if (location.pathname.includes("gardens.html")) {
             // Set up basic (complete) list of links
-            generateLinks(xmlData, xmlKeys);
+            var $ul = $("<ul>").appendTo($(".column.main"));
+            generateLinks($ul, xmlData, xmlKeys);
         } else if (location.pathname.includes("recipes.html")) {
             // Create category images that show links on hover
             generateCategoryView(xmlData, xmlKeys);
