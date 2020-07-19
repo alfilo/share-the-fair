@@ -5,19 +5,37 @@ function makeId(string) {
         .replace(/ /g, '-');  // Replace spaces with dashes
 }
 
-// Set the src, title, and alt of img based on item's keys
+// Create image(s) with the src, title, and alt based on item's keys and image
+// tags, if present.  Image tags are used to show multiple images.  Stop after
+// one if the last argument is false.  Return the images as a jQuery object.
 // Use the 4h Clover as the backup image
-function imgProps(img, item, idKeys) {
+function makeImgs(item, idKeys, useAllExts = true) {
+    function makeImg(title) {
+        return $("<img>")
+            .prop("src", "images/" + makeId(title) + ".jpg")
+            .prop("title", title)
+            .prop("alt", title)
+            .attr("onerror", "this.src='images/4h-clover.png'");
+    }
+
     var title = "";
     for (var i = 0; i < idKeys.length; i++) {
         title += item[idKeys[i]] + " ";
     }
     title = title.slice(0, -1);
-    return img
-        .prop("src", "images/" + makeId(title) + ".jpg")
-        .prop("title", title)
-        .prop("alt", title)
-        .attr("onerror", "this.src='images/4h-clover.png'");
+    if ("images" in item && item.images) {
+        // Collect results in a jQuery object for use/modification in callers
+        var $imgs = $();
+        var imageExts = item.images.image;  // Array of image extensions
+        for (var i = 0; i < imageExts.length; i++) {
+            // Use the item title plus this extension for image title
+            $imgs = $imgs.add(makeImg(title + " " + imageExts[i]));
+            if (!useAllExts) break;  // Need only one image
+        }
+        return $imgs;
+    }
+    // No image tags--use the title
+    return makeImg(title);
 }
 
 
@@ -54,6 +72,7 @@ function makeHeading(key) {
 // Recursively display the object and all its values; start at heading level 3
 function displayObject(obj, idKeys, $parent, hLevel = 3) {
     for (var prop in obj) {
+        if (prop === "images") return;  // Ignore the image tags here
         // Skip over features w/o details or those used in the header
         if (obj[prop] && !idKeys.includes(prop)) {
             if (typeof obj[prop] === "string") {
@@ -115,9 +134,8 @@ function generateDetailsPage(data, idKeys) {
 
     // Fill in the page: recursively display itemInfo
     displayObject(itemInfo, idKeys, $(".column.main"));
-    // Look up the image placeholder in right column (it sets the style)
-    // and use the item's id to link to the image
-    imgProps($(".column.right img"), itemInfo, idKeys);
+    // Make image(s) in the right column
+    makeImgs(itemInfo, idKeys).appendTo($(".column.right"));
 }
 
 
@@ -193,7 +211,7 @@ function configureSearch(data, idKeys) {
             $(".search-img").hide();
             $(".column.right img").hide();
             var searchPos = $("#search").position();
-            imgProps($("<img>"), ui.item, idKeys)
+            makeImgs(ui.item, idKeys, false)  // Make only one image
                 .addClass("search-img")
                 // Place the image in line with search box and below the cursor
                 .css({"left": searchPos.left + "px",
@@ -237,8 +255,8 @@ function generateCategoryView(data, idKeys) {
         // and pop-up text (header & link list)
         if ($categoryUl.length === 0) {
             $categoryUl = $("<ul>").attr("id", categoryId);
-            var $img = imgProps($("<img>"), data[i], idKeys)
-                .addClass("cat-img");
+            // Make only one image
+            var $img = makeImgs(data[i], idKeys, false).addClass("cat-img");
             $("<div>").addClass("cat-div")
                 .append($img)
                 .append($("<div>").addClass("cat-text")
