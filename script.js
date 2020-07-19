@@ -51,8 +51,8 @@ function makeHeading(key) {
         .replace(/-/g, ' ');  // Replace dashes with spaces
 }
 
-// Recursively display the object and all its values
-function displayObject(obj, idKeys, $parent, hLevel) {
+// Recursively display the object and all its values; start at heading level 3
+function displayObject(obj, idKeys, $parent, hLevel = 3) {
     for (var prop in obj) {
         // Skip over features w/o details or those used in the header
         if (obj[prop] && !idKeys.includes(prop)) {
@@ -113,10 +113,8 @@ function generateDetailsPage(data, idKeys) {
     var hText = makeDetailsHrefAndText(itemInfo, idKeys).text;
     $("#header h1").text(hText);
 
-    // Fill in the page
-    var $colMain = $(".column.main");
-    // Recursively display itemInfo
-    displayObject(itemInfo, idKeys, $colMain, 3);
+    // Fill in the page: recursively display itemInfo
+    displayObject(itemInfo, idKeys, $(".column.main"));
     // Look up the image placeholder in right column (it sets the style)
     // and use the item's id to link to the image
     imgProps($(".column.right img"), itemInfo, idKeys);
