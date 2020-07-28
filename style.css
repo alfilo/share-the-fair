@@ -29,12 +29,10 @@ th, td {
 #header {
     background-color: #f1f1f1;
     /* Can't set the opacity of a background.  Workaround: start with another
-       "image": a gradient from white to white with opacity 0.4.
-       For wide-enough screens, let the real image cover part of the screen
-       and repeat left-to-right.  See the bottom for updated background-size
-       for narrow screens.
+       "image": a gradient from transparent to white and back, covering the
+       actual image (clover), which repeats left-to-right.
    */
-    background-image: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)),
+    background-image: linear-gradient(to right, transparent, white 25% 75%, transparent),
                       url(images/4h-clover.png);
     background-repeat: no-repeat, repeat-x;
 
@@ -327,5 +325,9 @@ input:focus, select:focus, textarea:focus {
     /* Stack the two columns; make form inputs full width */
     .column.right, .column.main, input, textarea, .form-btn {
         width: 100%;
+    }
+    #header {
+        /* Skip background image to avoid covering the clover with a header */
+        background-image: none;
     }
 }
