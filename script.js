@@ -39,24 +39,30 @@ function makeImgs(item, idKeys, useAllExts = true) {
 }
 
 
-/* Link creation and helper */
+/* Link creation and helpers */
 
-function makeDetailsHrefAndText(item, idKeys) {
-    // Build the link text and URL search params out of item's idKeys values
-    var text = "";
+function makeDetailsHref(item, idKeys) {
+    // Build the link with URL search params out of item's idKeys values
     var urlParams = new URLSearchParams();
     for (var j = 0; j < idKeys.length; j++) {
-        text += item[idKeys[j]] + " ";
         urlParams.set(idKeys[j], makeId(item[idKeys[j]]));
     }
-    text = text.slice(0, -1);  // Drop the extra " " at the end
     var urlPath = location.pathname.replace("s.html", "-details.html?")
-    return {"href": urlPath + urlParams.toString(), "text": text};
+    return urlPath + urlParams.toString();
+}
+
+function makeDetailsText(item, idKeys) {
+    // Build the link text out of item's idKeys values
+    var text = "";
+    for (var j = 0; j < idKeys.length; j++) {
+        text += item[idKeys[j]] + " ";
+    }
+    return text.slice(0, -1);  // Drop the extra " " at the end
 }
 
 function makeDetailsLink(item, idKeys) {
-    var hrefAndText = makeDetailsHrefAndText(item, idKeys);
-    return $("<a>").prop("href", hrefAndText.href).text(hrefAndText.text);
+    return $("<a>").prop("href", makeDetailsHref(item, idKeys))
+        .text(makeDetailsText(item, idKeys));
 }
 
 
@@ -129,8 +135,7 @@ function generateDetailsPage(data, idKeys) {
     }
 
     // Make heading out of the displayed item's keys
-    var hText = makeDetailsHrefAndText(itemInfo, idKeys).text;
-    $("#header h1").text(hText);
+    $("#header h1").text(makeDetailsText(itemInfo, idKeys));
 
     // Fill in the page: recursively display itemInfo
     displayObject(itemInfo, idKeys, $(".column.main"));
@@ -232,12 +237,11 @@ function configureSearch(data, idKeys, column="right") {
             // an improvement over the below.
 
             // Navigate to the selected item
-            location.href = makeDetailsHrefAndText(ui.item, idKeys).href;
+            location.href = makeDetailsHref(ui.item, idKeys);
         }
     }).autocomplete( "instance" )._renderItem = function(ul, item) {
-        var text = makeDetailsHrefAndText(item, idKeys).text;
         return $("<li>")
-            .append("<div><i>" + text + "</i>" + "</div>")
+            .append("<div><i>" + makeDetailsText(item, idKeys) + "</i>" + "</div>")
             .appendTo(ul);
     };
 }
