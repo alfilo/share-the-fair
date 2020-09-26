@@ -26,7 +26,7 @@
         <warmup>For the warmup this meeting, we went on a scavenger hunt and had fun with a
         few riddles.  Everyone was very creative!</warmup>
         <summary>This meeting, we had a 4-H Fair update about the scheduled virtual events
-        we could participate in, took a look at the data we collected on our favoriteinsect,
+        we could participate in, took a look at the data we collected on our favorite insect,
         had a Weed Challenge.  We all did very well!  Good job, everyone!  And finally, we
         had grafted ginkgos during a previous meeting and some were successful!</summary>
         <community-service>For this meeting's community service section, we gave updates on
@@ -37,12 +37,49 @@
         <month>August</month>
         <day>14,</day>
         <year>2020</year>
-        <plan>We plan on having fun discovering Hidden Colors.</plan>
+        <warmup>For the warmup this meeting, we each found two objects and took turns telling
+        a few sentences of a story, including both objects.  Everyone was very creative!</warmup>
+        <summary>This meeting, we had a fun time learning about mimicry and look-a-likes.  We
+        learned about identifying characteristics of a plant for identification and learned
+        about convergent evolution and evolutionary mimicry.  Then, we did a fun Kahoot to
+        review our second weed list and watched the "Vegetable Orchestra" play.</summary>
+        <community-service>For this meeting's community service section, we gave updates on
+        how our gardens were growing.  Everyone's gardens are doing great!  Keep up the
+        awesome work, Botany Besties!</community-service>
     </meeting>
     <meeting>
         <month>September</month>
-        <day>11,</day>
+        <day>18,</day>
         <year>2020</year>
-        <plan>We might do something about soil... Feel free to give suggestions!</plan>
+        <warmup>For the warmup this meeting, we did some fun veggie art with vegetables we grew.
+        One person did a person, another did a butterfly, and someone even did a Mr. Potatohead!
+        Great job, Botany Besties!</warmup>
+        <summary>This meeting, we learned about and did a chromatography experiment about Hidden
+        Colors on leaves we found around our yard.  Everyone's chromatography turned out wonderful!
+        And everyone did amazing on the discussion questions afterwards!  We also did a fun weed
+        Kahoot using all of the weeds we've learned so far.  Everyone did great!</summary>
+        <community-service>For this meeting's community service section, we updated on
+        dropping food off for the food pantry and at local Neighborhood Food Hubs to support our
+        community.  Everyone's gardens are doing great!  Keep up the awesome work, Botany
+        Besties!</community-service>
+        <images>
+            <image>Veggie Art A</image>
+            <image>Veggie Art B</image>
+            <image>Veggie Art C</image>
+        </images>
+    </meeting>
+    <meeting>
+        <month>October</month>
+        <day>9,</day>
+        <year>2020</year>
+        <plan>We plan to have a guest speaker present about Plant Breeding.  We may also learn
+        about some trees.</plan>
+    </meeting>
+    <meeting>
+        <month>November</month>
+        <day>13,</day>
+        <year>2020</year>
+        <plan>We plan to learn about soil and soil improvement, and maybe have a guest speaker talk
+        to us about "How to Use a Botanical Key".  We'd love any suggestions!</plan>
     </meeting>
 </meetings>
