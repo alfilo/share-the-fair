@@ -194,8 +194,8 @@ function matchInArray(arr, matcher) {
     return false;
 }
 
-function configureSearch(data, idKeys) {
-    $("#search").autocomplete({
+function configureSearch(data, idKeys, column="right") {
+    $("#search-" + column).autocomplete({
         source: function(request, response) {
             // Only match the typed text at the start of words
             var pattern = "\\b" + $.ui.autocomplete.escapeRegex(request.term);
@@ -209,8 +209,8 @@ function configureSearch(data, idKeys) {
         focus: function(event, ui) {
             // Pop up the focused element's image
             $(".search-img").hide();
-            $(".column.right img").hide();
-            var searchPos = $("#search").position();
+            $(".column." + column + " img").hide();
+            var searchPos = $("#search-" + column).position();
             makeImgs(ui.item, idKeys, false)  // Make only one image
                 .addClass("search-img")
                 // Place the image in line with search box and below the cursor
@@ -221,7 +221,7 @@ function configureSearch(data, idKeys) {
         close: function(event, ui) {
             // Hide the image triggered by focus
             $(".search-img").hide();
-            $(".column.right img").show();
+            $(".column." + column + " img").show();
         },
         select: function(event, ui) {
             // Setting location and location.href has the same effect, if
@@ -383,6 +383,9 @@ function handleXMLData() {
     } else if (location.pathname.includes("recipe")) {
         var fileName = "data/recipes.xml";
         xmlKeys = ["name"];
+    } else if (location.pathname.includes("resource")) {
+        var fileName = "data/resources.xml";
+        xmlKeys = ["kind", "name"];
     }
     $.get(fileName, function(xml) {
         // Convert XML to JSON to allow grepping, etc.
@@ -408,6 +411,18 @@ function handleXMLData() {
             generateCategoryView(xmlData, xmlKeys);
             // Configure autocomplete-based search
             configureSearch(xmlData, xmlKeys);
+        } else if (location.pathname.includes("resources.html")) {
+            function kindFilter (kind) {
+                return xmlData.filter(function (item) {
+                    return item.kind === kind;
+                });
+            }
+
+            // Configure autocomplete-based search for Topics in main column
+            configureSearch(kindFilter("Topic:"), xmlKeys, "main");
+
+            // Configure autocomplete-based search for Warmups in right column
+            configureSearch(kindFilter("Warmup:"), xmlKeys, "right");
         } else {  // meetings.html
             // Set up filters for selecting specific meetings by data
             // Register on-click listener for filter selections
@@ -439,7 +454,8 @@ $(function() {  // Call this from DOM's .ready()
         // the header is the only loaded element that may be updated
         if (i == 0 && (location.pathname.includes("meeting") ||
                        location.pathname.includes("garden") ||
-                       location.pathname.includes("recipe"))) {
+                       location.pathname.includes("recipe") ||
+                       location.pathname.includes("resource"))) {
             $(placeholders[i]).load(sharedEltUrl, handleXMLData);
         } else {
             $(placeholders[i]).load(sharedEltUrl);

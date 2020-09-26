@@ -1,0 +1,34 @@
+<resources>
+    <resource>
+        <kind>Topic:</kind>
+        <name>Mimicry and Look-a-likes</name>
+        <details>Evolutionary Mimicry is a term for when one species evolves
+        to mimic another.  The Bee Orchid evolved to mimic a female Orchid Bee.
+        It not only looks like a female Orchid Bee, it also releases pheromones,
+        a sort of smelly substance, to attract the male Orchid Bees.</details>
+        <question>How does this help the Bee Orchid?</question>
+        <answer>For the Bee Orchid, it increases the survival rate because it
+        is able to spread more of its pollen.</answer>
+    </resource>
+    <resource>
+        <kind>Topic:</kind>
+        <name>Chromatography</name>
+        <details>Chromatography is the process of seperating out molecules based
+        on their polarities.</details>
+        <question>Could this still be done in space?</question>
+        <answer>Since the capillary action that drives the molecules is not
+        gravity dependant, Chromatography done in space would look similar to
+        Chromatography done on Earth.</answer>
+    </resource>
+    <resource>
+        <kind>Warmup:</kind>
+        <name>Object Story</name>
+        <summary>For the warmup this meeting, we each found an object and took turns telling
+        a few sentences of a story, including the object.</summary>
+    </resource>
+    <resource>
+        <kind>Warmup:</kind>
+        <name>Veggie Art</name>
+        <summary>We arranged and cut veggies from our gardens to make a piece of edible art.</summary>
+    </resource>
+</resources>
