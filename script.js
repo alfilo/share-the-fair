@@ -41,14 +41,13 @@ function makeImgs(item, idKeys, useAllExts = true) {
 
 /* Link creation and helpers */
 
-function makeDetailsHref(item, idKeys) {
+function makeDetailsHref(pageSrc, item, idKeys) {
     // Build the link with URL search params out of item's idKeys values
-    var urlParams = new URLSearchParams();
+    var urlParams = new URLSearchParams({"page": pageSrc});
     for (var j = 0; j < idKeys.length; j++) {
         urlParams.set(idKeys[j], makeId(item[idKeys[j]]));
     }
-    var urlPath = location.pathname.replace("s.html", "-details.html?")
-    return urlPath + urlParams.toString();
+    return "/details.html?" + urlParams.toString();
 }
 
 function makeDetailsText(item, idKeys) {
@@ -60,8 +59,8 @@ function makeDetailsText(item, idKeys) {
     return text.slice(0, -1);  // Drop the extra " " at the end
 }
 
-function makeDetailsLink(item, idKeys) {
-    return $("<a>").prop("href", makeDetailsHref(item, idKeys))
+function makeDetailsLink(pageSrc, item, idKeys) {
+    return $("<a>").prop("href", makeDetailsHref(pageSrc, item, idKeys))
         .text(makeDetailsText(item, idKeys));
 }
 
@@ -146,9 +145,9 @@ function generateDetailsPage(data, idKeys) {
 
 /* Generate links for data items and add to list */
 
-function generateLinks(list, data, idKeys) {
+function generateLinks(pageSrc, list, data, idKeys) {
     for (var i = 0; i < data.length; i++) {
-        var link = makeDetailsLink(data[i], idKeys);
+        var link = makeDetailsLink(pageSrc, data[i], idKeys);
         $("<li>").append(link).appendTo(list);
     }
 }
@@ -199,7 +198,7 @@ function matchInArray(arr, matcher) {
     return false;
 }
 
-function configureSearch(data, idKeys, column="right") {
+function configureSearch(pageSrc, data, idKeys, column="right") {
     $("#search-" + column).autocomplete({
         source: function(request, response) {
             // Only match the typed text at the start of words
@@ -237,7 +236,7 @@ function configureSearch(data, idKeys, column="right") {
             // an improvement over the below.
 
             // Navigate to the selected item
-            location.href = makeDetailsHref(ui.item, idKeys);
+            location.href = makeDetailsHref(pageSrc, ui.item, idKeys);
         }
     }).autocomplete( "instance" )._renderItem = function(ul, item) {
         return $("<li>")
@@ -249,7 +248,7 @@ function configureSearch(data, idKeys, column="right") {
 
 /* Generate category view (image with links on hover) in main column */
 
-function generateCategoryView(data, idKeys) {
+function generateCategoryView(pageSrc, data, idKeys) {
     var $mainColumn = $(".column.main");
     for (var i = 0; i < data.length; i++) {
         var category = data[i]["category"];
@@ -269,7 +268,7 @@ function generateCategoryView(data, idKeys) {
                 .appendTo($mainColumn);
         }
         // Make link for the item and add to the category list
-        var link = makeDetailsLink(data[i], idKeys);
+        var link = makeDetailsLink(pageSrc, data[i], idKeys);
         $("<li>").append(link).appendTo($categoryUl);
     }
 }
@@ -285,7 +284,7 @@ function makeDate(item) {
 
 // Find data item with the closest date in the future and
 // make a link to it in the right column
-function generateNextActivity(data, idKeys) {
+function generateNextActivity(pageSrc, data, idKeys) {
     var nextActivityInfo;
     var today = new Date();
     for (var i = 0; i < data.length; i++) {
@@ -301,7 +300,7 @@ function generateNextActivity(data, idKeys) {
             }
         }
     }
-    makeDetailsLink(nextActivityInfo, idKeys).appendTo($(".column.right"));
+    makeDetailsLink(pageSrc, nextActivityInfo, idKeys).appendTo($(".column.right"));
 }
 
 
@@ -318,7 +317,7 @@ function clearFilters() {
 
     // Empty the list of matching items and make links for all items
     var $frUl = $("#filter-results").empty();
-    generateLinks($frUl, xmlData, xmlKeys);
+    generateLinks(pageSrc, $frUl, xmlData, xmlKeys);
 }
 
 function updateFilter() {
@@ -366,7 +365,7 @@ function updateFilter() {
 
     // Empty the list of matching items and make links for matching items
     var $frUl = $("#filter-results").empty();
-    generateLinks($frUl, filteredData, xmlKeys);
+    generateLinks(pageSrc, $frUl, filteredData, xmlKeys);
 };
 
 
@@ -375,21 +374,32 @@ function updateFilter() {
 // Globals are only used in updateFilters
 var xmlData;  // The data from the XML file
 var xmlKeys;  // The keys used for identifying an item (vary by page)
+var pageSrc;  // Value for page param, e.g., "meetings"
 
 function handleXMLData() {
     // Save names of data files and keys used for identifying items
-    if (location.pathname.includes("meeting")) {
+    // For details pages, look up page param
+    pageSrc = "";
+    if (location.search) {
+        var urlParams = new URLSearchParams(location.search);
+        pageSrc = urlParams.get("page");
+    }
+    if (location.pathname.includes("meetings.html") || pageSrc === "meetings") {
         var fileName = "data/meetings.xml";
         xmlKeys = ["month", "day", "year"];
-    } else if (location.pathname.includes("garden")) {
+        pageSrc = "meetings";
+    } else if (location.pathname.includes("gardens.html") || pageSrc === "gardens") {
         var fileName = "data/gardens.xml";
         xmlKeys = ["name"];
-    } else if (location.pathname.includes("recipe")) {
+        pageSrc = "gardens";
+    } else if (location.pathname.includes("recipes.html") || pageSrc === "recipes") {
         var fileName = "data/recipes.xml";
         xmlKeys = ["name"];
-    } else if (location.pathname.includes("resource")) {
+        pageSrc = "recipes";
+    } else if (location.pathname.includes("resources.html") || pageSrc === "resources") {
         var fileName = "data/resources.xml";
         xmlKeys = ["kind", "name"];
+        pageSrc = "resources";
     }
     $.get(fileName, function(xml) {
         // Convert XML to JSON to allow grepping, etc.
@@ -409,12 +419,12 @@ function handleXMLData() {
         } else if (location.pathname.includes("gardens.html")) {
             // Set up basic (complete) list of links
             var $ul = $("<ul>").appendTo($(".column.main"));
-            generateLinks($ul, xmlData, xmlKeys);
+            generateLinks(pageSrc, $ul, xmlData, xmlKeys);
         } else if (location.pathname.includes("recipes.html")) {
             // Create category images that show links on hover
-            generateCategoryView(xmlData, xmlKeys);
+            generateCategoryView(pageSrc, xmlData, xmlKeys);
             // Configure autocomplete-based search
-            configureSearch(xmlData, xmlKeys);
+            configureSearch(pageSrc, xmlData, xmlKeys);
         } else if (location.pathname.includes("resources.html")) {
             function kindFilter (kind) {
                 return xmlData.filter(function (item) {
@@ -423,10 +433,10 @@ function handleXMLData() {
             }
 
             // Configure autocomplete-based search for Topics in main column
-            configureSearch(kindFilter("Topic:"), xmlKeys, "main");
+            configureSearch(pageSrc, kindFilter("Topic:"), xmlKeys, "main");
 
             // Configure autocomplete-based search for Warmups in right column
-            configureSearch(kindFilter("Warmup:"), xmlKeys, "right");
+            configureSearch(pageSrc, kindFilter("Warmup:"), xmlKeys, "right");
         } else {  // meetings.html
             // Set up filters for selecting specific meetings by data
             // Register on-click listener for filter selections
@@ -441,7 +451,7 @@ function handleXMLData() {
             $("#filter-group div:last-child .dropdown-content button:first-child").click();
 
             // Generate the next meeting's link in the right column
-            generateNextActivity(xmlData, xmlKeys);
+            generateNextActivity(pageSrc, xmlData, xmlKeys);
         }
     });
 }
@@ -452,14 +462,14 @@ $(function() {  // Call this from DOM's .ready()
     var placeholders = ["#header", "#topnav", "#footer"];
     for (var i = 0; i < placeholders.length; i++) {
         var sharedEltUrl = "load.html " + placeholders[i] + "-shared";
-        // Call handleXML for all meeting, garden, and recipe pages
-        // (e.g., meetings.html & meeting-details.html).
+        // Call handleXML for all pages listed below.
         // Do this after the header load is completed because
         // the header is the only loaded element that may be updated
-        if (i == 0 && (location.pathname.includes("meeting") ||
-                       location.pathname.includes("garden") ||
-                       location.pathname.includes("recipe") ||
-                       location.pathname.includes("resource"))) {
+        if (i == 0 && (location.pathname.includes("meetings.html") ||
+                       location.pathname.includes("gardens.html") ||
+                       location.pathname.includes("recipes.html") ||
+                       location.pathname.includes("resources.html") ||
+                       location.pathname.includes("details.html"))) {
             $(placeholders[i]).load(sharedEltUrl, handleXMLData);
         } else {
             $(placeholders[i]).load(sharedEltUrl);
