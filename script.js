@@ -91,11 +91,16 @@ function displayObject(obj, idKeys, $parent, hLevel = 3) {
                 // It's usually duplicative of the prop higher up
                 displayArray(obj[prop], idKeys, $parent, hLevel);
             } else {
-                $parent
-                    // Make a heading out of prop
-                    .append($("<h" + hLevel + ">").text(makeHeading(prop)));
-                // Recursively display the object that is prop's value in obj
-                displayObject(obj[prop], idKeys, $parent, hLevel + 1);
+                if (prop === "html") {
+                    // Translate json back to XML and insert (as HTML)
+                    $parent.append(x2js.json2xml_str(obj[prop]));
+                } else {
+                    $parent
+                        // Make a heading out of prop
+                        .append($("<h" + hLevel + ">").text(makeHeading(prop)));
+                    // Recursively display the object that is prop's value in obj
+                    displayObject(obj[prop], idKeys, $parent, hLevel + 1);
+                }
             }
         }
     }
@@ -371,6 +376,9 @@ function updateFilter() {
 
 /* Process XML file's data and call appropriate generation routines */
 
+// Create an X2JS instance for use in displayObject and handleXMLData
+var x2js = new X2JS();
+
 // Globals are only used in updateFilters
 var xmlData;  // The data from the XML file
 var xmlKeys;  // The keys used for identifying an item (vary by page)
@@ -403,8 +411,6 @@ function handleXMLData() {
     }
     $.get(fileName, function(xml) {
         // Convert XML to JSON to allow grepping, etc.
-        var x2js = new X2JS();
-
         var jsObj = x2js.xml2json(xml);
         // Dereference into the first field (such as .meetings)
         jsObj = jsObj[Object.keys(jsObj)[0]];
