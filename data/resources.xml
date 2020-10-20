@@ -19,6 +19,13 @@
         <answer>Since the capillary action that drives the molecules is not
         gravity dependant, Chromatography done in space would look similar to
         Chromatography done on Earth.</answer>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSAKvSbRRGsQQNbJL6wELRdeO0iAnkHx47H1zCNSh_j6W-45EkzHrnaGxTEPiOCeGnAqfwVNVFdYzot/embed?delayms=3000"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+        </html>
     </resource>
     <resource>
         <kind>Warmup:</kind>
