@@ -47,7 +47,7 @@ function makeDetailsHref(pageSrc, item, idKeys) {
     for (var j = 0; j < idKeys.length; j++) {
         urlParams.set(idKeys[j], makeId(item[idKeys[j]]));
     }
-    return "/details.html?" + urlParams.toString();
+    return "details.html?" + urlParams.toString();
 }
 
 function makeDetailsText(item, idKeys) {
