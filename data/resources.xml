@@ -12,7 +12,33 @@
     </resource>
     <resource>
         <kind>Topic:</kind>
-        <name>Chromatography</name>
+        <name>All Cooped Up</name>
+        <details>How can we grow salads indoors?</details>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSqDIK3EUFaYaUxxVhX41b9xjJEZqxbf4IUdPNiW3SwBwkULc3CjaEk5wBeCxSi68iVC95IH2GxHawM/embed?delayms=3000"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+        </html>
+    </resource>
+    <resource>
+        <kind>Topic:</kind>
+        <name>Buggy Day</name>
+        <details>What insects are beneficial, and which are considered pests?  For more details,
+        open the speaker notes by clicking on the settings icon in the lower right hand corner
+        of the slideshow.  Then, choose "Open speaker notes".</details>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQlHelDz5HiJmOOO9uUX46NMuJrIGd9r3wBEypm1LK77BPWTXb_EAnDUok9lkB1p4OeX2GnOyM0aZO9/embed?delayms=3000"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+        </html>
+    </resource>
+    <resource>
+        <kind>Topic:</kind>
+        <name>Hidden Colors</name>
         <details>Chromatography is the process of seperating out molecules based
         on their polarities.</details>
         <question>Could this still be done in space?</question>
@@ -22,6 +48,36 @@
         <html>
             <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
                 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSAKvSbRRGsQQNbJL6wELRdeO0iAnkHx47H1zCNSh_j6W-45EkzHrnaGxTEPiOCeGnAqfwVNVFdYzot/embed?delayms=3000"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+        </html>
+    </resource>
+    <resource>
+        <kind>Topic:</kind>
+        <name>Mysteries of Color</name>
+        <details>How do we see?  How do plants see?  And how can we use this to help
+        plants grow?</details>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTLrZ0YRXKfVJk2Em9yv3s_Sgj-mZgA2qNI7EBummsSZZZKBA08596og6TcUrbEbnTwZ9X02KzY94U_/embed?delayms=3000"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+            <p>To experiment more with how color filters work, feel free to experiment
+            with this website:</p>
+            <a href="https://phet.colorado.edu/sims/html/color-vision/latest/color-vision_en.html">
+            Color Vision</a>
+        </html>
+    </resource>
+    <resource>
+        <kind>Topic:</kind>
+        <name>Top 5 Trees</name>
+        <details>What are you five favorite trees?  One of our members shared theirs, along with information on how to
+        identify each of them, how they are used, and where they grow.</details>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT2Jra6FeXqZAGaGI8qDdsQ80pQRw4VPgps9hSgW4ZebgViHFnIJsdb_P_13NmLly66X3ylQ2w8IvP6/embed?delayms=3000"
                         style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
                         allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
             </div>
@@ -50,13 +106,26 @@
     <resource>
         <kind>Warmup:</kind>
         <name>Veggie Art</name>
-        <summary>We picked veggies from our garden and made art with them.  One member did
-        a person, another did a butterfly, and someone even did a Mr. Potatohead!  Afterwards, we
-        gave some ideas on how to reuse our veggies after we finished our veggie art.  Two
-        members put theirs on a pizza, some just ate them raw (that took care of most of
-        the veggies!), and others gave them to their chickens.  Don't worry, we didn't cook
-        Mr. Potatohead.  He's reusable veggie art!  Great job, Botany Besties!
-        For more examples, see the warmup on the Resources page and take a look at the slideshow
-        we used during the meeting.</summary>
+        <summary>We picked veggies from our garden and made art with them.  Here's a slideshow
+        presentation with some ideas.  Have fun creating (and eating afterwards)!</summary>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ44ZJwTM4y9laQa2K6VTzD5klOw5Ga-U1vGLphi_RVfWMUWjV3SMzpWw6uZaBxzEFUTX4V81VCiQzz/embed?delayms=3000"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+        </html>
+    </resource>
+    <resource>
+        <kind>Warmup:</kind>
+        <name>Pollinator Taboo Game</name>
+        <summary>Not only bees pollinate gardens!  Check out some other pollinators in the slideshow below.</summary>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSCPzXg1wPy_3FGkNbnTyoLvCKBlyiny7Yl2JhBPKWN0XFi2CP-3J3Y8WA2ZI0kvByV2WXMbruDQomx/embed?delayms=3000"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+        </html>
     </resource>
 </resources>
