@@ -28,17 +28,23 @@ th, td {
 /* Style the header */
 #header {
     background-color: #f1f1f1;
-    /* Can't set the opacity of a background.  Workaround: start with another
+    /* The background image fades under the header.
+       Can't set the opacity of a background.  Workaround: start with another
        "image": a gradient from transparent to white and back, covering the
-       actual image, which repeats left-to-right.
-   */
+       actual image, which repeats left-to-right.  To have a partially
+       transparent image under the entire header, replace the linear-gradient
+       with something like (white to white, 0.4 opacity):
+           linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)) */
     background-image: linear-gradient(to right, transparent, white 25% 75%, transparent),
-                      url(images/default.png);
+                      url(../images/default.png);
     background-repeat: no-repeat, repeat-x;
 
     /* Two images:  Linear Gradient covers (header) and doesn't repeat.
                     The image is constrained by the Y-axis (contain) and repeats
-                    to cover the (header) horizontally */
+                    to cover the (header) horizontally 
+                    To have the real image cover part of the screen, change
+                    "contain" to something like "60%".
+       See the bottom for updated background-size for narrow screens. */
     background-size: cover, contain;
     background-position: center;
 
@@ -327,7 +333,12 @@ input:focus, select:focus, textarea:focus {
         width: 100%;
     }
     #header {
-        /* Skip background image to avoid covering the image with a header */
+        /* Make background image fill #header */
+        background-size: cover;
+
+        /* To skip the background image, e.g., to avoid covering the image
+           with a header, uncomment the following line:
         background-image: none;
+        */
     }
 }
