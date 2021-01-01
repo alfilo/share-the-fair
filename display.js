@@ -9,14 +9,14 @@ function ContentDisplay(x2js, contentSrc, content, contentKeys) {
     // Create image(s) with the src, title, and alt based on item's keys and image
     // tags, if present.  Image tags are used to show multiple images.  Stop after
     // one if the last argument is false.  Return the images as a jQuery object.
-    // Use the 4h Clover as the backup image
+    // Use default.png as the backup image
     function makeImgs(item, useAllExts = true) {
         function makeImg(title) {
             return $("<img>")
                 .prop("src", "images/" + makeId(title) + ".jpg")
                 .prop("title", title)
                 .prop("alt", title)
-                .attr("onerror", "this.src='images/4h-clover.png'");
+                .attr("onerror", "this.src='images/default.png'");
         }
 
         var title = "";
