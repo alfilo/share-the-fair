@@ -30,15 +30,15 @@ th, td {
     background-color: #f1f1f1;
     /* Can't set the opacity of a background.  Workaround: start with another
        "image": a gradient from transparent to white and back, covering the
-       actual image (clover), which repeats left-to-right.
+       actual image, which repeats left-to-right.
    */
     background-image: linear-gradient(to right, transparent, white 25% 75%, transparent),
-                      url(images/4h-clover.png);
+                      url(images/default.png);
     background-repeat: no-repeat, repeat-x;
 
-    /* Two images:  Linear Gradient covers (header) and doesn't repeat
-                    4-H Clover is constrained by the Y-axis (contain) and repeats
-                        to cover the (header) horizontally */
+    /* Two images:  Linear Gradient covers (header) and doesn't repeat.
+                    The image is constrained by the Y-axis (contain) and repeats
+                    to cover the (header) horizontally */
     background-size: cover, contain;
     background-position: center;
 
@@ -327,7 +327,7 @@ input:focus, select:focus, textarea:focus {
         width: 100%;
     }
     #header {
-        /* Skip background image to avoid covering the clover with a header */
+        /* Skip background image to avoid covering the image with a header */
         background-image: none;
     }
 }
