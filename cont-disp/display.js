@@ -1,73 +1,108 @@
-function ContentDisplay(x2js, contentSrc, content, contentKeys) {
+function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, titleSep = ' ', customFltrMatchers = {}) {
     // General helper for converting a key value into a valid ID
     function makeId(string) {
         return string.toLowerCase()
             .replace(/[^a-z0-9 ]+/g, '')  // Keep alphanumeric chars and spaces
             .replace(/ /g, '-');  // Replace spaces with dashes
     }
+ 
+    // Return a checker of items against all filters
+    function filterMatcherFn(filters) {
+        return function (item) {
+            // Check item's entries against every filter's selection
+            for (var filter in filters) {
+                if (filter in customFltrMatchers) {
+                    if (!customFltrMatchers[filter](item[filter], filters[filter]))
+                        return false;
+                } else {
+                    var filterLC = filter.toLowerCase();
+                    // Values in filters are lowercase
+                    if (filter in item && !item[filter].toLowerCase().includes(filters[filter].toLowerCase()) ||
+                        filterLC in item && !item[filterLC].toLowerCase().includes(filters[filter].toLowerCase()))
+                        return false;  // Any match fails: skip item
+                }
+            }
+            return true;  // Passed all filters: keep item   
+        }
+    };
 
     // Create image(s) with the src, title, and alt based on item's keys and image
     // tags, if present.  Image tags are used to show multiple images.  Stop after
     // one if the last argument is false.  Return the images as a jQuery object.
-    // Use default.png as the backup image
+    // Use different formats and a default as backup images
     function makeImgs(item, useAllExts = true) {
-        function makeImg(title) {
+        window.loadAlternative = function(img) {
+            var fallbacks = $(img).data("fallbacks");
+            if (fallbacks.length)
+                img.src = "images/" + fallbacks.shift();
+        }
+        function makeImg(id, title) {
             return $("<img>")
-                .prop("src", "images/" + makeId(title) + ".jpg")
+                .prop("src", "images/" + id + ".jpg")
                 .prop("title", title)
                 .prop("alt", title)
-                .attr("onerror", "this.src='images/default.png'");
+                .data("fallbacks", [id + ".png", id + ".svg", "default.jpg", "default.png", "default.svg"])
+                .attr("onerror", "loadAlternative(this)");
         }
 
-        var title = "";
-        for (var i = 0; i < contentKeys.length; i++) {
-            title += item[contentKeys[i]] + " ";
-        }
-        title = title.slice(0, -1);
-        if ("images" in item && item.images) {
+        var imgOverride = "images" in item ? item["images"] : item["Images"];
+        if (imgOverride) {
             // Collect results in a jQuery object for use/modification in callers
             var $imgs = $();
-            var imageExts = item.images.image;  // Array of image extensions
-            for (var i = 0; i < imageExts.length; i++) {
-                // Use the item title plus this extension for image title
-                $imgs = $imgs.add(makeImg(title + " " + imageExts[i]));
+            // Array of explicit image titles in XML or string to split in CSV
+            var imgTitles = typeof imgOverride === "string" ? imgOverride.split(':') : imgOverride.image;
+            for (var i = 0; i < imgTitles.length; i++) {
+                $imgs = $imgs.add(makeImg(makeId(imgTitles[i])), imgTitles[i]);
                 if (!useAllExts) break;  // Need only one image
             }
             return $imgs;
+        } else {  // No image tags--use the idKeys and titleKeys
+            var idStr = "";
+            for (var i = 0; i < idKeys.length; i++) {
+                idStr += item[idKeys[i]] + " ";
+            }
+            idStr = idStr.slice(0, -1);
+            var title = "";
+            for (var i = 0; i < titleKeys.length; i++) {
+                title += item[titleKeys[i]] + titleSep;
+            }
+            title = title.slice(0, -titleSep.length);
+            return makeImg(makeId(idStr), title);
         }
-        // No image tags--use the title
-        return makeImg(title);
     }
 
 
     /* Link creation and helpers */
     this.links = new function Links() {
-        this.makeDetailsHref = function makeDetailsHref(item) {
-            // Build the link with URL search params out of item's contentKeys values
-            var urlParams = new URLSearchParams({ "src": contentSrc });
-            for (var j = 0; j < contentKeys.length; j++) {
-                urlParams.set(contentKeys[j], makeId(item[contentKeys[j]]));
+        this.makeDetailsHref = function (item) {
+            // Build the link with URL search params out of item's idKeys values
+            var urlParams = new URLSearchParams();
+            if (contentSrc) {
+                urlParams.set("src", contentSrc);
+            }
+            for (var j = 0; j < idKeys.length; j++) {
+                urlParams.set(makeId(idKeys[j]), makeId(item[idKeys[j]]));
             }
             return "details.html?" + urlParams.toString();
         }
 
-        this.makeDetailsText = function makeDetailsText(item) {
-            // Build the link text out of item's contentKeys values
+        this.makeDetailsText = function (item) {
+            // Build the link text out of item's titleKeys values
             var text = "";
-            for (var j = 0; j < contentKeys.length; j++) {
-                text += item[contentKeys[j]] + " ";
+            for (var j = 0; j < titleKeys.length; j++) {
+                text += item[titleKeys[j]] + titleSep;
             }
-            return text.slice(0, -1);  // Drop the extra " " at the end
+            return text.slice(0, -titleSep.length);
         }
 
-        this.makeDetailsLink = function makeDetailsLink(item) {
+        this.makeDetailsLink = function (item) {
             return $("<a>").prop("href", this.makeDetailsHref(item))
                 .text(this.makeDetailsText(item));
         }
 
         /* Generate links for content items and add to list */
-        this.generate = function generate(list, itemMatcher = null) {
-            var filteredContent = itemMatcher ? $.grep(content, itemMatcher) : content;
+        this.generate = function (list, filters = {}) {
+            var filteredContent = $.grep(content, filterMatcherFn(filters));
             for (var i = 0; i < filteredContent.length; i++) {
                 var link = this.makeDetailsLink(filteredContent[i]);
                 $("<li>").append(link).appendTo(list);
@@ -91,9 +126,10 @@ function ContentDisplay(x2js, contentSrc, content, contentKeys) {
         // Recursively display the object and all its values; start at heading level 3
         function displayObject(obj, $parent, hLevel = 3) {
             for (var prop in obj) {
-                if (prop === "images") return;  // Ignore the image tags here
-                // Skip over tags w/o details or those used in the header
-                if (obj[prop] && !contentKeys.includes(prop)) {
+                if (prop.toLowerCase() === "images")
+                    continue;  // Ignore the image tags here
+                // Skip over tags w/o details or those used in the id or the title
+                if (obj[prop] && !idKeys.includes(prop) && !titleKeys.includes(prop)) {
                     if (typeof obj[prop] === "string") {
                         $parent
                             // Make a heading out of prop
@@ -137,14 +173,30 @@ function ContentDisplay(x2js, contentSrc, content, contentKeys) {
             }
         }
 
-        this.generate = function () {
+        function generateTable(itemInfo) {
+            // Fill in the table (assumes a flat object, like from a CSV file)
+            var $tbody = $(".main tbody");
+            for (var prop in itemInfo) {
+                if (prop.toLowerCase() === "images")
+                    continue;  // Ignore the image tags here
+                // Skip over tags w/o details or those used in the id or the title
+                if (itemInfo[prop] && !idKeys.includes(prop) && !titleKeys.includes(prop)) {
+                    $("<tr>")
+                        .append($("<td>").text(prop))
+                        .append($("<td>").text(itemInfo[prop]))
+                        .appendTo($tbody);
+                }
+            }
+        }
+
+        this.generate = function (makeTable = false) {
             // Find the item requested by search params
             var urlParams = new URLSearchParams(location.search);
             var itemInfo;  // Save the matching object in itemInfo
             contentLoop: for (var i = 0; i < content.length; i++) {
-                for (var j = 0; j < contentKeys.length; j++) {
-                    var requestedId = urlParams.get(contentKeys[j]);
-                    if (makeId(content[i][contentKeys[j]]) !== requestedId) {
+                for (var j = 0; j < idKeys.length; j++) {
+                    var requestedId = urlParams.get(makeId(idKeys[j]));
+                    if (makeId(content[i][idKeys[j]]) !== requestedId) {
                         continue contentLoop;  // A key mismatch, go to next item
                     }
                 }
@@ -155,8 +207,12 @@ function ContentDisplay(x2js, contentSrc, content, contentKeys) {
             // Make heading out of the displayed item's keys
             $("#header h1").text(links.makeDetailsText(itemInfo));
 
-            // Fill in the page: recursively display itemInfo
-            displayObject(itemInfo, $(".column.main"));
+            if (makeTable) {
+                generateTable(itemInfo);
+            } else {
+                // Fill in the page: recursively display itemInfo
+                displayObject(itemInfo, $(".column.main"));
+            }
             // Make image(s) in the right column
             makeImgs(itemInfo).appendTo($(".column.right"));
         }
@@ -166,20 +222,20 @@ function ContentDisplay(x2js, contentSrc, content, contentKeys) {
     /* Search with autocomplete and related functions */
     this.search = new function Search() {
         // Return true if match succeeds in this object or recursively in values
-        function matchInObject(obj, matcher) {
+        function matchInObject(obj, matcher, searchKeys) {
             for (var prop in obj) {
-                // Skip over tags w/o details
-                if (obj[prop]) {
+                // Skip over non-search keys and tags w/o details
+                if ((!searchKeys || searchKeys.includes(prop)) && obj[prop]) {
                     if (typeof obj[prop] === "string") {
                         if (matcher.test(obj[prop])) {
                             return true;
                         }
                     } else if (Array.isArray(obj[prop])) {
-                        if (matchInArray(obj[prop], matcher)) {
+                        if (matchInArray(obj[prop], matcher, searchKeys)) {
                             return true;
                         }
                     } else {
-                        if (matchInObject(obj[prop], matcher)) {
+                        if (matchInObject(obj[prop], matcher, searchKeys)) {
                             return true;
                         }
                     }
@@ -189,18 +245,18 @@ function ContentDisplay(x2js, contentSrc, content, contentKeys) {
         }
 
         // Return true if match succeeds in this array or recursively in elements
-        function matchInArray(arr, matcher) {
+        function matchInArray(arr, matcher, searchKeys) {
             for (var i = 0; i < arr.length; i++) {
                 if (typeof arr[i] === "string") {
                     if (matcher.test(arr[i])) {
                         return true;
                     }
                 } else if (Array.isArray(arr[i])) {
-                    if (matchInArray(arr[i], matcher)) {
+                    if (matchInArray(arr[i], matcher, searchKeys)) {
                         return true;
                     }
                 } else {
-                    if (matchInObject(arr[i], matcher)) {
+                    if (matchInObject(arr[i], matcher, searchKeys)) {
                         return true;
                     }
                 }
@@ -208,20 +264,21 @@ function ContentDisplay(x2js, contentSrc, content, contentKeys) {
             return false;
         }
 
-        this.configureSearch = function (column = "right", kind = null) {
-            function filterKind() {
-                return kind ? content.filter(function (item) { return item.kind === kind; })
-                    : content;
-            }
-
+        this.configureSearch = function (column = "right", staticFilters = {}, dynFltrNames = [], searchKeys = null) {
             $("#search-" + column).autocomplete({
                 source: function (request, response) {
+                    var filters = Object.assign({}, staticFilters);
+                    for (var i = 0; i < dynFltrNames.length; i++) {
+                        var dynFltrVal = $("#search-" + makeId(dynFltrNames[i])).val();
+                        filters[dynFltrNames[i]] = dynFltrVal;
+                    }
                     // Only match the typed text at the start of words
                     var pattern = "\\b" + $.ui.autocomplete.escapeRegex(request.term);
                     var matcher = new RegExp(pattern, "i");
-                    response($.grep(filterKind(), function (item) {
+                    var filterMatcher = filterMatcherFn(filters);
+                    response($.grep(content, function (item) {
                         // Look for the matching text throughout the object
-                        return matchInObject(item, matcher);
+                        return filterMatcher(item) && matchInObject(item, matcher, searchKeys);
                     }));
                 },
                 minLength: 0,
@@ -348,7 +405,7 @@ function ContentDisplay(x2js, contentSrc, content, contentKeys) {
             // (in grandparent's first element child)
             var value = clickBtn.textContent.toLowerCase();
             var filterBtn = clickBtn.parentNode.parentNode.firstElementChild;
-            var filter = filterBtn.textContent.toLowerCase();
+            var filter = filterBtn.textContent;
 
             // Clear selected style in buttons of this filter's dropdown-content
             // (in case there was a selection in this filter before)
@@ -374,21 +431,9 @@ function ContentDisplay(x2js, contentSrc, content, contentKeys) {
                 $("#clear-filters").show();
             }
 
-            // Recompute the array of items matching the filters from scratch
-            function itemMatcher(item) {
-                // Check item's entries against every filter's selection
-                // Populate the results list with links to detail pages 
-                for (var filter in curFilters) {
-                    // Values in curFilters are lowercase
-                    if (!item[filter].toLowerCase().includes(curFilters[filter]))
-                        return false;  // Any match fails: skip item
-                }
-                return true;  // Passed all filters: keep item
-            };
-
             // Empty the list of matching items and make links for matching items
             var $frUl = $("#filter-results").empty();
-            links.generate($frUl, itemMatcher);
+            links.generate($frUl, curFilters);
         };
     }
 }
