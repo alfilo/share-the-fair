@@ -4,7 +4,7 @@ function handleXMLContent() {
     // Save names of data files and keys used for identifying items
     // For details pages, look up src param
     var content;  // The content from the XML file
-    var contentKeys;  // The keys used for identifying an item (vary by page)
+    var idKeys;  // The keys used for identifying an item (vary by page)
     var contentSrc = "";  // Value for src param, e.g., "meetings"
 
     if (location.search) {
@@ -13,19 +13,19 @@ function handleXMLContent() {
     }
     if (location.pathname.includes("meetings.html") || contentSrc === "meetings") {
         var fileName = "data/meetings.xml";
-        contentKeys = ["month", "day", "year"];
+        idKeys = ["month", "day", "year"];
         contentSrc = "meetings";
     } else if (location.pathname.includes("gardens.html") || contentSrc === "gardens") {
         var fileName = "data/gardens.xml";
-        contentKeys = ["name"];
+        idKeys = ["name"];
         contentSrc = "gardens";
     } else if (location.pathname.includes("recipes.html") || contentSrc === "recipes") {
         var fileName = "data/recipes.xml";
-        contentKeys = ["name"];
+        idKeys = ["name"];
         contentSrc = "recipes";
     } else if (location.pathname.includes("resources.html") || contentSrc === "resources") {
         var fileName = "data/resources.xml";
-        contentKeys = ["kind", "name"];
+        idKeys = ["kind", "name"];
         contentSrc = "resources";
     }
     $.get(fileName, function(xml) {
@@ -37,7 +37,7 @@ function handleXMLContent() {
         // Dereference into the second field (such as .meeting)
         content = jsObj[Object.keys(jsObj)[0]];
 
-        var contentDisplay = new ContentDisplay(x2js, contentSrc, content, contentKeys);
+        var contentDisplay = new ContentDisplay(x2js, contentSrc, content, idKeys);
 
         // If the location includes a search entry, we're customizing the
         // details page for the requested item (e.g., meeting-details.html);
@@ -56,10 +56,10 @@ function handleXMLContent() {
             contentDisplay.search.configureSearch();
         } else if (location.pathname.includes("resources.html")) {
             // Configure autocomplete-based search for Topics in main column
-            contentDisplay.search.configureSearch("main", "Topic:");
+            contentDisplay.search.configureSearch("main", {"kind" : "Topic:"});
 
             // Configure autocomplete-based search for Warmups in right column
-            contentDisplay.search.configureSearch("right", "Warmup:");
+            contentDisplay.search.configureSearch("right", {"kind" : "Warmup:"});
         } else {  // meetings.html
             // Set up filters for selecting specific meetings by content
             // Register on-click listener for filter selections
