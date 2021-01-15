@@ -26,11 +26,13 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, t
         }
     };
 
+    var imgHandlingEnum = Object.freeze({ALL: 1, FIRST: 2, RANDOM: 3});
+
     // Create image(s) with the src, title, and alt based on item's keys and image
     // tags, if present.  Image tags are used to show multiple images.  Stop after
     // one if the last argument is false.  Return the images as a jQuery object.
     // Use different formats and a default as backup images
-    function makeImgs(item, useAllExts = true) {
+    function makeImgs(item, imgHandling = imgHandlingEnum.ALL) {
         window.loadAlternative = function(img) {
             var fallbacks = $(img).data("fallbacks");
             if (fallbacks.length)
@@ -47,15 +49,21 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, t
 
         var imgOverride = "images" in item ? item["images"] : item["Images"];
         if (imgOverride) {
-            // Collect results in a jQuery object for use/modification in callers
-            var $imgs = $();
             // Array of explicit image titles in XML or string to split in CSV
-            var imgTitles = typeof imgOverride === "string" ? imgOverride.split(':') : imgOverride.image;
-            for (var i = 0; i < imgTitles.length; i++) {
-                $imgs = $imgs.add(makeImg(makeId(imgTitles[i])), imgTitles[i]);
-                if (!useAllExts) break;  // Need only one image
+            var imgTitles = typeof imgOverride === "string" ?
+                imgOverride.split(':') : imgOverride.image;
+            if (imgHandling === imgHandlingEnum.ALL) {
+                // Collect results in a jQuery object for use/modification in callers
+                var $imgs = $();
+                for (var i = 0; i < imgTitles.length; i++) {
+                    $imgs = $imgs.add(makeImg(makeId(imgTitles[i]), imgTitles[i]));
+                }
+                return $imgs;
+            } else {
+                var idx = imgHandling === imgHandlingEnum.FIRST ? 0 : 
+                    new Date().getSeconds() % imgTitles.length;  // RANDOM
+                return makeImg(makeId(imgTitles[idx]), imgTitles[idx]);
             }
-            return $imgs;
         } else {  // No image tags--use the idKeys and titleKeys
             var idStr = "";
             for (var i = 0; i < idKeys.length; i++) {
@@ -287,7 +295,7 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, t
                     $(".search-img").hide();
                     $(".column." + column + " img").hide();
                     var searchPos = $("#search-" + column).position();
-                    makeImgs(ui.item, false)  // Make only one image
+                    makeImgs(ui.item, imgHandlingEnum.RANDOM)
                         .addClass("search-img")
                         // Place the image in line with search box and below the cursor
                         .css({
@@ -327,7 +335,8 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, t
         this.generate = function () {
             var $mainColumn = $(".column.main");
             for (var i = 0; i < content.length; i++) {
-                var category = content[i]["category"];
+                var category = "category" in content[i] ?
+                    content[i]["category"] : content[i]["Category"];
                 var categoryId = makeId(category);
                 var $categoryUl = $('#' + categoryId);
                 // If we haven't seen this category yet, create an image of this item
@@ -335,7 +344,8 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, t
                 if ($categoryUl.length === 0) {
                     $categoryUl = $("<ul>").attr("id", categoryId);
                     // Make only one image
-                    var $img = makeImgs(content[i], false).addClass("cat-img");
+                    var $img = makeImgs(content[i], imgHandlingEnum.FIRST)
+                        .addClass("cat-img");
                     $("<div>").addClass("cat-div")
                         .append($img)
                         .append($("<div>").addClass("cat-text")
