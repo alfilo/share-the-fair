@@ -161,14 +161,30 @@
         <month>December</month>
         <day>18,</day>
         <year>2020</year>
-        <plan>We plan to have one of our members teach us about 5 more of their favorite trees. 
-        We will make origami pointsettias and snowflakes to give to a local nursing home and
-        review what we learned this year by making a fun, end of the year dessert.</plan>
+        <summary>One of our members taught us about 5 of their favorite nut-producing trees. 
+        We also reviewed what we learned this year by making
+        a fun, end of the year dessert. Each layer represents one of the projects we did during
+        the year, and we asked questions to review what we had done and learned.</summary>
+        <community-service>We made origami pointsettias and snowflakes, and donated them to
+        Beech Tree long-term care and rehabilitation facility.</community-service>
     </meeting>
     <meeting>
         <month>January</month>
-        <day>15,</day>
+        <day>22,</day>
         <year>2021</year>
-        <plan>We plan to experiment with natural pH indicators.</plan>
+        <summary>We learned about what pH is, what affects the pH of soil,
+        why the pH of soil matters, and how we can find soil pH. We did
+        a short experiment to find whether our soil is acidic or basic
+        and learned about other natural pH indicators such as turmeric,
+        blueberries, and red cabbage. We also learned about how to choose
+        a soil pH test kit and where to obtain them. To see the slideshow
+        and video used in the meeting, go to Soil pH in the Resources page.</summary>
+    </meeting>
+    <meeting>
+        <month>February</month>
+        <day>19,</day>
+        <year>2021</year>
+        <plan>One of our members will present to us about how to care for
+        tropical plants.</plan>
     </meeting>
 </meetings>
