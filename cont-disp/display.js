@@ -1,4 +1,7 @@
-function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, titleSep = ' ', customFltrMatchers = {}) {
+function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
+    titleSep = ' ', customFltrMatchers = {}, newTab = false, trackSelection = false,
+    selectionCallback = null) {
+
     // General helper for converting a key value into a valid ID
     function makeId(string) {
         return string.toLowerCase()
@@ -82,6 +85,8 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, t
 
     /* Link creation and helpers */
     this.links = new function Links() {
+        var filteredContent = [];
+        var selection = [];
         this.makeDetailsHref = function (item) {
             // Build the link with URL search params out of item's idKeys values
             var urlParams = new URLSearchParams();
@@ -94,26 +99,84 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, t
             return "details.html?" + urlParams.toString();
         }
 
-        this.makeDetailsText = function (item) {
-            // Build the link text out of item's titleKeys values
-            var text = "";
+        this.makeItemTitle = function (item) {
+            var title = "";
             for (var j = 0; j < titleKeys.length; j++) {
-                text += item[titleKeys[j]] + titleSep;
+                title += item[titleKeys[j]] + titleSep;
             }
-            return text.slice(0, -titleSep.length);
+            return title.slice(0, -titleSep.length);
         }
 
         this.makeDetailsLink = function (item) {
             return $("<a>").prop("href", this.makeDetailsHref(item))
-                .text(this.makeDetailsText(item));
+                .prop("target", newTab ? "_blank" : "_self")
+                .text(this.makeItemTitle(item));
         }
 
-        /* Generate links for content items and add to list */
-        this.generate = function (list, filters = {}) {
-            var filteredContent = $.grep(content, filterMatcherFn(filters));
+        this.clearSelect = function () {
+            selection = [];
+            $("#filter-results input:checkbox:checked").prop("checked", false);
+            if (selectionCallback && filteredContent.length) {
+                selectionCallback(filteredContent);
+            }
+        }
+
+        this.selectAll = function () {
             for (var i = 0; i < filteredContent.length; i++) {
-                var link = this.makeDetailsLink(filteredContent[i]);
-                $("<li>").append(link).appendTo(list);
+                if (!selection.includes(filteredContent[i])) {
+                    selection.push(filteredContent[i]);
+                }
+            }
+            $("#filter-results input:checkbox:not(:checked)").prop("checked", true);
+            if (selectionCallback && selection.length) selectionCallback(selection);
+        }
+
+        /* Generate links for content items and add to list.
+           Invoke callback, if present (e.g., visualization).
+         */
+        this.generate = function (list, filters = {}) {
+            filteredContent = $.grep(content, filterMatcherFn(filters));
+            for (var i = 0; i < filteredContent.length; i++) {
+                var item = filteredContent[i];
+                var li = $("<li>").appendTo(list);
+                var link = this.makeDetailsLink(item);
+                if (trackSelection) {
+                    var checkbox = $("<input>")
+                        .attr("type", "checkbox")
+                        .attr("name", "vis-select")
+                        .attr("value", this.makeItemTitle(item))
+                        .prop("checked", selection.includes(item));
+                    li.append(checkbox)
+                        .append($("<label>").append(link));
+
+                    checkbox.click((function() {
+                            var thisItem = item;
+                            return function () {
+                                if (this.checked) {
+                                    selection.push(thisItem);
+                                } else {
+                                    // Uses strict equality for objects
+                                    var idx = selection.indexOf(thisItem);
+                                    selection.splice(idx, 1);
+                                }
+                                if (selectionCallback) {
+                                    selectionCallback(selection.length ?
+                                        selection : filteredContent);
+                                }
+                            }
+                        })() );
+
+                } else {
+                    li.append(link);
+                }
+
+                filteredContent[i].link = link[0];  // Add link to item info
+            }
+
+            // If we're using selections and the selection is non-empty,
+            // skip the callback for filteredContent
+            if (selectionCallback && !(trackSelection && selection.length)) {
+                selectionCallback(filteredContent);
             }
         }
     }
@@ -213,7 +276,7 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, t
             }
 
             // Make heading out of the displayed item's keys
-            $("#header h1").text(links.makeDetailsText(itemInfo));
+            $("#header h1").text(links.makeItemTitle(itemInfo));
 
             if (makeTable) {
                 generateTable(itemInfo);
@@ -233,7 +296,7 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, t
         function matchInObject(obj, matcher, searchKeys) {
             for (var prop in obj) {
                 // Skip over non-search keys and tags w/o details
-                if ((!searchKeys || searchKeys.includes(prop)) && obj[prop]) {
+                if ((!searchKeys.length || searchKeys.includes(prop)) && obj[prop]) {
                     if (typeof obj[prop] === "string") {
                         if (matcher.test(obj[prop])) {
                             return true;
@@ -272,7 +335,7 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, t
             return false;
         }
 
-        this.configureSearch = function (column = "right", staticFilters = {}, dynFltrNames = [], searchKeys = null) {
+        this.configureSearch = function (column = "right", staticFilters = {}, dynFltrNames = [], searchKeys = []) {
             $("#search-" + column).autocomplete({
                 source: function (request, response) {
                     var filters = Object.assign({}, staticFilters);
@@ -310,19 +373,24 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, t
                     $(".column." + column + " img").show();
                 },
                 select: function (event, ui) {
-                    // Setting location and location.href has the same effect, if
-                    // location isn't set.  Both act as if the link is clicked, so
-                    // "Back" goes to current page).  location.replace(url) is like
-                    // HTTP redirect--it skips the current page for back navigation.
-                    // $(location).prop('href', url) is the jQuery way but it's not
-                    // an improvement over the below.
+                    if (newTab) {
+                        // Not blocked as a popup because it's caused by a user action
+                        window.open(links.makeDetailsHref(ui.item), "_blank");
+                    } else {
+                        // Setting location and location.href has the same effect, if
+                        // location isn't set.  Both act as if the link is clicked, so
+                        // "Back" goes to current page).  location.replace(url) is like
+                        // HTTP redirect--it skips the current page for back navigation.
+                        // $(location).prop('href', url) is the jQuery way but it's not
+                        // an improvement over the below.
 
-                    // Navigate to the selected item
-                    location.href = links.makeDetailsHref(ui.item);
+                        // Navigate to the selected item
+                        location.href = links.makeDetailsHref(ui.item);
+                    }
                 }
             }).autocomplete("instance")._renderItem = function (ul, item) {
                 return $("<li>")
-                    .append("<div><i>" + links.makeDetailsText(item) + "</i>" + "</div>")
+                    .append("<div><i>" + links.makeItemTitle(item) + "</i>" + "</div>")
                     .appendTo(ul);
             };
         }
@@ -407,7 +475,7 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys, t
 
             // Empty the list of matching items and make links for all items
             var $frUl = $("#filter-results").empty();
-            links.generate($frUl);
+            links.generate($frUl, {}, selectionCallback);
         }
 
         this.updateFilter = function (clickBtn) {
