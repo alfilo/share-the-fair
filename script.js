@@ -74,7 +74,7 @@ function handleXMLContent() {
             // Click on the latest value in the last dropdown (current year)
             // This is the first button under dropdown-content of the last div
             // (a dropdown) under filter-group
-            $("#filter-group div:last-child .dropdown-content button:first-child").click();
+            $("#filter-group div:last-of-type .dropdown-content button:first-child").click();
 
             // Generate the next meeting's link in the right column
             contentDisplay.activities.generateNextActivity();
