@@ -37,7 +37,8 @@ function handleXMLContent() {
         // Dereference into the second field (such as .meeting)
         content = jsObj[Object.keys(jsObj)[0]];
 
-        var contentDisplay = new ContentDisplay(x2js, contentSrc, content, idKeys);
+        var contentDisplay = new ContentDisplay(content, idKeys,
+            { contentSrc: contentSrc, x2js: x2js });
 
         // If the location includes a search entry, we're customizing the
         // details page for the requested item (e.g., meeting-details.html);
