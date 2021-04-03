@@ -1,6 +1,11 @@
-function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
-    titleSep = ' ', customFltrMatchers = {}, newTab = false, trackSelection = false,
-    selectionCallback = null) {
+function ContentDisplay(content, idKeys, opts) {
+
+    // Provide default values.  Consider using Proxy in the future.
+    if (!("titleKeys" in opts)) opts.titleKeys = idKeys;
+    if (!("titleSep" in opts)) opts.titleSep = " ";
+    if (!("customFltrMatchers" in opts)) opts.customFltrMatchers = {};
+    if (!("newTab" in opts)) opts.newTab = false;
+    if (!("trackSelection" in opts)) opts.trackSelection = false;
 
     // General helper for converting a key value into a valid ID
     function makeId(string) {
@@ -14,8 +19,8 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
         return function (item) {
             // Check item's entries against every filter's selection
             for (var filter in filters) {
-                if (filter in customFltrMatchers) {
-                    if (!customFltrMatchers[filter](item[filter], filters[filter]))
+                if (filter in opts.customFltrMatchers) {
+                    if (!opts.customFltrMatchers[filter](item[filter], filters[filter]))
                         return false;
                 } else {
                     var filterLC = filter.toLowerCase();
@@ -67,17 +72,17 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
                     new Date().getSeconds() % imgTitles.length;  // RANDOM
                 return makeImg(makeId(imgTitles[idx]), imgTitles[idx]);
             }
-        } else {  // No image tags--use the idKeys and titleKeys
+        } else {  // No image tags--use the idKeys and opts.titleKeys
             var idStr = "";
             for (var i = 0; i < idKeys.length; i++) {
                 idStr += item[idKeys[i]] + " ";
             }
             idStr = idStr.slice(0, -1);
             var title = "";
-            for (var i = 0; i < titleKeys.length; i++) {
-                title += item[titleKeys[i]] + titleSep;
+            for (var i = 0; i < opts.titleKeys.length; i++) {
+                title += item[opts.titleKeys[i]] + opts.titleSep;
             }
-            title = title.slice(0, -titleSep.length);
+            title = title.slice(0, -opts.titleSep.length);
             return makeImg(makeId(idStr), title);
         }
     }
@@ -90,8 +95,8 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
         this.makeDetailsHref = function (item) {
             // Build the link with URL search params out of item's idKeys values
             var urlParams = new URLSearchParams();
-            if (contentSrc) {
-                urlParams.set("src", contentSrc);
+            if (opts.contentSrc) {
+                urlParams.set("src", opts.contentSrc);
             }
             for (var j = 0; j < idKeys.length; j++) {
                 urlParams.set(makeId(idKeys[j]), makeId(item[idKeys[j]]));
@@ -101,23 +106,23 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
 
         this.makeItemTitle = function (item) {
             var title = "";
-            for (var j = 0; j < titleKeys.length; j++) {
-                title += item[titleKeys[j]] + titleSep;
+            for (var j = 0; j < opts.titleKeys.length; j++) {
+                title += item[opts.titleKeys[j]] + opts.titleSep;
             }
-            return title.slice(0, -titleSep.length);
+            return title.slice(0, -opts.titleSep.length);
         }
 
         this.makeDetailsLink = function (item) {
             return $("<a>").prop("href", this.makeDetailsHref(item))
-                .prop("target", newTab ? "_blank" : "_self")
+                .prop("target", opts.newTab ? "_blank" : "_self")
                 .text(this.makeItemTitle(item));
         }
 
         this.clearSelect = function () {
             selection = [];
             $("#filter-results input:checkbox:checked").prop("checked", false);
-            if (selectionCallback && filteredContent.length) {
-                selectionCallback(filteredContent);
+            if ("selectionCallback" in opts && filteredContent.length) {
+                opts.selectionCallback(filteredContent);
             }
         }
 
@@ -128,7 +133,9 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
                 }
             }
             $("#filter-results input:checkbox:not(:checked)").prop("checked", true);
-            if (selectionCallback && selection.length) selectionCallback(selection);
+            if ("selectionCallback" in opts && selection.length) {
+                opts.selectionCallback(selection);
+            }
         }
 
         /* Generate links for content items and add to list.
@@ -140,7 +147,7 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
                 var item = filteredContent[i];
                 var li = $("<li>").appendTo(list);
                 var link = this.makeDetailsLink(item);
-                if (trackSelection) {
+                if (opts.trackSelection) {
                     var checkbox = $("<input>")
                         .attr("type", "checkbox")
                         .attr("name", "vis-select")
@@ -159,8 +166,8 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
                                     var idx = selection.indexOf(thisItem);
                                     selection.splice(idx, 1);
                                 }
-                                if (selectionCallback) {
-                                    selectionCallback(selection.length ?
+                                if ("selectionCallback" in opts) {
+                                    opts.selectionCallback(selection.length ?
                                         selection : filteredContent);
                                 }
                             }
@@ -175,8 +182,8 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
 
             // If we're using selections and the selection is non-empty,
             // skip the callback for filteredContent
-            if (selectionCallback && !(trackSelection && selection.length)) {
-                selectionCallback(filteredContent);
+            if ("selectionCallback" in opts && !(opts.trackSelection && selection.length)) {
+                opts.selectionCallback(filteredContent);
             }
         }
     }
@@ -200,7 +207,7 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
                 if (prop.toLowerCase() === "images")
                     continue;  // Ignore the image tags here
                 // Skip over tags w/o details or those used in the id or the title
-                if (obj[prop] && !idKeys.includes(prop) && !titleKeys.includes(prop)) {
+                if (obj[prop] && !idKeys.includes(prop) && !opts.titleKeys.includes(prop)) {
                     if (typeof obj[prop] === "string") {
                         $parent
                             // Make a heading out of prop
@@ -214,7 +221,7 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
                     } else {
                         if (prop === "html") {
                             // Translate json back to XML and insert (as HTML)
-                            $parent.append(x2js.json2xml_str(obj[prop]));
+                            $parent.append(opts.x2js.json2xml_str(obj[prop]));
                         } else {
                             $parent
                                 // Make a heading out of prop
@@ -251,7 +258,7 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
                 if (prop.toLowerCase() === "images")
                     continue;  // Ignore the image tags here
                 // Skip over tags w/o details or those used in the id or the title
-                if (itemInfo[prop] && !idKeys.includes(prop) && !titleKeys.includes(prop)) {
+                if (itemInfo[prop] && !idKeys.includes(prop) && !opts.titleKeys.includes(prop)) {
                     $("<tr>")
                         .append($("<td>").text(prop))
                         .append($("<td>").text(itemInfo[prop]))
@@ -373,7 +380,7 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
                     $(".column." + column + " img").show();
                 },
                 select: function (event, ui) {
-                    if (newTab) {
+                    if (opts.newTab) {
                         // Not blocked as a popup because it's caused by a user action
                         window.open(links.makeDetailsHref(ui.item), "_blank");
                     } else {
@@ -475,7 +482,7 @@ function ContentDisplay(x2js, contentSrc, content, idKeys, titleKeys = idKeys,
 
             // Empty the list of matching items and make links for all items
             var $frUl = $("#filter-results").empty();
-            links.generate($frUl, {}, selectionCallback);
+            links.generate($frUl, {}, opts.selectionCallback);
         }
 
         this.updateFilter = function (clickBtn) {
