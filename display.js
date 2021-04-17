@@ -281,8 +281,8 @@ function ContentDisplay(content, idKeys, opts) {
         // Recursively display the object and all its values; start at heading level 3
         function displayObject(obj, $parent, hLevel = 3) {
             for (var prop in obj) {
-                if (prop.toLowerCase() === "images")
-                    continue;  // Ignore the image tags here
+                if (prop.toLowerCase() === "images" || prop.toLowerCase() === "link")
+                    continue;  // Ignore the images and links here
                 // Skip over tags w/o details or those used in the id or the title
                 if (obj[prop] && !idKeys.includes(prop) && !opts.titleKeys.includes(prop)) {
                     if (typeof obj[prop] === "string") {
