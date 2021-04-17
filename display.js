@@ -88,10 +88,85 @@ function ContentDisplay(content, idKeys, opts) {
     }
 
 
+    function Selection() {
+        var arr = [];  // Used only when localStorage not available
+        var useWLS = false;  // Updated if test below succeeds
+        try {
+            // Check for localStorage availability and successful modification
+            window.localStorage.setItem("test-key", "test-value");
+            window.localStorage.removeItem("test-key");
+            useWLS = true;
+        } catch (err) {
+            console.log("Local storage not available; falling back on an array");
+            console.log(err.name + ": " + err.message);
+        }
+
+        this.isEmpty = function () {
+            if (useWLS) {
+                return !window.localStorage.length;
+            } else {
+                return !arr.length
+            }
+        }
+
+        this.includes = function (item) {
+            if (useWLS) {
+                return window.localStorage.getItem(makeWLSKey(item)) !== null;
+            } else {
+                return arr.includes(item);
+            }
+        }
+
+        this.array = function () {
+            if (useWLS) {
+                return $.grep(content, function (item) {
+                    return window.localStorage.getItem(makeWLSKey(item)) !== null;
+                });
+            } else {
+                return arr;
+            }
+        }
+
+        function makeWLSKey(item) {
+            var key = "";
+            for (var i = 0; i < idKeys.length; i++) {
+                key += item[idKeys[i]] + opts.titleSep;
+            }
+            return key.slice(0, -opts.titleSep.length);
+        }
+
+        this.add = function (item) {
+            if (useWLS) {
+                // Record plant quantity as the value (for now, 1)
+                window.localStorage.setItem(makeWLSKey(item), 1);
+            } else {
+                arr.push(item);
+            }
+        }
+
+        this.remove = function (item) {
+            if (useWLS) {
+                window.localStorage.removeItem(makeWLSKey(item));
+            } else {
+                // Uses strict equality for objects
+                var idx = arr.indexOf(item);
+                arr.splice(idx, 1);
+            }
+        }
+
+        this.clear = function () {
+            if (useWLS) {
+                window.localStorage.clear();
+            } else {
+                arr = [];
+            }
+        }
+    }
+
     /* Link creation and helpers */
     this.links = new function Links() {
         var filteredContent = [];
-        var selection = [];
+        var selection = new Selection();
         this.makeDetailsHref = function (item) {
             // Build the link with URL search params out of item's idKeys values
             var urlParams = new URLSearchParams();
@@ -119,7 +194,7 @@ function ContentDisplay(content, idKeys, opts) {
         }
 
         this.clearSelect = function () {
-            selection = [];
+            selection.clear();
             $("#filter-results input:checkbox:checked").prop("checked", false);
             if ("selectionCallback" in opts && filteredContent.length) {
                 opts.selectionCallback(filteredContent);
@@ -129,13 +204,18 @@ function ContentDisplay(content, idKeys, opts) {
         this.selectAll = function () {
             for (var i = 0; i < filteredContent.length; i++) {
                 if (!selection.includes(filteredContent[i])) {
-                    selection.push(filteredContent[i]);
+                    selection.add(filteredContent[i]);
                 }
             }
             $("#filter-results input:checkbox:not(:checked)").prop("checked", true);
-            if ("selectionCallback" in opts && selection.length) {
-                opts.selectionCallback(selection);
+            if ("selectionCallback" in opts && !selection.isEmpty() ) {
+                opts.selectionCallback(selection.array());
             }
+        }
+
+        // Fill in DOM links for all items in content
+        for (var i = 0; i < content.length; i++) {
+            content[i].link = this.makeDetailsLink(content[i])[0];
         }
 
         /* Generate links for content items and add to list.
@@ -146,7 +226,6 @@ function ContentDisplay(content, idKeys, opts) {
             for (var i = 0; i < filteredContent.length; i++) {
                 var item = filteredContent[i];
                 var li = $("<li>").appendTo(list);
-                var link = this.makeDetailsLink(item);
                 if (opts.trackSelection) {
                     var checkbox = $("<input>")
                         .attr("type", "checkbox")
@@ -154,36 +233,34 @@ function ContentDisplay(content, idKeys, opts) {
                         .attr("value", this.makeItemTitle(item))
                         .prop("checked", selection.includes(item));
                     li.append(checkbox)
-                        .append($("<label>").append(link));
+                        .append($("<label>").append(item.link));
 
-                    checkbox.click((function() {
-                            var thisItem = item;
-                            return function () {
-                                if (this.checked) {
-                                    selection.push(thisItem);
-                                } else {
-                                    // Uses strict equality for objects
-                                    var idx = selection.indexOf(thisItem);
-                                    selection.splice(idx, 1);
-                                }
-                                if ("selectionCallback" in opts) {
-                                    opts.selectionCallback(selection.length ?
-                                        selection : filteredContent);
-                                }
+                    checkbox.click((function () {
+                        var thisItem = item;
+                        return function () {
+                            if (this.checked) {
+                                selection.add(thisItem);
+                            } else {
+                                selection.remove(thisItem);
                             }
-                        })() );
+                            if ("selectionCallback" in opts) {
+                                opts.selectionCallback(selection.isEmpty() ?
+                                    filteredContent : selection.array());
+                            }
+                        }
+                    })());
 
                 } else {
-                    li.append(link);
+                    li.append(item.link);
                 }
-
-                filteredContent[i].link = link[0];  // Add link to item info
             }
 
-            // If we're using selections and the selection is non-empty,
-            // skip the callback for filteredContent
-            if ("selectionCallback" in opts && !(opts.trackSelection && selection.length)) {
-                opts.selectionCallback(filteredContent);
+            if ("selectionCallback" in opts) {
+                if (opts.trackSelection && !selection.isEmpty()) {
+                    opts.selectionCallback(selection.array());
+                } else {
+                    opts.selectionCallback(filteredContent);
+                }
             }
         }
     }
@@ -255,8 +332,8 @@ function ContentDisplay(content, idKeys, opts) {
             // Fill in the table (assumes a flat object, like from a CSV file)
             var $tbody = $(".main tbody");
             for (var prop in itemInfo) {
-                if (prop.toLowerCase() === "images")
-                    continue;  // Ignore the image tags here
+                if (prop.toLowerCase() === "images" || prop.toLowerCase() === "link")
+                    continue;  // Ignore the images and links here
                 // Skip over tags w/o details or those used in the id or the title
                 if (itemInfo[prop] && !idKeys.includes(prop) && !opts.titleKeys.includes(prop)) {
                     $("<tr>")
@@ -416,7 +493,7 @@ function ContentDisplay(content, idKeys, opts) {
                 var $categoryUl = $('#' + categoryId);
                 // If we haven't seen this category yet, create an image of this item
                 // and pop-up text (header & link list)
-                if ($categoryUl.length === 0) {
+                if (!$categoryUl.length) {
                     $categoryUl = $("<ul>").attr("id", categoryId);
                     // Make only one image
                     var $img = makeImgs(content[i], imgHandlingEnum.FIRST)
@@ -482,7 +559,7 @@ function ContentDisplay(content, idKeys, opts) {
 
             // Empty the list of matching items and make links for all items
             var $frUl = $("#filter-results").empty();
-            links.generate($frUl, {}, opts.selectionCallback);
+            links.generate($frUl, {});
         }
 
         this.updateFilter = function (clickBtn) {
