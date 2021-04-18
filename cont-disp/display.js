@@ -1,3 +1,5 @@
+"use strict";
+
 function ContentDisplay(content, idKeys, opts) {
 
     // Provide default values.  Consider using Proxy in the future.
