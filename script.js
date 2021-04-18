@@ -1,3 +1,5 @@
+"use strict";
+
 /* Process XML file's content and call appropriate generation routines */
 
 function handleXMLContent() {
