@@ -381,6 +381,8 @@ function ContentDisplay(content, idKeys, opts) {
         // Return true if match succeeds in this object or recursively in values
         function matchInObject(obj, matcher, searchKeys) {
             for (var prop in obj) {
+                if (prop.toLowerCase() === "images" || prop.toLowerCase() === "link")
+                    continue;  // Ignore the images and links here
                 // Skip over non-search keys and tags w/o details
                 if ((!searchKeys.length || searchKeys.includes(prop)) && obj[prop]) {
                     if (typeof obj[prop] === "string") {
