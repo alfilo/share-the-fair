@@ -195,6 +195,26 @@ function ContentDisplay(content, idKeys, opts) {
                 .text(this.makeItemTitle(item));
         }
 
+        this.makeCategoryHref = function (category, catPathIds) {
+            // Build the link with URL search params recording catPathIds
+            var urlParams = new URLSearchParams();
+            if (opts.contentSrc) {
+                urlParams.set("src", opts.contentSrc);
+            }
+            // Extend catPathIds with curent category's ID
+            catPathIds = catPathIds.concat(makeId(category));
+            for (var j = 0; j < catPathIds.length; j++) {
+                urlParams.append("cat", catPathIds[j]);
+            }
+            return "?" + urlParams.toString();
+        }
+
+        this.makeCategoryLink = function (category, catPathIds) {
+            return $("<a>").prop("href", this.makeCategoryHref(category, catPathIds))
+                .prop("target", opts.newTab ? "_blank" : "_self")
+                .text(category);
+        }
+
         this.clearSelect = function () {
             selection.clear();
             $("#filter-results input:checkbox:checked").prop("checked", false);
@@ -283,7 +303,9 @@ function ContentDisplay(content, idKeys, opts) {
         // Recursively display the object and all its values; start at heading level 3
         function displayObject(obj, $parent, hLevel = 3) {
             for (var prop in obj) {
-                if (prop.toLowerCase() === "images" || prop.toLowerCase() === "link")
+                if (prop.toLowerCase() === "images" ||
+                    prop.toLowerCase() === "link" ||
+                    prop.toLowerCase() === "category")
                     continue;  // Ignore the images and links here
                 // Skip over tags w/o details or those used in the id or the title
                 if (obj[prop] && !idKeys.includes(prop) && !opts.titleKeys.includes(prop)) {
@@ -488,30 +510,83 @@ function ContentDisplay(content, idKeys, opts) {
 
     /* Category view (image with links on hover) in main column */
     this.categoryView = new function CategoryView() {
+        // Save category path specified so far and make a string version for
+        // easy prefix comparison
+        var urlParams = new URLSearchParams(location.search);
+        var reqCatPath = urlParams.getAll("cat");
+        var reqCatPathStr = reqCatPath.join("/");
+
         this.generate = function () {
+            // Stores nextCat links already created for a curCat
+            var nextCatMap = {};
             var $mainColumn = $(".column.main");
             for (var i = 0; i < content.length; i++) {
-                var category = "category" in content[i] ?
+                var catPaths = "category" in content[i] ?
                     content[i]["category"] : content[i]["Category"];
-                var categoryId = makeId(category);
-                var $categoryUl = $('#' + categoryId);
-                // If we haven't seen this category yet, create an image of this item
-                // and pop-up text (header & link list)
-                if (!$categoryUl.length) {
-                    $categoryUl = $("<ul>").attr("id", categoryId);
-                    // Make only one image
-                    var $img = makeImgs(content[i], imgHandlingEnum.FIRST)
-                        .addClass("cat-img");
-                    $("<div>").addClass("cat-div")
-                        .append($img)
-                        .append($("<div>").addClass("cat-text")
-                            .append($("<h4>").text(category))
-                            .append($categoryUl))
-                        .appendTo($mainColumn);
+                // Handle one or more category paths in current item
+                if (!Array.isArray(catPaths)) {
+                    catPaths = [catPaths];  // Turn into singleton array
                 }
-                // Make link for the item and add to the category list
-                var link = links.makeDetailsLink(content[i]);
-                $("<li>").append(link).appendTo($categoryUl);
+
+                // Check if at least one item catPath extends reqCatPath
+                for (var j = 0; j < catPaths.length; j++) {
+                    // Make arrays of original category elements and their ID
+                    // versions for the current catPath; make a string version
+                    // for easy prefix comparison
+                    var catPath = catPaths[j].split("/");
+                    var catPathIds = catPath.map(function (elt) { return makeId(elt) });
+                    var catPathStr = catPathIds.join("/");
+
+                    // If reqCatPathStr isn't a prefix of catPathStr,
+                    // this path isn't a match for the request
+                    if (!catPathStr.startsWith(reqCatPathStr)) continue;
+
+                    // The current category is the catPath element just past
+                    // reqCatPath, unless the paths are the same; then take
+                    // make a category list/image for the last element
+                    var idx = catPath.length > reqCatPath.length ?
+                        reqCatPath.length : reqCatPath.length - 1;
+                    var curCat = catPath[idx];
+                    var curCatId = catPathIds[idx];
+
+                    var $categoryUl = $('#' + curCatId);
+                    // If we haven't processed this category yet, create an
+                    // image for this item and pop-up text (header & link list)
+                    if (!$categoryUl.length) {
+                        // Initialize the tracker for curCat's nextCat entries
+                        nextCatMap[curCat] = [];
+
+                        $categoryUl = $("<ul>").attr("id", curCatId);
+                        // Make only one image
+                        var $img = makeImgs(content[i], imgHandlingEnum.FIRST)
+                            .addClass("cat-img");
+                        $("<div>").addClass("cat-div")
+                            .append($img)
+                            .append($("<div>").addClass("cat-text")
+                                .append($("<h4>").text(curCat))
+                                .append($categoryUl))
+                            .appendTo($mainColumn);
+                    }
+
+                    // Is there another category (after curCat) in catPath?
+                    if (catPath.length > reqCatPath.length + 1) {
+                        var nextCat = catPath[reqCatPath.length + 1];
+                        // Skip if it's already included in curCat's links
+                        if (!nextCatMap[curCat].includes(nextCat)) {
+                            nextCatMap[curCat].push(nextCat);
+                            // Make link for the next category, with
+                            // reqCatPath + curCatId as initial catPathIds
+                            var link = links.makeCategoryLink(nextCat,
+                                reqCatPath.concat(curCatId));
+                            $("<li>").append(link).appendTo($categoryUl);
+                        }
+                    } else {
+                        // Make regular details link for the item and add to
+                        // the category list
+                        var link = links.makeDetailsLink(content[i]);
+                        $("<li>").append(link).appendTo($categoryUl);
+                    }
+                }
             }
         }
     }
