@@ -592,35 +592,34 @@ function ContentDisplay(content, idKeys, opts) {
     }
 
 
-    /* Dated activities as links in the right column */
-    this.activities = new function Activities() {
+    /* Events (with dates and, optionally, times) */
+    this.events = new function Events() {
         // Construct Date object out of item for comparisons
         function makeDate(item) {
             var stringDate = item["month"] + " " + item["day"] + " " + item["year"];
             return new Date(stringDate);
         }
 
-        // Set up link to next activity in right column:
-        // find content item with the closest date in the future and
-        // make a link to it in the right column
-        this.generateNextActivity = function () {
-            var nextActivityInfo;
+        // Set up link to next event: find content item with the closest date
+        // in the future and make a link to it in the column
+        this.generateNextEvent = function (column = "right") {
+            var nextEventInfo;
             var today = new Date();
             for (var i = 0; i < content.length; i++) {
                 var iDate = makeDate(content[i]);
                 if (iDate > today) {
-                    if (nextActivityInfo == null) {
-                        nextActivityInfo = content[i];
+                    if (nextEventInfo == null) {
+                        nextEventInfo = content[i];
                         continue;
                     }
-                    var nextActivityDate = makeDate(nextActivityInfo);
-                    if (iDate < nextActivityDate) {
-                        nextActivityInfo = content[i];
+                    var nextEventDate = makeDate(nextEventInfo);
+                    if (iDate < nextEventDate) {
+                        nextEventInfo = content[i];
                     }
                 }
             }
-            if (nextActivityInfo)
-                links.makeDetailsLink(nextActivityInfo).appendTo($(".column.right"));
+            if (nextEventInfo)
+                links.makeDetailsLink(nextEventInfo).appendTo($(".column." + column));
         }
     }
 
