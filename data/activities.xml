@@ -1,0 +1,32 @@
+<activities>
+    <activity>
+        <name>Cattle Showmanship</name>
+        <category>Animals/Dairy Cattle/Showing</category>
+        <category>Live Events</category>
+        <html>...</html>
+        <time>...</time>
+    </activity>
+    <activity>
+        <name>Stomach</name>
+        <category>Animals/Dairy Cattle/Anatomy</category>
+        <category>Learning/Quiz/Novice</category>
+        <details>...</details>
+    </activity>
+    <activity>
+        <name>Herbs</name>
+        <category>Animals/Sheep/Nutrition</category>
+        <category>Plants/Food</category>
+        <uses>...
+        </uses>
+        <benefits>...
+        </benefits>
+    </activity>
+    <activity>
+        <name>Flowers</name>
+        <category>Plants</category>
+        <uses>...
+        </uses>
+        <benefits>...
+        </benefits>
+    </activity>
+</activities>
