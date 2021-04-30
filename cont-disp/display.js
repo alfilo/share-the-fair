@@ -306,7 +306,8 @@ function ContentDisplay(content, idKeys, opts) {
             for (var prop in obj) {
                 if (prop.toLowerCase() === "images" ||
                     prop.toLowerCase() === "link" ||
-                    prop.toLowerCase() === "category")
+                    prop.toLowerCase() === "category" ||
+                    prop.toLowerCase() === "date")
                     continue;  // Ignore the images and links here
                 // Skip over tags w/o details or those used in the id or the title
                 if (obj[prop] && !idKeys.includes(prop) && !opts.titleKeys.includes(prop)) {
@@ -321,7 +322,7 @@ function ContentDisplay(content, idKeys, opts) {
                         // It's usually duplicative of the prop higher up
                         displayArray(obj[prop], $parent, hLevel);
                     } else {
-                        if (prop === "html") {
+                        if (prop.toLowerCase() === "html") {
                             // Translate json back to XML and insert (as HTML)
                             $parent.append(opts.x2js.json2xml_str(obj[prop]));
                         } else {
@@ -609,24 +610,66 @@ function ContentDisplay(content, idKeys, opts) {
     /* Events (with dates and, optionally, times) */
     this.events = new function Events() {
         // Construct Date object out of item for comparisons
-        function makeDate(item) {
-            var stringDate = item["month"] + " " + item["day"] + " " + item["year"];
-            return new Date(stringDate);
+        function setDate(item) {
+            var stringDate = "";
+            if ("when" in item) {
+                stringDate = item["when"];
+            } else if ("month" in item && "day" in item && "year" in item) {
+                stringDate = item["month"] + " " +
+                    item["day"] + " " + item["year"];
+            }
+            if (stringDate) {
+                var date = new Date(stringDate);
+                if (isNaN(date)) {
+                    console.error("Invalid date string " + stringDate);
+                    return false;
+                } else {
+                    return item.date = date;  // Set and return date
+                }
+            } else {
+                return false;
+            }
+        }
+
+        // Set up links to upcoming events: find content items with dates
+        // in the future and group by day as lists in column
+        this.generateUpcomingEvents = function (column = "right") {
+            var now = new Date();
+            var events = $.grep(content, function (item) {
+                return setDate(item) && item.date > now;
+            });
+            events.sort(function (a, b) { return a.date - b.date; });
+            var $col = $(".column." + column);
+            var curDs = "";
+            var $ul;
+            for (var i = 0; i < events.length; i++) {
+                var ds = events[i].date.toDateString();
+                if (ds !== curDs) {
+                    $ul = $("<ul>");
+                    curDs = ds;
+                    $col.append($("<h4>").text(ds)).append($ul);
+                }
+                var ts = events[i].date.toLocaleTimeString("en-US",
+                    { hour: "numeric", minute: "numeric" });
+                var $link = links.makeDetailsLink(events[i]);
+                $("<li>").append(ts + ": ")
+                    .append($link).appendTo($ul);
+            }
         }
 
         // Set up link to next event: find content item with the closest date
         // in the future and make a link to it in the column
         this.generateNextEvent = function (column = "right") {
             var nextEventInfo;
-            var today = new Date();
+            var now = new Date();
             for (var i = 0; i < content.length; i++) {
-                var iDate = makeDate(content[i]);
-                if (iDate > today) {
+                var iDate = setDate(content[i]);
+                if (iDate > now) {
                     if (nextEventInfo == null) {
                         nextEventInfo = content[i];
                         continue;
                     }
-                    var nextEventDate = makeDate(nextEventInfo);
+                    var nextEventDate = setDate(nextEventInfo);
                     if (iDate < nextEventDate) {
                         nextEventInfo = content[i];
                     }

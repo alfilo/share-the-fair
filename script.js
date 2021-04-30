@@ -14,6 +14,7 @@ function handleXMLContent() {
 
         var contentDisplay = new ContentDisplay(
             content, ["name"], { x2js: x2js, dropdownCat: true });
+        contentDisplay.events.generateUpcomingEvents();
 
         if (location.pathname.includes("activities.html")) {
             // Create category images that show links on hover

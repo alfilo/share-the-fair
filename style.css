@@ -1,3 +1,13 @@
+/* Tighten spacing for Upcoming Events */
+.column.right h4 {
+    margin-bottom: 10px;
+}
+
+.column.right h4 + ul {
+    padding-left: 25px;
+    margin-top: 5px;
+}
+
 /* Make all cat-div buttons and links full width of their cat-divs */
 .button-group.dropdown, .button-group.dropdown button,
 .button-group.dropdown .dropdown-content {

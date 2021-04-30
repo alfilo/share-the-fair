@@ -1,10 +1,15 @@
 <activities>
     <activity>
+        <name>Poultry Show and Showmanship</name>
+        <category>Live Events</category>
+        <when>July 27, 2021 4:00 PM EDT</when>
+    </activity>
+    <activity>
         <name>Cattle Showmanship</name>
         <category>Animals/Dairy Cattle/Showing</category>
         <category>Live Events</category>
         <html>...</html>
-        <time>...</time>
+        <when>July 30, 2021 10:00 AM EDT</when>
     </activity>
     <activity>
         <name>Stomach</name>
@@ -28,5 +33,12 @@
         </uses>
         <benefits>...
         </benefits>
+    </activity>
+    <activity>
+        <name>Story Time</name>
+        <category>Learning</category>
+        <category>Live Events</category>
+        <html>...</html>
+        <when>July 26, 2021 10:00 AM EDT</when>
     </activity>
 </activities>
