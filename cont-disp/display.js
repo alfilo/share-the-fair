@@ -6,6 +6,7 @@ function ContentDisplay(content, idKeys, opts) {
     if (!("titleKeys" in opts)) opts.titleKeys = idKeys;
     if (!("titleSep" in opts)) opts.titleSep = " ";
     if (!("customFltrMatchers" in opts)) opts.customFltrMatchers = {};
+    if (!("dropdownCat" in opts)) opts.dropdownCat = false;
     if (!("newTab" in opts)) opts.newTab = false;
     if (!("trackSelection" in opts)) opts.trackSelection = false;
 
@@ -549,23 +550,34 @@ function ContentDisplay(content, idKeys, opts) {
                     var curCat = catPath[idx];
                     var curCatId = catPathIds[idx];
 
-                    var $categoryUl = $('#' + curCatId);
-                    // If we haven't processed this category yet, create an
-                    // image for this item and pop-up text (header & link list)
-                    if (!$categoryUl.length) {
+                    var $catHolder = $('#' + curCatId);
+                    // If we haven't processed this category yet, create a
+                    // description, link holder, and image for this item
+                    if (!$catHolder.length) {
                         // Initialize the tracker for curCat's nextCat entries
                         nextCatMap[curCat] = [];
 
-                        $categoryUl = $("<ul>").attr("id", curCatId);
+                        var $catDiv = $("<div>").addClass("cat-div")
+                            .appendTo($mainColumn);
+                        $catHolder = opts.dropdownCat ?
+                            $("<div>").addClass("dropdown-content") : $("<ul>");
+                        $catHolder.attr("id", curCatId);
                         // Make only one image
                         var $img = makeImgs(content[i], imgHandlingEnum.FIRST)
                             .addClass("cat-img");
-                        $("<div>").addClass("cat-div")
-                            .append($img)
-                            .append($("<div>").addClass("cat-text")
-                                .append($("<h4>").text(curCat))
-                                .append($categoryUl))
-                            .appendTo($mainColumn);
+                        if (opts.dropdownCat) {
+                            $("<div>").addClass("button-group dropdown")
+                                .append($("<button>")  // Category name
+                                    .attr("type", "button").text(curCat))
+                                .append($catHolder)
+                                .appendTo($catDiv);
+                            $catDiv.append($img);
+                        } else {
+                            $catDiv.append($img)
+                                .append($("<div>").addClass("cat-text")
+                                    .append($("<h4>").text(curCat))
+                                    .append($catHolder));
+                        }
                     }
 
                     // Is there another category (after curCat) in catPath?
@@ -578,13 +590,15 @@ function ContentDisplay(content, idKeys, opts) {
                             // reqCatPath + curCatId as initial catPathIds
                             var link = links.makeCategoryLink(nextCat,
                                 reqCatPath.concat(curCatId));
-                            $("<li>").append(link).appendTo($categoryUl);
+                            $catHolder.append(opts.dropdownCat ?
+                                link : $("<li>").append(link));
                         }
                     } else {
                         // Make regular details link for the item and add to
                         // the category list
                         var link = links.makeDetailsLink(content[i]);
-                        $("<li>").append(link).appendTo($categoryUl);
+                        $catHolder.append(opts.dropdownCat ?
+                            link : $("<li>").append(link));
                     }
                 }
             }

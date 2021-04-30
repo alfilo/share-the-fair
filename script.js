@@ -13,7 +13,7 @@ function handleXMLContent() {
         var content = jsObj[Object.keys(jsObj)[0]];
 
         var contentDisplay = new ContentDisplay(
-            content, ["name"], { x2js: x2js });
+            content, ["name"], { x2js: x2js, dropdownCat: true });
 
         if (location.pathname.includes("activities.html")) {
             // Create category images that show links on hover

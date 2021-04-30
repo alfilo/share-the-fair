@@ -1,3 +1,28 @@
+/* Make all cat-div buttons and links full width of their cat-divs */
+.button-group.dropdown, .button-group.dropdown button,
+.button-group.dropdown .dropdown-content {
+    display: block;
+    width: 100%;
+}
+
+/* Override initial styling */
+.button-group.dropdown a, .button-group.dropdown button {
+    border-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Eliminate transparency on hover */
+.cat-div:hover .cat-img {
+    opacity: 1;
+    filter: none;
+}
+
+/* Make category name font size larger */
+.button-group.dropdown button {
+    font-size: 1.25em;
+}
+
 @media only screen and (max-width: 600px) {
     #header {
         /* Skip the background image to avoid covering the image with a header */
