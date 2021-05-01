@@ -397,8 +397,8 @@ function ContentDisplay(content, idKeys, opts) {
                 // Fill in the page: recursively display itemInfo
                 displayObject(itemInfo, $(".column.main"));
             }
-            // Make image(s) in the right column
-            makeImgs(itemInfo).appendTo($(".column.right"));
+            // Make image(s) in side column
+            makeImgs(itemInfo).appendTo($(".column.side"));
         }
     }
 
@@ -450,7 +450,8 @@ function ContentDisplay(content, idKeys, opts) {
             return false;
         }
 
-        this.configureSearch = function (column = "right", staticFilters = {}, dynFltrNames = [], searchKeys = []) {
+        this.configureSearch = function (column = "side",
+            staticFilters = {}, dynFltrNames = [], searchKeys = []) {
             $("#search-" + column).autocomplete({
                 source: function (request, response) {
                     var filters = Object.assign({}, staticFilters);
@@ -641,7 +642,7 @@ function ContentDisplay(content, idKeys, opts) {
 
         // Set up links to upcoming events: find content items with dates
         // in the future and group by day as lists in column
-        this.generateUpcomingEvents = function (column = "right") {
+        this.generateUpcomingEvents = function (column = "side") {
             var now = new Date();
             // Collect tuples of items paired with each of their dates
             var events = content.reduce(function (accum, item) {
@@ -677,7 +678,7 @@ function ContentDisplay(content, idKeys, opts) {
 
         // Set up link to next event: find content item with the closest date
         // in the future and make a link to it in the column
-        this.generateNextEvent = function (column = "right") {
+        this.generateNextEvent = function (column = "side") {
             var nextEventDate, nextEventInfo = null;
             var now = new Date();
             for (var i = 0; i < content.length; i++) {

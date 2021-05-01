@@ -21,8 +21,8 @@ function handleXMLContent() {
             contentDisplay.categoryView.generate();
 
             // Configure autocomplete-based search
-            // contentDisplay.search.configureSearch("left");
-        } else {  // details.html
+            // contentDisplay.search.configureSearch();
+        } else if (location.pathname.includes("details.html")) {
             contentDisplay.details.generate();
         }
     });
@@ -34,11 +34,9 @@ $(function() {  // Call this from DOM's .ready()
     var placeholders = ["#header", "#topnav", "#footer"];
     for (var i = 0; i < placeholders.length; i++) {
         var sharedEltUrl = "load.html " + placeholders[i] + "-shared";
-        // Call handleXML for all pages listed below.
-        // Do this after the header load is completed because
-        // the header is the only loaded element that may be updated
-        if (i == 0 && (location.pathname.includes("activities.html") ||
-                       location.pathname.includes("details.html"))) {
+        // Call handleXML for all pages after loading header;
+        // it is the only loaded element that may be updated
+        if (i === 0) {
             $(placeholders[i]).load(sharedEltUrl, handleXMLContent);
         } else {
             $(placeholders[i]).load(sharedEltUrl);
