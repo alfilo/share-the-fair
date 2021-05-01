@@ -307,7 +307,7 @@ function ContentDisplay(content, idKeys, opts) {
                 if (prop.toLowerCase() === "images" ||
                     prop.toLowerCase() === "link" ||
                     prop.toLowerCase() === "category" ||
-                    prop.toLowerCase() === "date")
+                    prop.toLowerCase() === "dates")
                     continue;  // Ignore the images and links here
                 // Skip over tags w/o details or those used in the id or the title
                 if (obj[prop] && !idKeys.includes(prop) && !opts.titleKeys.includes(prop)) {
@@ -318,7 +318,10 @@ function ContentDisplay(content, idKeys, opts) {
                             // Make a paragraph out of prop's value in obj
                             .append($("<p>").text(obj[prop]));
                     } else if (Array.isArray(obj[prop])) {
-                        // Don't make a heading out of prop for arrays
+                        if (prop.toLowerCase() === "when") {
+                            $parent.append($("<h" + hLevel + ">").text("When"));
+                        }
+                        // Don't make a heading out of other props for arrays
                         // It's usually duplicative of the prop higher up
                         displayArray(obj[prop], $parent, hLevel);
                     } else {
@@ -610,48 +613,63 @@ function ContentDisplay(content, idKeys, opts) {
     /* Events (with dates and, optionally, times) */
     this.events = new function Events() {
         // Construct Date object out of item for comparisons
-        function setDate(item) {
-            var stringDate = "";
+        function setDates(item) {
+            var dateStrs = [];
             if ("when" in item) {
-                stringDate = item["when"];
+                dateStrs = typeof item.when === "string" ?
+                    [item.when] : item.when;
             } else if ("month" in item && "day" in item && "year" in item) {
-                stringDate = item["month"] + " " +
-                    item["day"] + " " + item["year"];
+                dateStrs = [item.month + " " + item.day + " " + item.year];
             }
-            if (stringDate) {
-                var date = new Date(stringDate);
+            if (!dateStrs.length) return false;
+
+            var dates = [];
+            for (var i = 0; i < dateStrs.length; i++) {
+                var date = new Date(dateStrs[i]);
                 if (isNaN(date)) {
-                    console.error("Invalid date string " + stringDate);
-                    return false;
+                    console.error("Invalid date string " + dateStrs[i]);
                 } else {
-                    return item.date = date;  // Set and return date
+                    dates.push(date);
                 }
-            } else {
-                return false;
             }
+            if (dates.length) {
+                item.dates = dates;
+                return true;
+            }
+            return false;
         }
 
         // Set up links to upcoming events: find content items with dates
         // in the future and group by day as lists in column
         this.generateUpcomingEvents = function (column = "right") {
             var now = new Date();
-            var events = $.grep(content, function (item) {
-                return setDate(item) && item.date > now;
-            });
+            // Collect tuples of items paired with each of their dates
+            var events = content.reduce(function (accum, item) {
+                if (setDates(item)) {
+                    for (var i = 0; i < item.dates.length; i++) {
+                        if (item.dates[i] > now) {
+                            accum.push({ item: item, date: item.dates[i] });
+                        }
+                    }
+                }
+                return accum;
+            }, []);
             events.sort(function (a, b) { return a.date - b.date; });
             var $col = $(".column." + column);
             var curDs = "";
             var $ul;
             for (var i = 0; i < events.length; i++) {
                 var ds = events[i].date.toDateString();
+                // Group time and event info by date
                 if (ds !== curDs) {
                     $ul = $("<ul>");
                     curDs = ds;
                     $col.append($("<h4>").text(ds)).append($ul);
                 }
+                // Use Hours, Minutes, and AM/PM
                 var ts = events[i].date.toLocaleTimeString("en-US",
                     { hour: "numeric", minute: "numeric" });
-                var $link = links.makeDetailsLink(events[i]);
+                var $link = links.makeDetailsLink(events[i].item);
                 $("<li>").append(ts + ": ")
                     .append($link).appendTo($ul);
             }
@@ -660,17 +678,16 @@ function ContentDisplay(content, idKeys, opts) {
         // Set up link to next event: find content item with the closest date
         // in the future and make a link to it in the column
         this.generateNextEvent = function (column = "right") {
-            var nextEventInfo;
+            var nextEventDate, nextEventInfo = null;
             var now = new Date();
             for (var i = 0; i < content.length; i++) {
-                var iDate = setDate(content[i]);
-                if (iDate > now) {
-                    if (nextEventInfo == null) {
-                        nextEventInfo = content[i];
-                        continue;
-                    }
-                    var nextEventDate = setDate(nextEventInfo);
-                    if (iDate < nextEventDate) {
+                if (!setDates(content[i])) continue;
+
+                var dates = content[i].dates;
+                for (var j = 0; j < dates.length; j++) {
+                    if (dates[j] > now &&
+                        (nextEventInfo === null || dates[j] < nextEventDate)) {
+                        nextEventDate = dates[j];
                         nextEventInfo = content[i];
                     }
                 }
