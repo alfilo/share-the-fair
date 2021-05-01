@@ -1,3 +1,7 @@
+html * {
+    font-family: Verdana, sans-serif;
+}
+
 /* Tighten spacing for Upcoming Events */
 .column.side h4 {
     margin-bottom: 10px;
