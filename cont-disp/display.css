@@ -187,6 +187,11 @@ th, td {
     margin-bottom: 15px;
 }
 
+.column.main > img {  /* Don't style category images */
+    height: 200px;
+    float: right;
+}
+
 /* === FORMS & SEARCH === */
 
 /* Common settings for most form elements */

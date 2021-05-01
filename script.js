@@ -12,8 +12,8 @@ function handleXMLContent() {
         // Dereference into the second field (.activity)
         var content = jsObj[Object.keys(jsObj)[0]];
 
-        var contentDisplay = new ContentDisplay(
-            content, ["name"], { x2js: x2js, dropdownCat: true });
+        var contentDisplay = new ContentDisplay(content, ["name"],
+            { x2js: x2js, dropdownCat: true, imgCol: "main" });
         contentDisplay.events.generateUpcomingEvents();
 
         if (location.pathname.includes("activities.html")) {

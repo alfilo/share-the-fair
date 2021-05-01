@@ -5,8 +5,13 @@ function ContentDisplay(content, idKeys, opts) {
     // Provide default values.  Consider using Proxy in the future.
     if (!("titleKeys" in opts)) opts.titleKeys = idKeys;
     if (!("titleSep" in opts)) opts.titleSep = " ";
+    if (!("catCol" in opts)) opts.catCol = "main";
+    if (!("detailCol" in opts)) opts.detailCol = "main";
+    if (!("imgCol" in opts)) opts.imgCol = "side";
+    if (!("eventCol" in opts)) opts.eventCol = "side";
     if (!("customFltrMatchers" in opts)) opts.customFltrMatchers = {};
     if (!("dropdownCat" in opts)) opts.dropdownCat = false;
+    if (!("detailTable" in opts)) opts.detailTable = false;
     if (!("newTab" in opts)) opts.newTab = false;
     if (!("trackSelection" in opts)) opts.trackSelection = false;
 
@@ -373,7 +378,7 @@ function ContentDisplay(content, idKeys, opts) {
             }
         }
 
-        this.generate = function (makeTable = false) {
+        this.generate = function () {
             // Find the item requested by search params
             var urlParams = new URLSearchParams(location.search);
             var itemInfo;  // Save the matching object in itemInfo
@@ -391,14 +396,13 @@ function ContentDisplay(content, idKeys, opts) {
             // Make heading out of the displayed item's keys
             $("#header h1").text(links.makeItemTitle(itemInfo));
 
-            if (makeTable) {
+            if (opts.detailTable) {
                 generateTable(itemInfo);
             } else {
                 // Fill in the page: recursively display itemInfo
-                displayObject(itemInfo, $(".column.main"));
+                displayObject(itemInfo, $(".column." + opts.detailCol));
             }
-            // Make image(s) in side column
-            makeImgs(itemInfo).appendTo($(".column.side"));
+            makeImgs(itemInfo).appendTo($(".column." + opts.imgCol));
         }
     }
 
@@ -514,7 +518,7 @@ function ContentDisplay(content, idKeys, opts) {
     }
 
 
-    /* Category view (image with links on hover) in main column */
+    /* Category view (image with links on hover) in catCol */
     this.categoryView = new function CategoryView() {
         // Save category path specified so far and make a string version for
         // easy prefix comparison
@@ -525,7 +529,7 @@ function ContentDisplay(content, idKeys, opts) {
         this.generate = function () {
             // Stores nextCat links already created for a curCat
             var nextCatMap = {};
-            var $mainColumn = $(".column.main");
+            var $col = $(".column." + opts.catCol);
             for (var i = 0; i < content.length; i++) {
                 var catPaths = "category" in content[i] ?
                     content[i]["category"] : content[i]["Category"];
@@ -563,7 +567,7 @@ function ContentDisplay(content, idKeys, opts) {
                         nextCatMap[curCat] = [];
 
                         var $catDiv = $("<div>").addClass("cat-div")
-                            .appendTo($mainColumn);
+                            .appendTo($col);
                         $catHolder = opts.dropdownCat ?
                             $("<div>").addClass("dropdown-content") : $("<ul>");
                         $catHolder.attr("id", curCatId);
@@ -641,8 +645,8 @@ function ContentDisplay(content, idKeys, opts) {
         }
 
         // Set up links to upcoming events: find content items with dates
-        // in the future and group by day as lists in column
-        this.generateUpcomingEvents = function (column = "side") {
+        // in the future and group by day as lists in eventCol
+        this.generateUpcomingEvents = function () {
             var now = new Date();
             // Collect tuples of items paired with each of their dates
             var events = content.reduce(function (accum, item) {
@@ -656,7 +660,7 @@ function ContentDisplay(content, idKeys, opts) {
                 return accum;
             }, []);
             events.sort(function (a, b) { return a.date - b.date; });
-            var $col = $(".column." + column);
+            var $col = $(".column." + opts.eventCol);
             var curDs = "";
             var $ul;
             for (var i = 0; i < events.length; i++) {
@@ -677,8 +681,8 @@ function ContentDisplay(content, idKeys, opts) {
         }
 
         // Set up link to next event: find content item with the closest date
-        // in the future and make a link to it in the column
-        this.generateNextEvent = function (column = "side") {
+        // in the future and make a link to it in eventCol
+        this.generateNextEvent = function () {
             var nextEventDate, nextEventInfo = null;
             var now = new Date();
             for (var i = 0; i < content.length; i++) {
@@ -694,7 +698,8 @@ function ContentDisplay(content, idKeys, opts) {
                 }
             }
             if (nextEventInfo)
-                links.makeDetailsLink(nextEventInfo).appendTo($(".column." + column));
+                links.makeDetailsLink(nextEventInfo)
+                    .appendTo($(".column." + opts.eventCol));
         }
     }
 
