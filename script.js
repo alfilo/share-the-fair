@@ -15,10 +15,11 @@ function handleXMLContent() {
         var contentDisplay = new ContentDisplay(content, ["name"],
             { x2js: x2js, dropdownCat: true, imgCol: "main" });
         contentDisplay.events.generateUpcomingEvents();
+        contentDisplay.categories.generateTopnavCats();
 
         if (location.pathname.includes("activities.html")) {
             // Create category images that show links on hover
-            contentDisplay.categoryView.generate();
+            contentDisplay.categories.generateCatView();
 
             // Configure autocomplete-based search
             // contentDisplay.search.configureSearch();

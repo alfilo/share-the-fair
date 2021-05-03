@@ -518,15 +518,41 @@ function ContentDisplay(content, idKeys, opts) {
     }
 
 
-    /* Category view (image with links on hover) in catCol */
-    this.categoryView = new function CategoryView() {
+    /* Category handling (topnav category listing and category view) */
+    this.categories = new function Categories() {
         // Save category path specified so far and make a string version for
         // easy prefix comparison
         var urlParams = new URLSearchParams(location.search);
         var reqCatPath = urlParams.getAll("cat");
         var reqCatPathStr = reqCatPath.join("/");
 
-        this.generate = function () {
+        /* Make dropdown list of top-level categories under "catHolder" */
+        this.generateTopnavCats = function () {
+            var cats = [];  // Stores top level categories
+            var $catHolder = $("#topnav-cat-holder");
+            for (var i = 0; i < content.length; i++) {
+                var catPaths = "category" in content[i] ?
+                    content[i]["category"] : content[i]["Category"];
+                // Handle one or more category paths in current item
+                if (!Array.isArray(catPaths)) {
+                    catPaths = [catPaths];  // Turn into singleton array
+                }
+
+                for (var j = 0; j < catPaths.length; j++) {
+                    // Make an array of category elements
+                    var catPath = catPaths[j].split("/");
+                    if (!cats.includes(catPath[0])) cats.push(catPath[0]);
+                }
+            }
+            cats.sort();  // List categories in alphabetic order
+            for (var i = 0; i < cats.length; i++) {
+                // Only showing top-level links, thus empty required cat path
+                $catHolder.append(links.makeCategoryLink(cats[i], []));
+            }
+        }
+
+        /* Generate category view (image with links on hover) in catCol */
+        this.generateCatView = function () {
             // Stores nextCat links already created for a curCat
             var nextCatMap = {};
             var $col = $(".column." + opts.catCol);
