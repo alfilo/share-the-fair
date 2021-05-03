@@ -12,15 +12,124 @@
         <when>July 30, 2021 10:00 AM EDT</when>
     </activity>
     <activity>
+        <name>Horse Interview</name>
+        <category>Animals/Horses</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Sheep Show and Showmanship</name>
+        <category>Animals/Sheep</category>
+        <when>July 29, 2021 10:00 AM EDT</when>
+    </activity>
+    <activity>
+        <name>Crafting</name>
+        <category>Live Events</category>
+        <html>...</html>
+        <when>July 26, 2021 12:00 PM EDT</when>
+    </activity>
+    <activity>
+        <name>Goat Show and Showmanship</name>
+        <category>Animals/Goats/Showing</category>
+        <category>Live Events</category>
+        <html>...</html>
+        <when>July 28, 2021 10:00 AM EDT</when>
+    </activity>
+    <activity>
+        <name>Plant Science Activity</name>
+        <category>Live Events</category>
+        <html>...</html>
+        <when>July 26, 2021 11:00 AM EDT</when>
+        <when>July 28, 2021 2:00 PM EDT</when>
+        <when>July 29, 2021 11:00 AM EDT</when>
+        <when>July 30, 2021 11:00 AM EDT</when>
+        <when>July 31, 2021 2:00 PM EDT</when>
+    </activity>
+    <activity>
+        <name>Dairy Quiz Bowl</name>
+        <category>Contests/Study Materials</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Livestock Quiz Bowl</name>
+        <category>Contests/Kahoots</category>
+        <category>Live Events</category>
+        <when>July 30, 2021 4:00 PM EDT</when>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Dairy Quiz Bowl</name>
+        <category>Contests/Kahoots</category>
+        <category>Live Events</category>
+        <when>July 29, 2021 4:00 PM EDT</when>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Consumer and Family Sciences Challenge</name>
+        <category>Contests/Kahoots</category>
+        <category>Live Events</category>
+        <when>July 27, 2021 2:00 PM EDT</when>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Plant Science Challenge</name>
+        <category>Contests/Kahoots</category>
+        <category>Live Events</category>
+        <when>July 28, 2021 1:00 PM EDT</when>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Laughing Goat Fiber Farm Tour</name>
+        <category>Animals/Goats</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Vaccinations</name>
+        <category>Animals/Alpacas</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Shearing</name>
+        <category>Animals/Alpacas</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Giddy Goats Club</name>
+        <category>Animals/Goats</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Jumping</name>
+        <category>Animals/Rabbits and Cavy</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Showmanship</name>
+        <category>Animals/Rabbits and Cavy</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Gallery</name>
+        <category>Animals/Rabbits and Cavy</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Chicken Buses</name>
+        <category>Animals/Poultry</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Gallery</name>
+        <category>Animals/Poultry</category>
+        <html>...</html>
+    </activity>
+    <activity>
         <name>Stomach</name>
         <category>Animals/Dairy Cattle/Anatomy</category>
-        <category>Learning/Quiz/Novice</category>
         <details>...</details>
     </activity>
     <activity>
         <name>Herbs</name>
-        <category>Animals/Sheep/Nutrition</category>
-        <category>Plants/Food</category>
+        <category>Horticulture/Food</category>
         <uses>...
         </uses>
         <benefits>...
@@ -28,7 +137,7 @@
     </activity>
     <activity>
         <name>Flowers</name>
-        <category>Plants</category>
+        <category>Horticulture</category>
         <uses>...
         </uses>
         <benefits>...
@@ -36,12 +145,145 @@
     </activity>
     <activity>
         <name>Story Time</name>
-        <category>Learning</category>
         <category>Live Events</category>
         <html>...</html>
         <when>July 26, 2021 10:00 AM EDT</when>
         <when>July 26, 2021 10:30 AM EDT</when>
         <when>July 29, 2021 3:00 PM EDT</when>
         <when>July 30, 2021 7:00 PM EDT</when>
+    </activity>
+    <activity>
+        <name>Patterns</name>
+        <category>Arts and Crafts/Fiber Arts</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Gallery</name>
+        <category>Arts and Crafts/Fiber Arts</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Patterns</name>
+        <category>Arts and Crafts/Hobby Crafts</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Gallery</name>
+        <category>Arts and Crafts/Fine Arts</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Food Donation Project</name>
+        <category>Community Service/Helping our Community</category>
+        <summary>The Botany Besties 4-H Club is committed to helping provide food security as
+        our community service project.  Our food donation project was crafted by one of our
+        club members, Greta Garrison. Her goal is to provide fresh food access through the
+        Friendship Donation Network which provides fresh vegetables to underserved members
+        of our community. Last summer each club member was encouraged to plant a row in
+        their garden for donation. When planning your gardens this spring, we invite you to
+        dedicate a small space, and place in your heart to this program.  For more information
+        on how you can help, contact our project manager at stickandstonefarm@gmail.com, or
+        visit:</summary>
+        <r>Friendship Donation Network Food Hubs: https://friendshipdonations.org/hubs/</r>
+        <r>Tompkins County Food Assistance Programs: http://ccetompkins.org/food/food-assistance-programs</r>
+        <r>Tompkins County Healthy Food For All: http://ccetompkins.org/food/healthy-food-for-all</r>
+    </activity>
+    <activity>
+        <name>Helping improve Food Security</name>
+        <category>Community Service/Helping our Community</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Cards to Thank Frontline Workers</name>
+        <category>Community Service/Helping our Community</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Mask Making</name>
+        <category>Community Service/Helping our Community</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Citizen Science Soil Project</name>
+        <category>Community Service/Citizen Science</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Bird Count with Cornell</name>
+        <category>Community Service/Citizen Science</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Kindness Rocks</name>
+        <category>Community Service/Helping our Community</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Beech Tree Celebrates Holidays with 4-H</name>
+        <category>Community Service/Helping our Community</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>How to Make a Pie Crust</name>
+        <category>Culinary Arts/What's Cookin'/Cooking Techniques</category>
+        <html>...</html>
+        <when>TBD</when>
+    </activity>
+    <activity>
+        <name>Kitchen Gallery</name>
+        <category>Culinary Arts/What's Cookin'</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Sausage Making</name>
+        <category>Culinary Arts/What's Cookin'/Recipes</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Table Setting</name>
+        <category>Culinary Arts/A Meal's Best Friend</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Favorite Kitchen Tools</name>
+        <category>Culinary Arts/A Meal's Best Friend</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Veggie Art</name>
+        <category>Culinary Arts/Garden of Healthy Eating</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Bakeoff</name>
+        <category>Culinary Arts</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Photos</name>
+        <category>Culinary Arts/What's Cookin'/Iron Chef</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Live Cooking</name>
+        <category>Culinary Arts/What's Cookin'/Iron Chef</category>
+        <category>Live Events</category>
+        <html>...</html>
+        <when>TBD</when>
+    </activity>
+    <activity>
+        <name>Registering Projects</name>
+        <category>Gallery/Fair Projects</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Fine Arts</name>
+        <category>Gallery/Fair Projects</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Fun at the Fair</name>
+        <category>Gallery</category>
+        <html>...</html>
     </activity>
 </activities>
