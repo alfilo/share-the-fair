@@ -13,7 +13,8 @@ function handleXMLContent() {
         var content = jsObj[Object.keys(jsObj)[0]];
 
         var contentDisplay = new ContentDisplay(content, ["name"],
-            { x2js: x2js, dropdownCat: true, imgCol: "main" });
+            { x2js: x2js, contentSrc: "activities", dropdownCat: true,
+            imgCol: "main" });
         contentDisplay.events.generateUpcomingEvents();
         contentDisplay.categories.generateTopnavCats();
 

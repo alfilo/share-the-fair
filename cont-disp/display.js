@@ -212,7 +212,8 @@ function ContentDisplay(content, idKeys, opts) {
             for (var j = 0; j < catPathIds.length; j++) {
                 urlParams.append("cat", catPathIds[j]);
             }
-            return "?" + urlParams.toString();
+            // Use contentSrc to make href with new params
+            return opts.contentSrc + ".html?" + urlParams.toString();
         }
 
         this.makeCategoryLink = function (category, catPathIds) {
