@@ -14,7 +14,7 @@ function handleXMLContent() {
 
         var contentDisplay = new ContentDisplay(content, ["name"],
             { x2js: x2js, contentSrc: "activities", dropdownCat: true,
-            imgCol: "main" });
+              ignoreCats: ["Live Events"], imgCol: "main" });
         contentDisplay.events.generateUpcomingEvents();
         contentDisplay.categories.generateTopnavCats();
 

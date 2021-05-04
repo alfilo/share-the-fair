@@ -10,6 +10,7 @@ function ContentDisplay(content, idKeys, opts) {
     if (!("imgCol" in opts)) opts.imgCol = "side";
     if (!("eventCol" in opts)) opts.eventCol = "side";
     if (!("customFltrMatchers" in opts)) opts.customFltrMatchers = {};
+    if (!("ignoreCats" in opts)) opts.ignoreCats = [];
     if (!("dropdownCat" in opts)) opts.dropdownCat = false;
     if (!("detailTable" in opts)) opts.detailTable = false;
     if (!("newTab" in opts)) opts.newTab = false;
@@ -527,7 +528,8 @@ function ContentDisplay(content, idKeys, opts) {
         var reqCatPath = urlParams.getAll("cat");
         var reqCatPathStr = reqCatPath.join("/");
 
-        /* Make dropdown list of top-level categories under "catHolder" */
+        /* Make dropdown list of top-level categories under "catHolder"
+           ignoring any categories in opts.ignoreCats */
         this.generateTopnavCats = function () {
             var cats = [];  // Stores top level categories
             var $catHolder = $("#topnav-cat-holder");
@@ -542,7 +544,10 @@ function ContentDisplay(content, idKeys, opts) {
                 for (var j = 0; j < catPaths.length; j++) {
                     // Make an array of category elements
                     var catPath = catPaths[j].split("/");
-                    if (!cats.includes(catPath[0])) cats.push(catPath[0]);
+                    if (!cats.includes(catPath[0]) &&
+                        !opts.ignoreCats.includes(catPath[0])) {
+                        cats.push(catPath[0]);
+                    }
                 }
             }
             cats.sort();  // List categories in alphabetic order
@@ -552,7 +557,8 @@ function ContentDisplay(content, idKeys, opts) {
             }
         }
 
-        /* Generate category view (image with links on hover) in catCol */
+        /* Generate category view (image with links on hover) in catCol
+           ignoring any categories in opts.ignoreCats */
         this.generateCatView = function () {
             // Stores nextCat links already created for a curCat
             var nextCatMap = {};
@@ -566,7 +572,7 @@ function ContentDisplay(content, idKeys, opts) {
                 }
 
                 // Check if at least one item catPath extends reqCatPath
-                for (var j = 0; j < catPaths.length; j++) {
+                catPathsLoop: for (var j = 0; j < catPaths.length; j++) {
                     // Make arrays of original category elements and their ID
                     // versions for the current catPath; make a string version
                     // for easy prefix comparison
@@ -577,6 +583,11 @@ function ContentDisplay(content, idKeys, opts) {
                     // If reqCatPathStr isn't a prefix of catPathStr,
                     // this path isn't a match for the request
                     if (!catPathStr.startsWith(reqCatPathStr)) continue;
+                    for (var k = 0; k < catPath.length; k++) {
+                        if (opts.ignoreCats.includes(catPath[k])) {
+                            continue catPathsLoop;
+                        }
+                    }
 
                     // The current category is the catPath element just past
                     // reqCatPath, unless the paths are the same; then take
