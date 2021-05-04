@@ -2,6 +2,24 @@ html * {
     font-family: Verdana, sans-serif;
 }
 
+/* Override color custom properties from display.css */
+:root {
+    --ftr--color: #f2f2f2;
+    --ftr--background-color: #a10909;
+    --topnav--background-color: #a10909;
+    --topnav-ddowncont--background-color: #c10909;
+    --topnav-a--color: #fff;
+    --btngrp-a-btn--color: white;
+    --btngrp-a-btn--background-color: green; /* green, #a10909, #c10909 */
+    --ddowncont-a-btn--color: white;
+    --ddowncont-a-btn-hover--background-color: #dadada;  /* #f9f2f4 */
+}
+
+/* Change color of regular links (doesn't affect topnav or button group) */
+a {
+    color: #a10909;  /* #b31b1b; */
+}
+
 #topnav {
     font-size: 1.125em;
 }
