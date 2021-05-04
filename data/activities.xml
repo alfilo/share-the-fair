@@ -5,7 +5,7 @@
         <when>July 27, 2021 4:00 PM EDT</when>
     </activity>
     <activity>
-        <name>Cattle Showmanship</name>
+        <name>Dairy Show and Showmanship</name>
         <category>Animals/Dairy Cattle/Showing</category>
         <category>Live Events</category>
         <html>...</html>
@@ -282,8 +282,40 @@
         <html>...</html>
     </activity>
     <activity>
+        <name>Danish System</name>
+        <category>Gallery/Fair Projects</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Awards</name>
+        <category>Gallery</category>
+        <html>...</html>
+    </activity>
+    <activity>
         <name>Fun at the Fair</name>
         <category>Gallery</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Winning Wednesday</name>
+        <category>Fundraisers</category>
+        <html>...</html>
+        <when>July 14, 2021</when>
+        <when>July 21, 2021</when>
+    </activity>
+    <activity>
+        <name>Fall Festival at Tractor Supply</name>
+        <category>Fundraisers</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Donations to Tompkins County 4-H</name>
+        <category>Fundraisers</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>Chicken BBQ</name>
+        <category>Fundraisers</category>
         <html>...</html>
     </activity>
 </activities>
