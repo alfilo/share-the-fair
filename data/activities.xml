@@ -125,7 +125,49 @@
     <activity>
         <name>Stomach</name>
         <category>Animals/Dairy Cattle/Anatomy</category>
-        <details>...</details>
+        <details>
+        Dairy cattle are ruminants, meaning their stomach is divided into four compartments. 
+        These compartments are often refered to as "stomachs".  The food travels through
+        the stomachs in reverse alphabetical order, the rumen first, then the reticulum,
+        followed by the omasum, and finally the abomasum.</details>
+        <stomachs>
+            <rumen>The rumen is the first stomach.  It is sometimes called the "fermentation vat",
+            since it is the largest stomach in a cow's body (taking up 80%).  Microorgamisms in the
+            rumen, bacteria, fungi, and protazoa, ferment grasses, breaking down the carbohydrates. 
+            It also breaks down some protein.  The protein that gets broken down in the rumen is
+            called rumen degradeable protien; the protein that passes through unchanged is called
+            rumen undegradeable protein, or by-pass protein.  Volatile fatty acids are also produced
+            in this stomach.  Acetic acid is used for energy and milkfat.  Butyric acid is an
+            undesireable component of silage.  Propionic acid is the precursor to glucose. The
+            rumen is not fully developed in a newborn calf.  It is important to give calves grain
+            and hay to facilitate the development of the rumen.  Normally, a calf starts chewing its
+            cud at 2-3 weeks of age, when the rumen is more fully developed.</rumen>
+            <reticulum>The reticulum is also known as the honeycomb.  It is the stomach compartment nearest
+            the heart.  Hardware disease occurs in this stomach.  Hardware disease happens when a cow
+            swallows hardware.  To decrease the risk of the hardware piercing the wall of the reticulum
+            and piercing the heart, cows are given magnets using a balling gun.  If the cow licks her
+            nose after the magnet is given, most of the time the magnet will stay down.</reticulum>
+            <omasum>The omasum is the third stomach, sometimes called the manyplies, since its many
+            folds look like the pages of a book.  The extra surface area provided by the folds helps
+            the omasum to dehydrate food before it is passed on into the abomasum.</omasum>
+            <abomasum>The abomasum is the fourth and final stomach.  Since it is the stomach closest
+            to a human's stomach, it is also known as the true stomach.  It is the largest stomach
+            at birth, taking up 25% of a calf's body.  The esophogeal groove diverts milk past the
+            rumen, which is not fully developed yet, and into the abomasum.  The abomasum uses acid
+            to break down proteins into amino acids, which will later be absorbed in the small
+            intestine.</abomasum>
+        </stomachs>
+        <resources>
+            <r>https://fyi.extension.wisc.edu/dairyyouth/files/2013/12/PDCAShowmanshipEvalCard.pdf</r>
+            <r>https://fyi.extension.wisc.edu/dairyyouth/dairy-events/showing-dairy-cattle/</r>
+            <r>https://cdn.shopify.com/s/files/1/0145/8808/4272/files/A3725.pdf</r>
+            <r>https://web.extension.illinois.edu/equiz/</r>
+            <r>https://dairy.ces.ncsu.edu/dairy-youth-programs/quizbowl/dairy-quizbowl-study-questions/</r>
+            <r>https://dairy.ces.ncsu.edu/wp-content/uploads/2019/12/2019-Junior-Dairy-Quiz-Bowl-Questions_final.pdf?fwd=no</r>
+            <r>https://dairy.ces.ncsu.edu/wp-content/uploads/2019/12/2018-Junior-Dairy-Quizbowl-Questions-All-Rounds.pdf?fwd=no</r>
+            <r>https://fyi.extension.wisc.edu/dairyyouth/files/2014/03/Dairy_Judging_Workbook.pdf</r>
+            <r>http://www.uobabylon.edu.iq/eprints/publication_12_15838_806.pdf</r>
+        </resources>
     </activity>
     <activity>
         <name>Herbs</name>
@@ -146,7 +188,9 @@
     <activity>
         <name>Story Time</name>
         <category>Live Events</category>
-        <html>...</html>
+        <description>Each storytime will last about 20 minutes and will be divided into two parts. 
+        4-H members will read a book about the fair or animals to an audience on Zoom.  Then, a 4-H
+        member will guide an interactive sing-along, also about the fair or animals.</description>
         <when>July 26, 2021 10:00 AM EDT</when>
         <when>July 26, 2021 10:30 AM EDT</when>
         <when>July 29, 2021 3:00 PM EDT</when>
@@ -191,7 +235,31 @@
     <activity>
         <name>Helping improve Food Security</name>
         <category>Community Service/Helping our Community</category>
-        <html>...</html>
+        <summary>According to the US Census, 16.9% of individuals in Tompkins County live at
+        or below the poverty line and 30% of children qualify for school lunch programs.  In
+        addition to the inability to pay for food, many individuals live in a food desert. 
+        This means that the closest grocery store may be miles away, too far to walk, and
+        public transportation is inconvenient or unaffordable to this population.  Vegetables
+        do not keep well, and they need to be shopped for frequently in order to be fresh and
+        have high nutritional value.  For the individuals who are at or below the poverty line,
+        there are limited food choices.  Many are high in calories, but they are not always
+        high in nutrition.  Obtaining high nutrition vegetables can be very expensive and
+        inaccessible for this group.  I would like to create a comprehensive growing and education
+        plan to address these issues.  Overall, I would like to build bridges between the many
+        organizations helping to combat food insecurity in my community to create a stronger
+        program with a continuum of education and support from the beginning to the end of the
+        program.  Through word of mouth, support for each other, education, and collaboration,
+        I hope for this program to become self-supporting, grow, and encourage others to help
+        their communities.  This pilot program will serve as a model to extend to other
+        communities.</summary>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT82Wmo0-6Ceg82ksA8WTDON_oDG2Tlcy842W4Tb-WfkJueuUUB4nsLEwkgU2CPT1cGUzMZw6WH3G5T/embed?delayms=3000"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
     </activity>
     <activity>
         <name>Cards to Thank Frontline Workers</name>
@@ -201,27 +269,110 @@
     <activity>
         <name>Mask Making</name>
         <category>Community Service/Helping our Community</category>
-        <html>...</html>
+        <each-kit-includes>
+            <e>5 pieces of fabric</e>
+            <e>2 sewing needles</e>
+            <e>1 spool of thread</e>
+            <e>10 adjustable straps</e>
+            <e>1 mask template</e>
+            <e>1 stick of chalk</e>
+        </each-kit-includes>
+        <you-will-need>
+            <y>A pair of fabric scissors or sharp all-purpose scissors.</y>
+            <y>A computer to access Youtube.com.</y>
+            <y>A sewing machine makes the process faster, however you may
+            use the needles and thread included in the kit.</y>
+            <y>An iron is helpful for making the material lay flat but is
+            not essential.</y>
+        </you-will-need>
+        <instructions>
+            <i>Start a stopwatch to keep track of your hours spent working
+            on the project. Lay all of the materials out on a spacious
+            surface.</i>
+            <i>Navigate to YouTube.com and search the below tutorial:
+            Make Fabric Face Mask at home | DIY Face Mask No Sewing Machine
+            | Easy Face Mask Pattern by the channel Crafty Daily.  URL:
+            https://tinyurl.com/1wwas5jq</i>
+            <i>Watch and follow along with the video tutorial. Special notes:
+            use the provided template instead of the dinner plate recommended
+            in the video. Also, if you have a sewing machine use it in place
+            of the needle and thread suggested in the video.</i>
+            <i>IMPORTANT! Stop the video at 2:42 and search this new video
+            into YouTube.com: It only takes 5 minutes to sew a simple mask
+            | Face mask sewing tutorial | DIY face mask at home by the channel
+            Mia. URL: http://tinyurl.com/v0nv2jrv  Please start this new video
+            at 3:30, and continue watching until 4:25. This video will show you
+            how to attach the adjustable straps not shown in the previous video.
+            </i>
+        </instructions>
+
     </activity>
     <activity>
         <name>Citizen Science Soil Project</name>
         <category>Community Service/Citizen Science</category>
-        <html>...</html>
+        <summary>We participated in a citizen science project run by the University
+        of Oklahoma to take soil samples, which will be tested for new drugs.  We
+        participated to give back to the community that did so much for us.</summary>
+        <resources>
+            <r>https://shareok.org/</r>
+            <r>https://whatsinyourbackyard.org/</r>
+        </resources>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTkBcqzz9c1hrdW7aLvuqktP_4AeKmHLHk6tnZPIK0Vnzy98QrAIGskIDYmPZirOYTCPKrb0G8kQCn3/embed?delayms=3000"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
     </activity>
     <activity>
         <name>Bird Count with Cornell</name>
         <category>Community Service/Citizen Science</category>
-        <html>...</html>
+        <summary>Plenty of people turned to birdwatching during the past year,
+        seeking enjoyment and relaxation. Chickadees, cardinals, finches and
+        other birds are doing their part to lift human spirits.  The 24th annual
+        Great Backyard Bird Count (GBBC), Feb. 12-15, is a great opportunity
+        for budding birdwatchers and bird-count veterans to use their skills.
+        People from around the world count the birds they see for at least 15
+        minutes on one or more days of the count, and then enter their checklists
+        online.  This helps to track the bird populations and migration routes.</summary>
+        <resources>
+            <r>https://www.birdcount.org/merlin-bird-id-app/</r>
+            <r>https://www.birdcount.org/participate/</r>
+            <r>https://www.birdcount.org/</r>
+            <r>https://www.birds.cornell.edu/home</r>
+        </resources>
     </activity>
     <activity>
         <name>Kindness Rocks</name>
         <category>Community Service/Helping our Community</category>
-        <html>...</html>
+        <description>Even during a pandemic, members of the Milk Duds/Jolly
+        Ranchers 4-H club discovered “Kindness Rocks”!  Below is a selection
+        of the rocks members recently painted.  They will now leave these
+        in the community for others to find.  One Kindness Rock was left
+        by a member of the Finger Lakes Conservation Club at one of the blue
+        food pantry.  The individual who found the rock posted a picture on
+        Facebook saying how much they needed to hear the kind words that day.
+        Help spread the kind words by making kindness rocks for your community
+        as well!</description>
+        <images>
+            <image>Kindness Rocks A</image>
+            <image>Kindness Rocks B</image>
+            <image>Kindness Rocks C</image>
+            <image>Kindness Rocks D</image>
+        </images>
     </activity>
     <activity>
         <name>Beech Tree Celebrates Holidays with 4-H</name>
         <category>Community Service/Helping our Community</category>
-        <html>...</html>
+        <summary>The Botany Besties 4-H Club made origami poinsettias and
+        snowflakes to donate to Beech Tree, a nearby long-term care facility. 
+        40 origami poinsettias and 50 origami snowflakes were donated to
+        brighten up the holidays for the residents of Beech Tree.  The patterns
+        can be found in the YouTube videos below.</summary>
+        <yt>https://www.youtube.com/watch?v=xcTjj2SEizw</yt>
+        <yt>https://www.youtube.com/watch?v=aSWx128RgbE</yt>
     </activity>
     <activity>
         <name>How to Make a Pie Crust</name>
@@ -252,12 +403,40 @@
     <activity>
         <name>Veggie Art</name>
         <category>Culinary Arts/Garden of Healthy Eating</category>
-        <html>...</html>
+        <have-some-fun-with-your-veggies>We picked veggies from our garden and
+        made art with them. You could make a person, a butterfly,or even a Mr.
+        Potatohead! Afterwards, try to reuse the veggies.  This could be making
+        an omlet, a salad, a pizza, or just eating them plain!  Don't worry,
+        you don't need to cook the Mr. Potatohead. He's reusable veggie art! 
+        Have some fun with your veggie art, and eat healthy!</have-some-fun-with-your-veggies>
+        <images>
+            <image>Veggie Art A</image>
+            <image>Veggie Art B</image>
+            <image>Veggie Art C</image>
+        </images>
     </activity>
     <activity>
         <name>Bakeoff</name>
         <category>Culinary Arts</category>
-        <html>...</html>
+        <summary>We know that there has been a lot of baking happening during the pandemic –
+        it’s time to put on your apron, get out your favorite recipe and bake a delicious treat!
+        The Holiday Bake off for Kids brings two important concepts together – positive youth
+        development and baking! This contest is open to ALL youth 5 – 18 years of age. Youth
+        work with an adult mentor to create an entry in one of the following categories: Cookies,
+        Cakes, Breads, Decorated Items, Healthy Choices, and Candy.  The goal of the contest is to
+        increase knowledge and appreciation of food around holiday celebrations, to build and
+        strengthen the tradition of families baking together, to recognize skill and culinary
+        arts talent, and to have FUN! So what are you waiting for, spend some quality time with
+        your sons and daughters and whip up something delicious in the kitchen, they will
+        learn to cherish this time with you. The “Best in Contest” will earn the giant Golden
+        Spoon Award.  The Holiday Bake Off is held during National Baking Week in October at
+        the Shops at Ithaca Mall.</summary>
+        <images>
+            <image>Bakeoff A</image>
+            <image>Bakeoff B</image>
+            <image>Bakeoff C</image>
+            <image>Bakeoff D</image>
+        </images>
     </activity>
     <activity>
         <name>Photos</name>
@@ -272,19 +451,32 @@
         <when>TBD</when>
     </activity>
     <activity>
-        <name>Registering Projects</name>
-        <category>Gallery/Fair Projects</category>
-        <html>...</html>
-    </activity>
-    <activity>
         <name>Fine Arts</name>
         <category>Gallery/Fair Projects</category>
         <html>...</html>
     </activity>
     <activity>
-        <name>Danish System</name>
-        <category>Gallery/Fair Projects</category>
+        <name>Register Your Project</name>
+        <category>Evaluations</category>
         <html>...</html>
+    </activity>
+    <activity>
+        <name>How they work</name>
+        <category>Evaluations</category>
+        <html>...</html>
+    </activity>
+    <activity>
+        <name>What do the ribbons mean?</name>
+        <category>Evaluations</category>
+        <summary>Projects are graded against a set of criteria, not
+        against other projects.  A blue ribbon means the project is
+        excellent, and meets expectations.  Red ribbons mean good,
+        projects meet most expectations.  White ribbons are given to projects
+        that have met some expectations, but not all.  At the 4-H Fair,
+        some projects are also given a marking called "Selected for State",
+        meaning that they exceeded expectations and the 4-Her went above and beyond
+        in creating the project.  The project will then go to be judged
+        at the State Fair.</summary>
     </activity>
     <activity>
         <name>Awards</name>
@@ -298,24 +490,24 @@
     </activity>
     <activity>
         <name>Winning Wednesday</name>
-        <category>Fundraisers</category>
+        <category>Support Us</category>
         <html>...</html>
         <when>July 14, 2021</when>
         <when>July 21, 2021</when>
     </activity>
     <activity>
         <name>Fall Festival at Tractor Supply</name>
-        <category>Fundraisers</category>
+        <category>Support Us</category>
         <html>...</html>
     </activity>
     <activity>
         <name>Donations to Tompkins County 4-H</name>
-        <category>Fundraisers</category>
+        <category>Support Us</category>
         <html>...</html>
     </activity>
     <activity>
         <name>Chicken BBQ</name>
-        <category>Fundraisers</category>
+        <category>Support Us</category>
         <html>...</html>
     </activity>
 </activities>
