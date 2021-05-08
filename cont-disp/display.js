@@ -68,7 +68,10 @@ function ContentDisplay(content, idKeys, opts) {
         if (imgOverride) {
             // Array of explicit image titles in XML or string to split in CSV
             var imgTitles = typeof imgOverride === "string" ?
-                imgOverride.split(':') : imgOverride.image;
+                imgOverride.split(':') :
+                (typeof imgOverride.image === "string" ?
+                    // Handle the case of a single image
+                    [imgOverride.image] : imgOverride.image);
             if (imgHandling === imgHandlingEnum.ALL) {
                 // Collect results in a jQuery object for use/modification in callers
                 var $imgs = $();
