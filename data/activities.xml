@@ -24,6 +24,7 @@
     <activity>
         <name>Crafting</name>
         <category>Live Events</category>
+        <category>Learn with us Online</category>
         <html>...</html>
         <when>July 26, 2021 12:00 PM EDT</when>
     </activity>
@@ -146,7 +147,7 @@
             the heart.  Hardware disease occurs in this stomach.  Hardware disease happens when a cow
             swallows hardware.  To decrease the risk of the hardware piercing the wall of the reticulum
             and piercing the heart, cows are given magnets using a balling gun.  If the cow licks her
-            nose after the magnet is given, most of the time the magnet will stay down.</reticulum>
+            nose after the magnet is given, it's likely that they have swallowed the magnet.</reticulum>
             <omasum>The omasum is the third stomach, sometimes called the manyplies, since its many
             folds look like the pages of a book.  The extra surface area provided by the folds helps
             the omasum to dehydrate food before it is passed on into the abomasum.</omasum>
@@ -188,6 +189,7 @@
     <activity>
         <name>Story Time</name>
         <category>Live Events</category>
+        <category>Learn with us Online</category>
         <description>Each storytime will last about 20 minutes and will be divided into two parts. 
         4-H members will read a book about the fair or animals to an audience on Zoom.  Then, a 4-H
         member will guide an interactive sing-along, also about the fair or animals.</description>
@@ -377,6 +379,7 @@
     <activity>
         <name>How to Make a Pie Crust</name>
         <category>Culinary Arts/What's Cookin'/Cooking Techniques</category>
+        <category>Learn with us Online</category>
         <html>...</html>
         <when>TBD</when>
     </activity>
@@ -456,19 +459,16 @@
         <html>...</html>
     </activity>
     <activity>
-        <name>Register Your Project</name>
-        <category>Evaluations</category>
-        <html>...</html>
-    </activity>
-    <activity>
-        <name>How they work</name>
-        <category>Evaluations</category>
-        <html>...</html>
-    </activity>
-    <activity>
         <name>What do the ribbons mean?</name>
-        <category>Evaluations</category>
-        <summary>Projects are graded against a set of criteria, not
+        <category>Project Evaluations</category>
+        <html>
+            <object data="data/What%20Do%20Ribbons%20Mean.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
+                    type="application/pdf" width="100%" height="750px">
+              <p>You don't have a PDF plugin, but you can download the file.</p>
+              <a href="data/What%20Do%20Ribbons%20Mean.pdf">What Do the Ribbons Mean?</a>
+            </object>
+        </html>
+        <text-version>Projects are graded against a set of criteria, not
         against other projects.  A blue ribbon means the project is
         excellent, and meets expectations.  Red ribbons mean good,
         projects meet most expectations.  White ribbons are given to projects
@@ -476,7 +476,36 @@
         some projects are also given a marking called "Selected for State",
         meaning that they exceeded expectations and the 4-Her went above and beyond
         in creating the project.  The project will then go to be judged
-        at the State Fair.</summary>
+        at the State Fair.</text-version>
+    </activity>
+    <activity>
+        <name>Register Your Project</name>
+        <category>Project Evaluations</category>
+        <details>Please visit the below pages for the forms and information
+        on registering your project for the Tompkins County 4-H Fair.</details>
+        <resources>
+            <r>http://ccetompkins.org/4-h-youth/activities-events/4-h-youth-fair</r>
+            <r>https://s3.amazonaws.com/assets.cce.cornell.edu/attachments/50924/Stationary_Exhibit_Registration.pdf?1620139270</r>
+            <r>https://s3.amazonaws.com/assets.cce.cornell.edu/attachments/50784/Fair_Book_Revised_2021.pdf?1619622561</r>
+            <r>https://s3.amazonaws.com/assets.cce.cornell.edu/attachments/45313/2020_Double_Entry_Card_Fillable.pdf?1591723416</r>
+        </resources>
+    </activity>
+    <activity>
+        <name>Sample evaluation</name>
+        <category>Project Evaluations</category>
+        <description>Watch the following YouTube to see a sample fair
+        project evaluation done between two 4-H members.</description>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/kxaF1RuspMY"
+                        title="YouTube video player of a Sample 4-H Evaluation"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
     </activity>
     <activity>
         <name>Awards</name>
