@@ -12,6 +12,12 @@
         <when>July 30, 2021 10:00 AM EDT</when>
     </activity>
     <activity>
+        <name>Dog Show</name>
+        <category>Live Events</category>
+        <category>Animals/Dogs</category>
+        <when>July 29, 2021 6:00 PM EDT</when>
+    </activity>
+    <activity>
         <name>Horse Interview</name>
         <category>Animals/Horses</category>
         <html>...</html>
@@ -22,11 +28,18 @@
         <when>July 29, 2021 10:00 AM EDT</when>
     </activity>
     <activity>
-        <name>Crafting</name>
+        <name>Cloverbud Stuffed Animal Show</name>
         <category>Live Events</category>
+        <when>July 29, 2021 1:00 PM EDT</when>
+    </activity>
+    <activity>
+        <name>Crafting</name>
         <category>Learn with us Online</category>
         <html>...</html>
-        <when>July 26, 2021 12:00 PM EDT</when>
+        <description>Pick up a craft kit at one of the library pickup
+        locations (Dryden Southworth Library or Tompkins County Public
+        Library at Green Street) and make the craft following the
+        YouTube videos on this page.</description>
     </activity>
     <activity>
         <name>Goat Show and Showmanship</name>
@@ -39,14 +52,11 @@
         <name>Plant Science Activity</name>
         <category>Live Events</category>
         <html>...</html>
-        <when>July 26, 2021 11:00 AM EDT</when>
-        <when>July 28, 2021 2:00 PM EDT</when>
-        <when>July 29, 2021 11:00 AM EDT</when>
         <when>July 30, 2021 11:00 AM EDT</when>
-        <when>July 31, 2021 2:00 PM EDT</when>
+        <when>July 31, 2021 11:00 AM EDT</when>
     </activity>
     <activity>
-        <name>Dairy Quiz Bowl</name>
+        <name>Dairy Challenge</name>
         <category>Contests/Study Materials</category>
         <html>...</html>
     </activity>
@@ -94,14 +104,23 @@
         <html>...</html>
     </activity>
     <activity>
+        <name>Alpaca Show and Showmanship</name>
+        <category>Live Events</category>
+        <category>Animals/Alpacas</category>
+        <when>July 28, 2021 4:00 PM EDT</when>
+    </activity>
+    <activity>
         <name>Giddy Goats Club</name>
         <category>Animals/Goats</category>
         <html>...</html>
     </activity>
     <activity>
-        <name>Jumping</name>
+        <name>Rabbit Hopping</name>
         <category>Animals/Rabbits and Cavy</category>
         <html>...</html>
+        <demonstration>There will be a live rabbit hopping
+        demonstration at the Pole Barn.</demonstration>
+        <when>July 31, 2021 12:00 PM EDT</when>
     </activity>
     <activity>
         <name>Showmanship</name>
@@ -112,6 +131,12 @@
         <name>Gallery</name>
         <category>Animals/Rabbits and Cavy</category>
         <html>...</html>
+    </activity>
+    <activity>
+        <name>Rabbit and Cavy Show and Showmanship</name>
+        <category>Live Events</category>
+        <category>Animals/Rabbits and Cavy</category>
+        <when>July 31, 2021 9:00 AM EDT</when>
     </activity>
     <activity>
         <name>Chicken Buses</name>
@@ -187,16 +212,12 @@
         </benefits>
     </activity>
     <activity>
-        <name>Story Time</name>
-        <category>Live Events</category>
+        <name>Storytime</name>
         <category>Learn with us Online</category>
-        <description>Each storytime will last about 20 minutes and will be divided into two parts. 
+        <description>Each storytime is videotaped and can be shown on YouTube or played on this page.
+        Storytimes will last about 20 minutes and will be divided into two parts. 
         4-H members will read a book about the fair or animals to an audience on Zoom.  Then, a 4-H
         member will guide an interactive sing-along, also about the fair or animals.</description>
-        <when>July 26, 2021 10:00 AM EDT</when>
-        <when>July 26, 2021 10:30 AM EDT</when>
-        <when>July 29, 2021 3:00 PM EDT</when>
-        <when>July 30, 2021 7:00 PM EDT</when>
     </activity>
     <activity>
         <name>Patterns</name>
@@ -388,6 +409,9 @@
             <image>Kindness Rocks B</image>
             <image>Kindness Rocks C</image>
             <image>Kindness Rocks D</image>
+            <image>Kindness Rocks E</image>
+            <image>Kindness Rocks F</image>
+
         </images>
     </activity>
     <activity>
@@ -402,11 +426,22 @@
         <yt>https://www.youtube.com/watch?v=aSWx128RgbE</yt>
     </activity>
     <activity>
-        <name>How to Make a Pie Crust</name>
+        <name>How to Make Scones</name>
         <category>Culinary Arts/What's Cookin'/Cooking Techniques</category>
         <category>Learn with us Online</category>
-        <html>...</html>
-        <when>TBD</when>
+        <description>In the below video, the Sweets and Treats 4-H Club makes
+        scones, raspberry, chocolate, and blueberry.</description>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/pDbINz0imOI"
+                        title="YouTube video player of making scones with Sweets and Treats"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
     </activity>
     <activity>
         <name>Kitchen Gallery</name>
@@ -430,13 +465,31 @@
     </activity>
     <activity>
         <name>Veggie Art</name>
-        <category>Culinary Arts/Garden of Healthy Eating</category>
+        <category>Culinary Arts/Healthy Eating</category>
+        <category>Live Event</category>
         <have-some-fun-with-your-veggies>We picked veggies from our garden and
         made art with them. You could make a person, a butterfly,or even a Mr.
         Potatohead! Afterwards, try to reuse the veggies.  This could be making
         an omlet, a salad, a pizza, or just eating them plain!  Don't worry,
         you don't need to cook the Mr. Potatohead. He's reusable veggie art! 
         Have some fun with your veggie art, and eat healthy!</have-some-fun-with-your-veggies>
+        <where>This event will take place hands-on at the 4-H Acres.</where>
+        <when>July 30, 2021 11:00 AM EDT</when>
+        <images>
+            <image>Veggie Art A</image>
+            <image>Veggie Art B</image>
+            <image>Veggie Art C</image>
+        </images>
+    </activity>
+    <activity>
+        <name>Garden of Healthy Eatin'</name>
+        <category>Culinary Arts/Healthy Eating</category>
+        <category>Live Events</category>
+        <description>This activity will take place at the 4-H Acres.  It
+        will be presented by the Plant and Environmental Sciences Team
+        (often abbreviated as P.E.S.T) all day.</description>
+        <when>July 30, 2021 8:00 AM EDT</when>
+        <when>July 31, 2021 8:00 AM EDT</when>
         <images>
             <image>Veggie Art A</image>
             <image>Veggie Art B</image>
