@@ -338,6 +338,11 @@ function ContentDisplay(content, idKeys, opts) {
                         if (prop.toLowerCase() === "html") {
                             // Translate json back to XML and insert (as HTML)
                             $parent.append(opts.x2js.json2xml_str(obj[prop]));
+                            // Register slideToggle for buttons on contact page
+                            var $slideBtn = $(".slide-down-btn");
+                            $slideBtn.click(function () {
+                                $(this).next().slideToggle();
+                            });
                         } else {
                             $parent
                                 // Make a heading out of prop

@@ -183,6 +183,28 @@
             to break down proteins into amino acids, which will later be absorbed in the small
             intestine.</abomasum>
         </stomachs>
+        <quiz>
+            <html>
+                <button class="slide-down-btn">
+                    Which stomach compartment is responsible for fermentation?
+                </button>
+                <div class="slide-down">
+                    <ul class="choices">
+                        <li><button onclick="quiz(this)">Abomasum</button></li>
+                        <li><button onclick="quiz(this)">Rumen</button></li>
+                        <li><button onclick="quiz(this)">Omasum</button></li>
+                        <li><button onclick="quiz(this)">Reticulum</button></li>
+                    </ul>
+                    <p style="display:none;">Rumen</p>
+                    <p class="correct" style="display:none;">
+                        Good job!  That's correct!
+                    </p>
+                    <p class="incorrect" style="display:none;">
+                        :-( That's not correct.  Try again!
+                    </p>
+                </div>
+            </html>
+        </quiz>
         <resources>
             <r>https://fyi.extension.wisc.edu/dairyyouth/files/2013/12/PDCAShowmanshipEvalCard.pdf</r>
             <r>https://fyi.extension.wisc.edu/dairyyouth/dairy-events/showing-dairy-cattle/</r>

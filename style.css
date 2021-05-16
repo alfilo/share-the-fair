@@ -59,6 +59,16 @@ a {
     font-size: 1.25em;
 }
 
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: #c10909;
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 600px) {
     #header {
         /* Skip the background image to avoid covering the image with a header */

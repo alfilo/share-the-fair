@@ -2,6 +2,19 @@
 
 /* Process XML file's content and call appropriate generation routines */
 
+function quiz(clicked) {
+    $(".correct").hide();  // Initially hide quiz results
+    $(".incorrect").hide();  // Initially hide quiz results
+    var clickedParent = clicked.parentNode.parentNode;
+    var ans = clickedParent.nextElementSibling.textContent;
+    var ansChosen = clicked.textContent;
+    if (ansChosen == ans) {
+        $(".correct").show();
+    } else {
+        $(".incorrect").show();
+    }
+}
+
 function handleXMLContent() {
     $.get("data/activities.xml", function(xml) {
         // Convert XML to JSON to allow grepping, etc.
