@@ -1,5 +1,32 @@
 <activities>
     <activity>
+        <name>Kritter Kamp</name>
+        <category>Animals</category>
+        <description>Kritter Kamp is a program for youth between the ages
+        of 9 and 13 who have an interest in learning more about farm animals
+        (dairy, goats, sheep, dog and rabbits). Experienced 4-H teens mentor
+        the campers as they learn about animal behavior and care, different
+        breeds, anatomy, the importance of agriculture and farm animals in our
+        society, and general safety with animals. They will be provided with
+        an animal and the equipment needed for the care and preparation of
+        the animal for show. The highlight will be a show experience Saturday
+        afternoon. Participants will demonstrate what they have learned as they
+        present their animal in the show ring.</description>
+        <images>
+            <image>Kritter Kamp A</image>
+            <image>Kritter Kamp B</image>
+            <image>Kritter Kamp C</image>
+            <image>Kritter Kamp D</image>
+            <image>Kritter Kamp E</image>
+            <image>Kritter Kamp F</image>
+            <image>Kritter Kamp G</image>
+            <image>Kritter Kamp H</image>
+            <image>Kritter Kamp I</image>
+            <image>Kritter Kamp J</image>
+            <image>Kritter Kamp K</image>
+        </images>
+    </activity>
+    <activity>
         <name>Poultry Show and Showmanship</name>
         <category>Live Events</category>
         <when>July 27, 2021 4:00 PM EDT</when>
