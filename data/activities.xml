@@ -8,7 +8,7 @@
         <name>Dairy Show and Showmanship</name>
         <category>Animals/Dairy Cattle/Showing</category>
         <category>Live Events</category>
-        <html>...</html>
+        <description>Watch the Goat Show and Showmanship competition</description>
         <when>July 30, 2021 10:00 AM EDT</when>
     </activity>
     <activity>
@@ -20,7 +20,8 @@
     <activity>
         <name>Horse Interview</name>
         <category>Animals/Horses</category>
-        <html>...</html>
+        <description>A 4-H member of the Milk Duds and Jolly Ranchers
+        4-H Club did an interview with their horse.</description>
     </activity>
     <activity>
         <name>Sheep Show and Showmanship</name>
@@ -35,7 +36,7 @@
     <activity>
         <name>Crafting</name>
         <category>Learn with us Online</category>
-        <html>...</html>
+        <category>Community Service/Helping our Community</category>
         <description>Pick up a craft kit at one of the library pickup
         locations (Dryden Southworth Library or Tompkins County Public
         Library at Green Street) and make the craft following the
@@ -45,63 +46,62 @@
         <name>Goat Show and Showmanship</name>
         <category>Animals/Goats/Showing</category>
         <category>Live Events</category>
-        <html>...</html>
+        <description>Watch the Goat Show and Showmanship competition</description>
         <when>July 28, 2021 10:00 AM EDT</when>
     </activity>
     <activity>
         <name>Plant Science Activity</name>
         <category>Live Events</category>
-        <html>...</html>
+        <description>The P.E.S.T will be holding a plant science activity.</description>
         <when>July 30, 2021 11:00 AM EDT</when>
         <when>July 31, 2021 11:00 AM EDT</when>
     </activity>
     <activity>
-        <name>Dairy Challenge</name>
-        <category>Contests/Study Materials</category>
-        <html>...</html>
-    </activity>
-    <activity>
-        <name>Livestock Quiz Bowl</name>
-        <category>Contests/Kahoots</category>
+        <name>Kahoot Livestock Challenge</name>
+        <category>Contests</category>
         <category>Live Events</category>
         <when>July 30, 2021 4:00 PM EDT</when>
-        <html>...</html>
+        <description>...</description>
     </activity>
     <activity>
-        <name>Dairy Quiz Bowl</name>
-        <category>Contests/Kahoots</category>
+        <name>Kahoot Dairy Challenge</name>
+        <category>Contests</category>
         <category>Live Events</category>
         <when>July 29, 2021 4:00 PM EDT</when>
-        <html>...</html>
+        <description>...</description>
     </activity>
     <activity>
-        <name>Consumer and Family Sciences Challenge</name>
-        <category>Contests/Kahoots</category>
+        <name>Kahoot Consumer and Family Sciences Challenge</name>
+        <category>Contests</category>
         <category>Live Events</category>
         <when>July 27, 2021 2:00 PM EDT</when>
-        <html>...</html>
+        <description>...</description>
     </activity>
     <activity>
-        <name>Plant Science Challenge</name>
-        <category>Contests/Kahoots</category>
+        <name>Kahoot Plant Science Challenge</name>
+        <category>Contests</category>
         <category>Live Events</category>
         <when>July 28, 2021 1:00 PM EDT</when>
-        <html>...</html>
+        <description>...</description>
     </activity>
     <activity>
         <name>Laughing Goat Fiber Farm Tour</name>
         <category>Animals/Goats</category>
-        <html>...</html>
+        <description>The Giddy Goats will make a tour of the Laughing Goat
+        Fiber Farm.</description>
     </activity>
     <activity>
         <name>Vaccinations</name>
         <category>Animals/Alpacas</category>
-        <html>...</html>
+        <description>Alpacas are vaccinated to protect them from disease. 
+        It's important to protect them from disease so they can produce
+        wool and healthy crias (baby alpacas).</description>
     </activity>
     <activity>
         <name>Shearing</name>
         <category>Animals/Alpacas</category>
-        <html>...</html>
+        <description>Some alpacas are bred to produce wool.  Their wool
+        is sheared off and used.</description>
     </activity>
     <activity>
         <name>Alpaca Show and Showmanship</name>
@@ -112,12 +112,11 @@
     <activity>
         <name>Giddy Goats Club</name>
         <category>Animals/Goats</category>
-        <html>...</html>
+        <description>This is an enthusiastic group of 4-Hers who learn about goats.</description>
     </activity>
     <activity>
         <name>Rabbit Hopping</name>
         <category>Animals/Rabbits and Cavy</category>
-        <html>...</html>
         <demonstration>There will be a live rabbit hopping
         demonstration at the Pole Barn.</demonstration>
         <when>July 31, 2021 12:00 PM EDT</when>
@@ -125,12 +124,7 @@
     <activity>
         <name>Showmanship</name>
         <category>Animals/Rabbits and Cavy</category>
-        <html>...</html>
-    </activity>
-    <activity>
-        <name>Gallery</name>
-        <category>Animals/Rabbits and Cavy</category>
-        <html>...</html>
+        <description>Learn about Rabbit and Cavy showmanship.</description>
     </activity>
     <activity>
         <name>Rabbit and Cavy Show and Showmanship</name>
@@ -141,12 +135,13 @@
     <activity>
         <name>Chicken Buses</name>
         <category>Animals/Poultry</category>
-        <html>...</html>
+        <description>Some chickens live in old school buses.  These buses
+        provide protection from predators and the elements.</description>
     </activity>
     <activity>
         <name>Gallery</name>
         <category>Animals/Poultry</category>
-        <html>...</html>
+        <description>Send in pictures of your chickens!</description>
     </activity>
     <activity>
         <name>Stomach</name>
@@ -244,22 +239,40 @@
     <activity>
         <name>Patterns</name>
         <category>Arts and Crafts/Fiber Arts</category>
-        <html>...</html>
+        <description>The Thread Cafe 4-H Club makes knitted and crocheted projects. 
+        These are some of the patterns they've made.</description>
     </activity>
     <activity>
         <name>Gallery</name>
         <category>Arts and Crafts/Fiber Arts</category>
-        <html>...</html>
+        <description>Photos coming soon...help by sending in some of your
+        fiber arts photos!</description>
     </activity>
     <activity>
         <name>Patterns</name>
         <category>Arts and Crafts/Hobby Crafts</category>
-        <html>...</html>
+        <description>Follow along with these patterns to make a project.</description>
+    </activity>
+    <activity>
+        <name>Gallery</name>
+        <category>Arts and Crafts/Hobby Crafts</category>
+        <description>Feel free to send in your hobby craft photos.</description>
+        <images>
+            <image>Pom Pom Animals</image>
+            <image>Fuse Beads</image>
+        </images>
     </activity>
     <activity>
         <name>Gallery</name>
         <category>Arts and Crafts/Fine Arts</category>
-        <html>...</html>
+        <description>Send your pictures of Fine Arts projects in to
+        have them displayed here!</description>
+    </activity>
+    <activity>
+        <name>Earring Making</name>
+        <category>Arts and Crafts/Fine Arts</category>
+        <description>At a F.L.O.W. club meeting, one of the members led an activity
+        on earring making.</description>
     </activity>
     <activity>
         <name>Food Donation Project</name>
@@ -309,7 +322,9 @@
     <activity>
         <name>Cards to Thank Frontline Workers</name>
         <category>Community Service/Helping our Community</category>
-        <html>...</html>
+        <description>The Botany Besties 4-H club made cards to thank frontline workers. 
+        They told about people they knew who were frontline workers while making their
+        cards.</description>
     </activity>
     <activity>
         <name>Mask Making</name>
@@ -334,7 +349,7 @@
             <i>Start a stopwatch to keep track of your hours spent working
             on the project. Lay all of the materials out on a spacious
             surface.</i>
-            <i>Navigate to YouTube.com and search the below tutorial:
+            <i>Navigate to the first YouTube video below or search the below tutorial:
             Make Fabric Face Mask at home | DIY Face Mask No Sewing Machine
             | Easy Face Mask Pattern by the channel Crafty Daily.  URL:
             https://tinyurl.com/1wwas5jq</i>
@@ -343,14 +358,34 @@
             in the video. Also, if you have a sewing machine use it in place
             of the needle and thread suggested in the video.</i>
             <i>IMPORTANT! Stop the video at 2:42 and search this new video
-            into YouTube.com: It only takes 5 minutes to sew a simple mask
+            into YouTube.com or watch the second YouTube Video: It only takes
+            5 minutes to sew a simple mask
             | Face mask sewing tutorial | DIY face mask at home by the channel
             Mia. URL: http://tinyurl.com/v0nv2jrv  Please start this new video
             at 3:30, and continue watching until 4:25. This video will show you
             how to attach the adjustable straps not shown in the previous video.
             </i>
         </instructions>
-
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
+                <iframe src="https://www.youtube.com/embed/uRfhuRNua_E"
+                        title="YouTube video player of making masks"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/eOcWQufOx7A"
+                        title="YouTube video player of making masks"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
     </activity>
     <activity>
         <name>Citizen Science Soil Project</name>
@@ -444,13 +479,31 @@
         40 origami poinsettias and 50 origami snowflakes were donated to
         brighten up the holidays for the residents of Beech Tree.  The patterns
         can be found in the YouTube videos below.</summary>
-        <yt>https://www.youtube.com/watch?v=xcTjj2SEizw</yt>
-        <yt>https://www.youtube.com/watch?v=aSWx128RgbE</yt>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/xcTjj2SEizw"
+                        title="YouTube video player of Snowflakes"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/aSWx128RgbE"
+                        title="YouTube video player of Poinsettias"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
     </activity>
     <activity>
         <name>How to Make Scones</name>
-        <category>Culinary Arts/What's Cookin'/Cooking Techniques</category>
-        <category>Learn with us Online</category>
+        <category>Culinary Arts/What's Cookin'</category>
+        <category>Learn with us Online/Cooking</category>
         <description>In the below video, the Sweets and Treats 4-H Club makes
         scones, raspberry, chocolate, and blueberry.</description>
         <html>
@@ -464,38 +517,144 @@
                 </iframe>
             </div>
         </html>
+        <recipe>
+            <ingredients>
+                <ingredient>2 cups flour</ingredient>
+                <ingredient>1/4 cup sugar</ingredient>
+                <ingredient>2 tsp baking powder</ingredient>
+                <ingredient>1/4 tsp salt</ingredient>
+                <ingredient>1/2 cup (1 stick) very cold butter</ingredient>
+                <ingredient>1/2 cup heavy cream</ingredient>
+                <ingredient>1/4 tsp vanilla extract</ingredient>
+                <ingredient>1/2 cup of either:  Rasberries, chocolate chips, or blueberries</ingredient>
+                <ingredient>2 tbsp sugar</ingredient>
+            </ingredients>
+            <directions>
+                <direction>Preheat oven to 375F.</direction>
+                <direction>In a bowl, whisk together flour, sugar, baking powder, and salt.</direction>
+                <direction>Cut the butter into tablespoon sized pieces, and using your hands,
+                mix it into the flour until the flour and butter are indistinguishable.</direction>
+                <direction>Whisk the heavy cream and vanilla together.</direction>
+                <direction>Pour half of the heavy cream and vanilla mixture over the dough
+                and sprinkle on half the sugar.</direction>
+                <direction>Put dough on floured surface.</direction>
+                <direction>Add your choice of add ins and gently work them into the dough by folding it
+                in half and then flattening five times.</direction>
+                <direction>Make a six inch round circle fo your dough about an inch thick and cut into wedges. 
+                Place the wedges on a lined baking sheet.</direction>
+                <direction>Pour on remaining heavy cream and vanilla mixture and sprinkle on remaining sugar.</direction>
+                <direction>Bake 14-16 minutes or until golden brown.  Cool and enjoy!</direction>
+            </directions>
+        </recipe>
     </activity>
     <activity>
         <name>Kitchen Gallery</name>
         <category>Culinary Arts/What's Cookin'</category>
-        <html>...</html>
+        <description>Help us by sending in pictures of what you're cooking!</description>
     </activity>
     <activity>
         <name>Sausage Making</name>
-        <category>Culinary Arts/What's Cookin'/Recipes</category>
-        <html>...</html>
+        <category>Culinary Arts/What's Cookin'</category>
+        <description>The Milk Duds and Jolly Ranchers 4-H Club made sausages
+        together as a club activity.  Try these recipes at home!</description>
+        <polish-sausage>
+            <p>18g kosher salt</p>
+            <p>25g fresh garlic (chopped in food processor or mini chopper)</p>
+            <p>1.3g dried marjoram</p>
+            <p>4.4g black pepper</p>
+            <p>1.3g dried marjoram</p>
+        </polish-sausage>
+        <italian-sausage>
+            <p>18g kosher salt</p>
+            <p>12g sugar</p>
+            <p>7.8g fennel seed</p>
+            <p>4g coriander</p>
+            <p>1.6g red pepper flakes</p>
+            <p>2.8g black pepper</p>
+            <p>5.7g fresh garlic (chopped in food processor or mini-chopper)</p>
+            <p>1.2g dried basil</p>
+            <p>1.2g dried oregano</p>
+            <p>9.4g paprika</p>
+            <p>When mixing add 3 tbsp red wine vinegar per kg sausage</p>
+        </italian-sausage>
+        <bratwurst>
+            <p>18g kosher salt</p>
+            <p>2.6g black pepper</p>
+            <p>2.2g ground dried ginger</p>
+            <p>2.2g nutmeg</p>
+            <p>3 tbsp dried milk (optional)</p>
+            <p>When mixing add 1 egg and 1/2 cup ice cold heavy cream per kg sausage</p>
+        </bratwurst>
+        <tips>
+            <tip>Keep your pork and liquids as cold as possible when
+            mixing to prevent fat smearing.</tip>
+            <tip>After mixing, make and cook a small patty to test
+            flavor before stuffing or packaging.</tip>
+            <tip>Be precise on salt measurements.</tip>
+            <tip>Make sure your scales are tared to zero before
+            measuring.</tip>
+            <tip>Make sure the scales are measured in g or kg.</tip>
+            <tip>Add a quarter cup of water to the meat when
+            grinding to achieve a finer grind.</tip>
+        </tips>
+        <images>
+            <image>Sausage Making A</image>
+            <image>Sausage Making B</image>
+        </images>
     </activity>
     <activity>
         <name>Table Setting</name>
-        <category>Culinary Arts/A Meal's Best Friend</category>
-        <html>...</html>
+        <category>Culinary Arts</category>
+        <description>A meal's no good if there's nowhere to put it...share
+        pictures of your table setting as well!</description>
+        <images>
+            <image>Table Setting A</image>
+            <image>Table Setting B</image>
+            <image>Table Setting C</image>
+        </images>
     </activity>
     <activity>
         <name>Favorite Kitchen Tools</name>
-        <category>Culinary Arts/A Meal's Best Friend</category>
-        <html>...</html>
+        <category>Culinary Arts</category>
+        <description>What are your favorite kitchen tools?  Submit your tool,
+        a picture, and a short description of why you like it.</description>
+        <pastry-cutter>My favorite tool is the pastry cutter because I love making
+        pie crust and it helps me cut the butter in faster.  Since it's metal, it
+        stays cold and doesn't melt the butter, which makes the pie crust flakier.
+        </pastry-cutter>
+        <biscuit-cutter>My mom used this biscuit cutter when she was a kid.  It wasn't
+        used a whole lot, so we're trying to make up for that now.  The scalloped
+        edges turn brown and crispy, and every time I bite into a biscuit we cooked
+        with this pastry cutter, I think of my mom and grammy.</biscuit-cutter>
+        <whisk>Whisks are super cool!  If you whisk fast enough, you can make
+        fluffed egg whites for marangues.  You can use them when making homemade
+        gravy to keep lumps from forming (this is mainly what I use the whisk for;
+        my gravy is generally lumpy).  They also combine your eggs and sugar into brownies. 
+        Yum!  Thank you, whisk!</whisk>
+        <images>
+            <image>Pastry Cutter</image>
+            <image>Biscuit Cutter</image>
+            <image>Whisk</image>
+        </images>
     </activity>
     <activity>
         <name>Veggie Art</name>
         <category>Culinary Arts/Healthy Eating</category>
-        <category>Live Event</category>
+        <category>Live Events</category>
         <have-some-fun-with-your-veggies>We picked veggies from our garden and
         made art with them. You could make a person, a butterfly,or even a Mr.
         Potatohead! Afterwards, try to reuse the veggies.  This could be making
         an omlet, a salad, a pizza, or just eating them plain!  Don't worry,
         you don't need to cook the Mr. Potatohead. He's reusable veggie art! 
         Have some fun with your veggie art, and eat healthy!</have-some-fun-with-your-veggies>
-        <where>This event will take place hands-on at the 4-H Acres.</where>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ44ZJwTM4y9laQa2K6VTzD5klOw5Ga-U1vGLphi_RVfWMUWjV3SMzpWw6uZaBxzEFUTX4V81VCiQzz/embed?delayms=3000"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
         <when>July 30, 2021 11:00 AM EDT</when>
         <images>
             <image>Veggie Art A</image>
@@ -544,19 +703,14 @@
     <activity>
         <name>Photos</name>
         <category>Culinary Arts/What's Cookin'/Iron Chef</category>
-        <html>...</html>
+        <description>Teams of 3-4 kids make a meal in an hour using two secret
+        ingredients.  In the past, apple cobbler, apple and chipotle, and spaghetti
+        have won the competition.</description>
     </activity>
     <activity>
-        <name>Live Cooking</name>
-        <category>Culinary Arts/What's Cookin'/Iron Chef</category>
-        <category>Live Events</category>
-        <html>...</html>
-        <when>TBD</when>
-    </activity>
-    <activity>
-        <name>Fine Arts</name>
-        <category>Gallery/Fair Projects</category>
-        <html>...</html>
+        <name>Fair Projects</name>
+        <category>Gallery</category>
+        <description>Send us pictures of your fair projects.</description>
     </activity>
     <activity>
         <name>What do the ribbons mean?</name>
@@ -610,33 +764,34 @@
     <activity>
         <name>Awards</name>
         <category>Gallery</category>
-        <html>...</html>
+        <description>Take a moment and reflect on how awesome everyone did this year!</description>
     </activity>
     <activity>
         <name>Fun at the Fair</name>
         <category>Gallery</category>
-        <html>...</html>
+        <description>What's a fair without fun?  Send in pictures of
+        the fun you have at the fair, complete with a fun caption.</description>
     </activity>
     <activity>
         <name>Winning Wednesday</name>
         <category>Support Us</category>
-        <html>...</html>
+        <description>...</description>
         <when>July 14, 2021</when>
         <when>July 21, 2021</when>
     </activity>
     <activity>
         <name>Fall Festival at Tractor Supply</name>
         <category>Support Us</category>
-        <html>...</html>
+        <description>...</description>
     </activity>
     <activity>
         <name>Donations to Tompkins County 4-H</name>
         <category>Support Us</category>
-        <html>...</html>
+        <description>...</description>
     </activity>
     <activity>
         <name>Chicken BBQ</name>
         <category>Support Us</category>
-        <html>...</html>
+        <description>...</description>
     </activity>
 </activities>
