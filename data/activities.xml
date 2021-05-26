@@ -207,15 +207,17 @@
         </stomachs>
         <quiz>
             <html>
+                <h4>Click on the question below to reveal some choices.  Select whichever
+                one you think is correct to test your knowledge!</h4>
                 <button class="slide-down-btn">
                     Which stomach compartment is responsible for fermentation?
                 </button>
                 <div class="slide-down">
                     <ul class="choices">
-                        <li><button onclick="quiz(this)">Abomasum</button></li>
-                        <li><button onclick="quiz(this)">Rumen</button></li>
-                        <li><button onclick="quiz(this)">Omasum</button></li>
-                        <li><button onclick="quiz(this)">Reticulum</button></li>
+                        <li><button onclick="quiz(this)" style="font-size:1.15em;">Abomasum</button></li>
+                        <li><button onclick="quiz(this)" style="font-size:1.15em;">Rumen</button></li>
+                        <li><button onclick="quiz(this)" style="font-size:1.15em;">Omasum</button></li>
+                        <li><button onclick="quiz(this)" style="font-size:1.15em;">Reticulum</button></li>
                     </ul>
                     <p style="display:none;">Rumen</p>
                     <p class="correct" style="display:none;">
