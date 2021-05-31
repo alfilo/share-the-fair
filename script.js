@@ -3,16 +3,12 @@
 /* Process XML file's content and call appropriate generation routines */
 
 function quiz(clicked) {
-    $(".correct").hide();  // Initially hide quiz results
-    $(".incorrect").hide();  // Initially hide quiz results
-    var clickedParent = clicked.parentNode.parentNode;
-    var ans = clickedParent.nextElementSibling.textContent;
-    var ansChosen = clicked.textContent;
-    if (ansChosen == ans) {
-        $(".correct").show();
-    } else {
-        $(".incorrect").show();
-    }
+    var $nearAncestor = $(clicked).parent().parent().parent();
+    // Delete previous quiz results
+    $nearAncestor.find(".correct, .incorrect").remove();
+    $nearAncestor.append($("<p>").addClass(clicked.value)
+        .text(clicked.value === "correct" ? "Good job!  That's correct!" :
+            "That's incorrect.  Try again!"));
 }
 
 function handleXMLContent() {
@@ -40,6 +36,12 @@ function handleXMLContent() {
         } else if (location.pathname.includes("details.html")) {
             contentDisplay.details.generate();
         }
+
+        // Register slideToggle for buttons on contact and details pages
+        var $slideBtn = $(".slide-down-btn");
+        $slideBtn.click(function () {
+            $(this).next().slideToggle();
+        });
     });
 }
 
@@ -56,12 +58,5 @@ $(function() {  // Call this from DOM's .ready()
         } else {
             $(placeholders[i]).load(sharedEltUrl);
         }
-    }
-    if (location.pathname.includes("contact")) {
-        // Register slideToggle for buttons on contact page
-        var $slideBtn = $(".slide-down-btn");
-        $slideBtn.click(function() {
-            $(this).next().slideToggle();
-        });
     }
 });

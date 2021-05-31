@@ -214,18 +214,11 @@
                 </button>
                 <div class="slide-down">
                     <ul class="choices">
-                        <li><button onclick="quiz(this)" style="font-size:1.15em;">Abomasum</button></li>
-                        <li><button onclick="quiz(this)" style="font-size:1.15em;">Rumen</button></li>
-                        <li><button onclick="quiz(this)" style="font-size:1.15em;">Omasum</button></li>
-                        <li><button onclick="quiz(this)" style="font-size:1.15em;">Reticulum</button></li>
+                        <li><button value="incorrect" onclick="quiz(this)" style="font-size:1.15em;">Abomasum</button></li>
+                        <li><button value="correct" onclick="quiz(this)" style="font-size:1.15em;">Rumen</button></li>
+                        <li><button value="incorrect" onclick="quiz(this)" style="font-size:1.15em;">Omasum</button></li>
+                        <li><button value="incorrect" onclick="quiz(this)" style="font-size:1.15em;">Reticulum</button></li>
                     </ul>
-                    <p style="display:none;">Rumen</p>
-                    <p class="correct" style="display:none;">
-                        Good job!  That's correct!
-                    </p>
-                    <p class="incorrect" style="display:none;">
-                        :-( That's not correct.  Try again!
-                    </p>
                 </div>
             </html>
         </quiz>
