@@ -1,77 +1,79 @@
 html * {
-    font-family: Verdana, sans-serif;
+  font-family: Verdana, sans-serif;
 }
 
 /* Override color custom properties from display.css */
 :root {
-    --ftr--color: #f2f2f2;
-    --ftr--background-color: #a10909;
-    --topnav--background-color: #a10909;
-    --topnav-ddowncont--background-color: #c10909;
-    --topnav-a--color: #fff;
-    --btngrp-a-btn--color: white;
-    --btngrp-a-btn--background-color: green; /* green, #a10909, #c10909 */
-    --ddowncont-a-btn--color: white;
-    --ddowncont-a-btn-hover--background-color: #dadada;  /* #f9f2f4 */
+  --ftr--color: #f2f2f2;
+  --ftr--background-color: #a10909;
+  --topnav--background-color: #a10909;
+  --topnav-ddowncont--background-color: #c10909;
+  --topnav-a--color: #fff;
+  --btngrp-a-btn--color: white;
+  --btngrp-a-btn--background-color: green; /* green, #a10909, #c10909 */
+  --ddowncont-a-btn--color: white;
+  --ddowncont-a-btn-hover--background-color: #dadada; /* #f9f2f4 */
 }
 
 /* Change color of regular links (doesn't affect topnav or button group) */
 a {
-    color: #a10909;  /* #b31b1b; */
+  color: #a10909; /* #b31b1b; */
 }
 
 #topnav {
-    font-size: 1.125em;
+  font-size: 1.125em;
 }
 
 /* Tighten spacing for Upcoming Events */
 .column.side h4 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .column.side h4 + ul {
-    padding-left: 25px;
-    margin-top: 5px;
+  padding-left: 25px;
+  margin-top: 5px;
 }
 
 /* Make all cat-div buttons and links full width of their cat-divs */
-.button-group.dropdown, .button-group.dropdown button,
+.button-group.dropdown,
+.button-group.dropdown button,
 .button-group.dropdown .dropdown-content {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 /* Override initial styling */
-.button-group.dropdown a, .button-group.dropdown button {
-    border-radius: 0;
-    margin-left: 0;
-    margin-right: 0;
+.button-group.dropdown a,
+.button-group.dropdown button {
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Eliminate transparency on hover */
 .cat-div:hover .cat-img {
-    opacity: 1;
-    filter: none;
+  opacity: 1;
+  filter: none;
 }
 
 /* Make category name font size larger */
 .button-group.dropdown button {
-    font-size: 1.25em;
+  font-size: 1.25em;
 }
 
 .correct {
-    color: green;
-    font-weight: bold;
+  color: green;
+  font-weight: bold;
 }
 
 .incorrect {
-    color: #c10909;
-    font-weight: bold;
+  color: #c10909;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 600px) {
-    #header {
-        /* Skip the background image to avoid covering the image with a header */
-        background-image: none;
-    }
+  #header {
+    /* Skip the background image to avoid covering the image with a header */
+    background-image: none;
+  }
 }

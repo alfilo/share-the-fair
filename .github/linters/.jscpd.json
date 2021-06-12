@@ -1,0 +1,12 @@
+{
+  "threshold": 0,
+  "reporters": [
+    "consoleFull"
+  ],
+  "ignore": [
+    "**/images/**",
+    "**/data/**",
+    "*.html"
+  ],
+  "absolute": true
+}
