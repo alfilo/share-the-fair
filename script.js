@@ -29,7 +29,7 @@ function handleXMLContent() {
 
     var contentDisplay = new ContentDisplay(content, ["name"], {
       x2js: x2js,
-      contentSrc: "activities",
+      contentSrc: "index",
       dropdownCat: true,
       ignoreCats: ["Live Events"],
       imgCol: "main",
@@ -37,7 +37,10 @@ function handleXMLContent() {
     contentDisplay.events.generateUpcomingEvents();
     contentDisplay.categories.generateTopnavCats();
 
-    if (location.pathname.includes("activities.html")) {
+    if (
+      !location.pathname.includes(".html") ||
+      location.pathname.includes("index.html")
+    ) {
       // Create category images that show links on hover
       contentDisplay.categories.generateCatView();
 
