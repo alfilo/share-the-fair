@@ -146,6 +146,27 @@
         <category>Animals/Rabbits and Cavy</category>
         <demonstration>There will be a live rabbit hopping
         demonstration at the Pole Barn.</demonstration>
+        <summary>Rabbit hopping was first introduced in the 1970s in
+        Europe.  The rules are based on the rules of horse show jumping,
+        modified to better suit rabbits.  There are several different types
+        of courses to compete in.  The youth at 4-H assembled this video
+        to demonstrate a straight course.</summary>
+        <html>
+            <p>For more information on rabbit hopping (or showjumping),
+            take a look at this link:</p>
+            <a href="https://yellowbrookrabbitry.com/all-about-rabbit-hopping-showjumping/"
+            target="_blank">
+                Yellow Brook Rabitry Rabbit Hopping</a>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
+                <iframe src="https://www.youtube.com/embed/05NMBD8bqIU"
+                        title="YouTube video player of rabbit hopping"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
         <when>July 31, 2021 12:00 PM EDT</when>
     </activity>
     <activity>
@@ -510,7 +531,37 @@
         food pantry.  The individual who found the rock posted a picture on
         Facebook saying how much they needed to hear the kind words that day.
         Help spread the kind words by making kindness rocks for your community
-        as well!</description>
+        as well!  Two cloverbuds also made videos describing the kindness rocks (or
+        peace rocks) they made with their club, the Milk Duds.</description>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/Tpxnj_q-p_g"
+                        title="YouTube video player of Kindness Rocks"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/DL7-wT_4u50"
+                        title="YouTube video player of Kindness Rocks"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/3sYhdMugveA"
+                        title="YouTube video player of Kindness Rocks"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
         <images>
             <image>Kindness Rocks A</image>
             <image>Kindness Rocks B</image>
@@ -518,7 +569,6 @@
             <image>Kindness Rocks D</image>
             <image>Kindness Rocks E</image>
             <image>Kindness Rocks F</image>
-
         </images>
     </activity>
     <activity>
