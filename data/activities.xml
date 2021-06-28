@@ -61,15 +61,6 @@
         <when>July 29, 2021 1:00 PM EDT</when>
     </activity>
     <activity>
-        <name>Crafting</name>
-        <category>Learn with us Online</category>
-        <category>Community Service/Helping our Community</category>
-        <description>Pick up a craft kit at one of the library pickup
-        locations (Dryden Southworth Library or Tompkins County Public
-        Library at Green Street) and make the craft following the
-        YouTube videos on this page.</description>
-    </activity>
-    <activity>
         <name>Goat Show and Showmanship</name>
         <category>Animals/Goats/Showing</category>
         <category>Live Events</category>
@@ -332,6 +323,15 @@
         <r>Friendship Donation Network Food Hubs: https://friendshipdonations.org/hubs/</r>
         <r>Tompkins County Food Assistance Programs: http://ccetompkins.org/food/food-assistance-programs</r>
         <r>Tompkins County Healthy Food For All: http://ccetompkins.org/food/healthy-food-for-all</r>
+    </activity>
+    <activity>
+        <name>Crafting</name>
+        <category>Learn with us Online</category>
+        <category>Community Service/Helping our Community</category>
+        <description>Pick up a craft kit at one of the library pickup
+        locations (Dryden Southworth Library or Tompkins County Public
+        Library at Green Street) and make the craft following the
+        YouTube videos on this page.</description>
     </activity>
     <activity>
         <name>Helping improve Food Security</name>
@@ -601,6 +601,30 @@
         </html>
     </activity>
     <activity>
+        <name>Favorite Kitchen Tools</name>
+        <category>Culinary Arts</category>
+        <description>What are your favorite kitchen tools?  Submit your tool,
+        a picture, and a short description of why you like it.</description>
+        <pastry-cutter>My favorite tool is the pastry cutter because I love making
+        pie crust and it helps me cut the butter in faster.  Since it's metal, it
+        stays cold and doesn't melt the butter, which makes the pie crust flakier.
+        </pastry-cutter>
+        <biscuit-cutter>My mom used this biscuit cutter when she was a kid.  It wasn't
+        used a whole lot, so we're trying to make up for that now.  The scalloped
+        edges turn brown and crispy, and every time I bite into a biscuit we cooked
+        with this pastry cutter, I think of my mom and grammy.</biscuit-cutter>
+        <whisk>Whisks are super cool!  If you whisk fast enough, you can make
+        fluffed egg whites for marangues.  You can use them when making homemade
+        gravy to keep lumps from forming (this is mainly what I use the whisk for;
+        my gravy is generally lumpy).  They also combine your eggs and sugar into brownies. 
+        Yum!  Thank you, whisk!</whisk>
+        <images>
+            <image>Pastry Cutter</image>
+            <image>Biscuit Cutter</image>
+            <image>Whisk</image>
+        </images>
+    </activity>
+    <activity>
         <name>How to Make Scones</name>
         <category>Culinary Arts/What's Cookin'</category>
         <category>Learn with us Online/Cooking</category>
@@ -711,30 +735,6 @@
             <image>Table Setting A</image>
             <image>Table Setting B</image>
             <image>Table Setting C</image>
-        </images>
-    </activity>
-    <activity>
-        <name>Favorite Kitchen Tools</name>
-        <category>Culinary Arts</category>
-        <description>What are your favorite kitchen tools?  Submit your tool,
-        a picture, and a short description of why you like it.</description>
-        <pastry-cutter>My favorite tool is the pastry cutter because I love making
-        pie crust and it helps me cut the butter in faster.  Since it's metal, it
-        stays cold and doesn't melt the butter, which makes the pie crust flakier.
-        </pastry-cutter>
-        <biscuit-cutter>My mom used this biscuit cutter when she was a kid.  It wasn't
-        used a whole lot, so we're trying to make up for that now.  The scalloped
-        edges turn brown and crispy, and every time I bite into a biscuit we cooked
-        with this pastry cutter, I think of my mom and grammy.</biscuit-cutter>
-        <whisk>Whisks are super cool!  If you whisk fast enough, you can make
-        fluffed egg whites for marangues.  You can use them when making homemade
-        gravy to keep lumps from forming (this is mainly what I use the whisk for;
-        my gravy is generally lumpy).  They also combine your eggs and sugar into brownies. 
-        Yum!  Thank you, whisk!</whisk>
-        <images>
-            <image>Pastry Cutter</image>
-            <image>Biscuit Cutter</image>
-            <image>Whisk</image>
         </images>
     </activity>
     <activity>
