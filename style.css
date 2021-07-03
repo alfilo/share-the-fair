@@ -34,6 +34,12 @@ a {
   margin-top: 5px;
 }
 
+/* Override styling only of images directly in main column (detail pages) */
+.column.main > img {
+  margin: 3px;
+  border: 5px solid var(--btngrp-a-btn--background-color);
+}
+
 /* Make all cat-div buttons and links full width of their cat-divs */
 .button-group.dropdown,
 .button-group.dropdown button,
@@ -48,6 +54,14 @@ a {
   border-radius: 0;
   margin-left: 0;
   margin-right: 0;
+}
+
+/* Center .cat-img under button */
+.cat-img {
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Eliminate transparency on hover */
