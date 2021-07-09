@@ -331,7 +331,12 @@
         <description>Pick up a craft kit at one of the library pickup
         locations (Dryden Southworth Library or Tompkins County Public
         Library at Green Street) and make the craft following the
-        YouTube videos on this page.</description>
+        YouTube videos (which will be posted soon) on this page.</description>
+        <images>
+            <image>Pipe Cleaner Animals</image>
+            <image>Spinners</image>
+        </images>
+        <youTube-link>https://www.youtube.com/watch?v=A5rI1SG3Kpw</youTube-link>
     </activity>
     <activity>
         <name>Helping improve Food Security</name>
@@ -873,9 +878,14 @@
         the fun you have at the fair, complete with a fun caption.</description>
     </activity>
     <activity>
-        <name>Winning Wednesday</name>
+        <name>Winning Wednesdays</name>
         <category>Support Us</category>
-        <description>...</description>
+        <description>WINNING WEDNESDAYS at Texas Roadhouse!  Take a break and
+        take out or eat in at Ithaca Texas Roadhouse and they will donate 15%
+        of your total check to the 4-H Youth Fair.  When you support Texas
+        Roadhouse, they support us!  Just be sure you mention that you support
+        4-H to your server.  Winning Wednesdays are July 7, 14 and 21.
+        </description>
         <when>July 14, 2021</when>
         <when>July 21, 2021</when>
     </activity>
