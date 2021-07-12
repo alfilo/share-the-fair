@@ -331,12 +331,36 @@
         <description>Pick up a craft kit at one of the library pickup
         locations (Dryden Southworth Library or Tompkins County Public
         Library at Green Street) and make the craft following the
-        YouTube videos (which will be posted soon) on this page.</description>
-        <images>
-            <image>Pipe Cleaner Animals</image>
-            <image>Spinners</image>
-        </images>
-        <youTube-link>https://www.youtube.com/watch?v=A5rI1SG3Kpw</youTube-link>
+        YouTube videos on this page.</description>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
+                <iframe src="https://www.youtube.com/embed/Bi7F03XSc2A"
+                        title="YouTube video player of making Animal Bookmarks"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/A-XnIL-ZW1M"
+                        title="YouTube video player of making Chenille Stem Critters"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/Uy35aPc5LT8"
+                        title="YouTube video player of making Spinners"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
     </activity>
     <activity>
         <name>Helping improve Food Security</name>
