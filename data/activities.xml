@@ -365,6 +365,21 @@
                         allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
                 </iframe>
             </div>
+            <div>
+                <br></br>
+                <button class="form-btn slide-down-btn">Click here to give feedback on the Take and Make Craft Kits</button>
+                <div class="slide-down">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSev0bLWuSD3r4TxhDgGtXM8nZlR-4FdBs3qddnTCloE-w2Ihg/formResponse" method="post">
+                        <textarea id="name-take-make" name="entry.1437279743" placeholder="Name" required="required" maxlength="200" rows="2"></textarea>
+                        <textarea id="age-take-make" name="entry.2033389245" placeholder="Age of child" required="required" maxlength="200" rows="10"></textarea>
+                        <textarea id="ease-take-make" name="entry.1907777736" placeholder="Ease of craft" required="required" maxlength="1000" rows="10"></textarea>
+                        <textarea id="suggest-take-make" name="entry.143964855" placeholder="Suggestions on how to improve the kits" required="required" maxlength="1000" rows="10"></textarea>
+                        <textarea id="suggest-take-make" name="entry.11063362" placeholder="Additional comments" required="required" maxlength="1000" rows="10"></textarea>
+                        <br></br>
+                        <input type="submit" value="Send"></input>
+                    </form>
+                </div>
+            </div>
         </html>
     </activity>
     <activity>
