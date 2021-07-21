@@ -33,26 +33,18 @@
     </activity>
     <activity>
         <name>Dairy Show and Showmanship</name>
-        <category>Animals/Dairy Cattle/Showing</category>
         <category>Live Events</category>
-        <description>Watch the Goat Show and Showmanship competition</description>
+        <description>Attend the Dairy Show and Showmanship competition.</description>
         <when>July 30, 2021 10:00 AM EDT</when>
     </activity>
     <activity>
         <name>Dog Show</name>
         <category>Live Events</category>
-        <category>Animals/Dogs</category>
         <when>July 29, 2021 6:00 PM EDT</when>
     </activity>
     <activity>
-        <name>Horse Interview</name>
-        <category>Animals/Horses</category>
-        <description>A 4-H member of the Milk Duds and Jolly Ranchers
-        4-H Club did an interview with their horse.</description>
-    </activity>
-    <activity>
         <name>Sheep Show and Showmanship</name>
-        <category>Animals/Sheep</category>
+        <category>Live Events</category>
         <when>July 29, 2021 10:00 AM EDT</when>
     </activity>
     <activity>
@@ -62,9 +54,8 @@
     </activity>
     <activity>
         <name>Goat Show and Showmanship</name>
-        <category>Animals/Goats/Showing</category>
         <category>Live Events</category>
-        <description>Watch the Goat Show and Showmanship competition</description>
+        <description>Attend the Goat Show and Showmanship competition.</description>
         <when>July 28, 2021 10:00 AM EDT</when>
     </activity>
     <activity>
@@ -86,21 +77,25 @@
         <category>Contests</category>
         <category>Live Events</category>
         <when>July 29, 2021 4:00 PM EDT</when>
-        <description>...</description>
+        <description>Test your knowledge of dairy
+        sciences in this fun Kahoot for youth!</description>
     </activity>
     <activity>
         <name>Kahoot Consumer and Family Sciences Challenge</name>
         <category>Contests</category>
         <category>Live Events</category>
         <when>July 27, 2021 2:00 PM EDT</when>
-        <description>...</description>
+        <description>Test your knowledge of family and consumer
+        sciences like sewing and cooking in this fun Kahoot
+        for youth!</description>
     </activity>
     <activity>
         <name>Kahoot Plant Science Challenge</name>
         <category>Contests</category>
         <category>Live Events</category>
         <when>July 28, 2021 1:00 PM EDT</when>
-        <description>...</description>
+        <description>Test your knowledge of plant
+        sciences in this fun Kahoot for youth!</description>
     </activity>
     <activity>
         <name>Laughing Goat Fiber Farm Tour</name>
@@ -124,19 +119,11 @@
     <activity>
         <name>Alpaca Show and Showmanship</name>
         <category>Live Events</category>
-        <category>Animals/Alpacas</category>
         <when>July 28, 2021 4:00 PM EDT</when>
-    </activity>
-    <activity>
-        <name>Giddy Goats Club</name>
-        <category>Animals/Goats</category>
-        <description>This is an enthusiastic group of 4-Hers who learn about goats.</description>
     </activity>
     <activity>
         <name>Rabbit Hopping</name>
         <category>Animals/Rabbits and Cavy</category>
-        <demonstration>There will be a live rabbit hopping
-        demonstration at the Pole Barn.</demonstration>
         <summary>Rabbit hopping was first introduced in the 1970s in
         Europe.  The rules are based on the rules of horse show jumping,
         modified to better suit rabbits.  There are several different types
@@ -161,14 +148,8 @@
         <when>July 31, 2021 12:00 PM EDT</when>
     </activity>
     <activity>
-        <name>Showmanship</name>
-        <category>Animals/Rabbits and Cavy</category>
-        <description>Learn about Rabbit and Cavy showmanship.</description>
-    </activity>
-    <activity>
         <name>Rabbit and Cavy Show and Showmanship</name>
         <category>Live Events</category>
-        <category>Animals/Rabbits and Cavy</category>
         <when>July 31, 2021 9:00 AM EDT</when>
     </activity>
     <activity>
@@ -247,34 +228,11 @@
         </resources>
     </activity>
     <activity>
-        <name>Herbs</name>
-        <category>Horticulture/Food</category>
-        <uses>...
-        </uses>
-        <benefits>...
-        </benefits>
-    </activity>
-    <activity>
-        <name>Flowers</name>
-        <category>Horticulture</category>
-        <uses>...
-        </uses>
-        <benefits>...
-        </benefits>
-    </activity>
-    <activity>
         <name>Storytime</name>
         <category>Learn with us Online</category>
         <description>Each storytime is videotaped and can be shown on YouTube or played on this page.
-        Storytimes will last about 20 minutes and will be divided into two parts. 
-        4-H members will read a book about the fair or animals to an audience on Zoom.  Then, a 4-H
-        member will guide an interactive sing-along, also about the fair or animals.</description>
-    </activity>
-    <activity>
-        <name>Patterns</name>
-        <category>Arts and Crafts/Fiber Arts</category>
-        <description>The Thread Cafe 4-H Club makes knitted and crocheted projects. 
-        These are some of the patterns they've made.</description>
+        4-H members will read a book about the fair or animals in the video.  These
+        videos were created by kids for kids.</description>
     </activity>
     <activity>
         <name>Gallery</name>
@@ -936,16 +894,24 @@
     <activity>
         <name>Fall Festival at Tractor Supply</name>
         <category>Support Us</category>
-        <description>...</description>
+        <description>Visit 4-H at the Fall Festival at Tractor Supply! 
+        Have fun visiting animals, participating in a biggest pumpkin
+        contest, and playing fun 4-H games!</description>
     </activity>
     <activity>
         <name>Donations to Tompkins County 4-H</name>
         <category>Support Us</category>
-        <description>...</description>
+        <description>4-H appreciates any donations.  The donations will
+        be used to support the grounds, membership and supply costs, and
+        fund more fun activities for youth in the community.  Please
+        email Brenda Carpenter (btc6@cornell.edu) for more details on
+        who to contact for you to make your donation.</description>
     </activity>
     <activity>
         <name>Chicken BBQ</name>
         <category>Support Us</category>
-        <description>...</description>
+        <description>The Chicken BBQ is a fundraiser to support the
+        grounds, membership and supply costs, and fund more fun
+        activities for youth in the community.</description>
     </activity>
 </activities>
