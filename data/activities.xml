@@ -70,7 +70,8 @@
         <category>Contests</category>
         <category>Live Events</category>
         <when>July 30, 2021 4:00 PM EDT</when>
-        <description>...</description>
+        <description>Test your knowledge of all livestock in
+        this fun, online Kahoot!</description>
     </activity>
     <activity>
         <name>Kahoot Dairy Challenge</name>
@@ -109,12 +110,90 @@
         <description>Alpacas are vaccinated to protect them from disease. 
         It's important to protect them from disease so they can produce
         wool and healthy crias (baby alpacas).</description>
-    </activity>
-    <activity>
-        <name>Shearing</name>
-        <category>Animals/Alpacas</category>
-        <description>Some alpacas are bred to produce wool.  Their wool
-        is sheared off and used.</description>
+        <types-of-vaccine>There are three types of vaccines:  Killed
+        or toxoid, modified live, and recombinant.  With all of
+        the vaccines, vaccinating a sick animal is not effective. 
+        Animals should be vaccinated 2-3 weeks after recovering. 
+        The vaccines also do not provide full protection, and
+        efficacy of the vaccine is affected by many factors. 
+        Antibodies found in colostrum, the mother's first milk,
+        can interfere with some vaccines, so crias often require
+        additional boosters.</types-of-vaccine>
+        <killed-or-toxoid>Killed or toxoid vaccines contain
+        the killed bacteria or virus, which means it is safe
+        and the bacteria or virus is unable to reproduce. 
+        This makes the killed or toxoid vaccines preferred for
+        pregnant animals.  Killed vaccines do not always produce
+        a strong immune response, so boosters are required 2-4
+        weeks after the first shot and once a year every year
+        after.</killed-or-toxoid>
+        <modified-live>Modified live vaccines have some parts
+        of the bacteria or virus that trigger the immune response. 
+        This type of vaccine causes a mild infection,
+        which increases the immune response and thus makes the
+        vaccine last longer.  Vaccines are designed for use in
+        a specific species, so they shouldn't be used in
+        alpacas or anything else in the camelid family.</modified-live>
+        <recombinant>Recombinant vaccines have a piece of the
+        bacteria or virus, such as the spike protein causing the
+        immune response.  The bacteria or virus is unable to
+        reproduce, while still causing a strong immune response,
+        thus making the vaccine last longer.</recombinant>
+        <clostridial-vaccination>Alpacas and sheep need similar
+        vaccines as sheep.  Twice a year, in the spring and autumn,
+        alpacas are given a clostridial vaccination.  Crias can
+        be vaccinated at 6-8 weeks and given a booster 4-6 weeks. 
+        Then, crias are given another booster at 6 months of age
+        and every year after.  If clostridial diseases have
+        affected young animals on the farm, an extra vaccination
+        can take place at 6-10 days of age for at-risk crias.</clostridial-vaccination>
+        <clostridial-diseases>
+            <c>Tetanus:  Poisoning from a neurotoxin caused by
+            Clostridium tetani.  There are intermittent spasms
+            of the muscles which can lead to death.</c>
+            <c>Pulpy kidney/enterotoxemia:  Triggered when
+            alpacas switch to feeds rich in starch, sugar,
+            and/or protein.  High levels of these nutrients
+            cause normally present Clostridium perfringens
+            Type D bacteria undergo rapid growth in the small
+            intestine.  As the bacteria increase in number,
+            they release toxins causing damage to the small
+            intestines, among other organs.  Alpacas will
+            abruptly go off feed, become lethargic, show
+            signs of stomach pain, have loose stool, lose
+            the ability to stand (due to the toxin's effects
+            on the brain), and die quickly with no previous
+            signs of disease.</c>
+            <c>Black leg:  Causes swelling of the muscles and
+            necrotizing myositis in large muscles.  It's called
+            black leg due to the color the muscles turn when
+            animals are infected with the disease.  The muscles
+            have a sweetish odor, small bubbles, dry and spongy,
+            with little edema.  The tongue and diaphragm can
+            also be affected.  Black leg can cause acute, severe
+            lameness, marked depression, fever, focal hot and
+            painful swelling, cold and insensitive skin, with
+            decreased blood flow to affected areas.  Highly
+            fatal.</c>
+            <c>Black's disease/infectious necrotic hepatitis: 
+            Caused by Clostridium novyi type B.  Death is sudden
+            with little to no clinical signs, but is limited
+            to alpacas also infected with liver flukes.  Lesions
+            are grayish yellow, necrotic foci in diseased tissue. 
+            The lesions are caused by young, migrating flukes,
+            the host to the bacteria.</c>
+            <c>Malignant edema:  Caused by severe, often fatal
+            spread of bacterial toxins through the bloodstream. 
+            Symptoms include loss of appetite, intoxication,
+            and high fever, swelling around the site of infection.</c>
+        </clostridial-diseases>
+        <resources>
+            <r>https://www.incaalpaca.co.uk/alpaca-info/about-alpacas/what-alpacas-need/</r>
+            <r>https://www.midwestshearing.com/articles/vaccinations</r>
+            <r>https://extension.colostate.edu/topic-areas/agriculture/enterotoxemia-overeating-disease-of-sheep-and-goats-8-018/</r>
+            <r>https://criagenesis.cc/wp-content/uploads/2016/03/CriaGenesis-Vacc-5-in-1a-1.pdf</r>
+            <r></r>
+        </resources>
     </activity>
     <activity>
         <name>Alpaca Show and Showmanship</name>
@@ -159,7 +238,7 @@
         provide protection from predators and the elements.</description>
     </activity>
     <activity>
-        <name>Gallery</name>
+        <name>Poultry Gallery</name>
         <category>Animals/Poultry</category>
         <description>Send in pictures of your chickens!</description>
     </activity>
@@ -233,20 +312,65 @@
         <description>Each storytime is videotaped and can be shown on YouTube or played on this page.
         4-H members will read a book about the fair or animals in the video.  These
         videos were created by kids for kids.</description>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/BA6F1lNfcXI"
+                        title="YouTube video player of Storytime"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
     </activity>
     <activity>
-        <name>Gallery</name>
+        <name>Fiber Arts Gallery</name>
         <category>Arts and Crafts/Fiber Arts</category>
-        <description>Photos coming soon...help by sending in some of your
+        <description>More photos coming soon...help by sending in some of your
         fiber arts photos!</description>
+        <images>
+            <image>Pom Pom Animals</image>
+            <image>Fiber Arts B</image>
+            <image>Fiber Arts C</image>
+        </images>
     </activity>
     <activity>
         <name>Patterns</name>
         <category>Arts and Crafts/Hobby Crafts</category>
         <description>Follow along with these patterns to make a project.</description>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
+                <iframe src="https://www.youtube.com/embed/z0-mlZvJD-E"
+                        title="YouTube video player of Origami Fireworks"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/sOE863z3eD8"
+                        title="YouTube video player of Universe Kusudama"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://www.youtube.com/embed/74CVSdRRdp0"
+                        title="YouTube video player of Bargello Interlocking Crochet"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
     </activity>
     <activity>
-        <name>Gallery</name>
+        <name>Hobby Crafts Gallery</name>
         <category>Arts and Crafts/Hobby Crafts</category>
         <description>Feel free to send in your hobby craft photos.</description>
         <images>
@@ -255,10 +379,15 @@
         </images>
     </activity>
     <activity>
-        <name>Gallery</name>
+        <name>Fine Arts Gallery</name>
         <category>Arts and Crafts/Fine Arts</category>
         <description>Send your pictures of Fine Arts projects in to
         have them displayed here!</description>
+        <images>
+            <image>Fine Arts A</image>
+            <image>Fine Arts B</image>
+            <image>Fine Arts C</image>
+        </images>
     </activity>
     <activity>
         <name>Earring Making</name>
@@ -682,6 +811,11 @@
         <name>Kitchen Gallery</name>
         <category>Culinary Arts/What's Cookin'</category>
         <description>Help us by sending in pictures of what you're cooking!</description>
+        <images>
+            <image>Shortbread Cookies</image>
+            <image>Omlet in a Bowl</image>
+            <image>Borsch with Russian Blackbread</image>
+        </images>
     </activity>
     <activity>
         <name>Sausage Making</name>
@@ -808,16 +942,21 @@
         </images>
     </activity>
     <activity>
-        <name>Photos</name>
-        <category>Culinary Arts/What's Cookin'/Iron Chef</category>
+        <name>Iron Chef</name>
+        <category>Culinary Arts/What's Cookin'</category>
         <description>Teams of 3-4 kids make a meal in an hour using two secret
         ingredients.  In the past, apple cobbler, apple and chipotle, and spaghetti
         have won the competition.</description>
+        <images>
+            <image>Iron Chef A</image>
+            <image>Iron Chef B</image>
+            <image>Iron Chef C</image>
+        </images>
     </activity>
     <activity>
         <name>Fair Projects</name>
         <category>Gallery</category>
-        <description>Send us pictures of your fair projects.</description>
+        <description>Send us pictures of your fair projects this year.</description>
     </activity>
     <activity>
         <name>What do the ribbons mean?</name>
