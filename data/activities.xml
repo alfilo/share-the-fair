@@ -66,6 +66,43 @@
         <when>July 31, 2021 11:00 AM EDT</when>
     </activity>
     <activity>
+        <name>Project Displays</name>
+        <category>Live Events</category>
+        <description>See all the projects 4-Hers have been working on this
+        year in Kiwanis Hall.</description>
+        <when>July 31, 2021 9:00 AM EDT</when>
+    </activity>
+    <activity>
+        <name>Peace Rock Activity</name>
+        <category>Live Events</category>
+        <description>Make peace rocks to share around your community. 
+        For more information on what peace rocks are, check out the
+        project the Milk Duds did on the Kindness Rocks page.</description>
+        <when>July 31, 2021 11:00 AM EDT</when>
+        <images>
+            <image>Kindness Rocks A</image>
+            <image>Kindness Rocks B</image>
+            <image>Kindness Rocks C</image>
+            <image>Kindness Rocks D</image>
+            <image>Kindness Rocks E</image>
+            <image>Kindness Rocks F</image>
+        </images>
+    </activity>
+    <activity>
+        <name>Chicken BBQ</name>
+        <category>Live Events</category>
+        <description>Eat in or take out chicken BBQ to support the
+        Tompkins County 4-H.  Dinners are $10 or $8 for chicken only.</description>
+        <when>July 31, 2021 11:30 AM EDT</when>
+    </activity>
+    <activity>
+        <name>4-H Olympics</name>
+        <category>Live Events</category>
+        <description>Have fun throwing cow pies and running with eggs
+        on a spoon at the 4-H Olympics on the front lawn!</description>
+        <when>July 31, 2021 1:00 PM EDT</when>
+    </activity>
+    <activity>
         <name>Kahoot Livestock Challenge</name>
         <category>Contests</category>
         <category>Live Events</category>
