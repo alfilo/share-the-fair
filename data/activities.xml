@@ -45,7 +45,28 @@
     <activity>
         <name>Sheep Show and Showmanship</name>
         <category>Live Events</category>
+        <category>Animals/Sheep</category>
         <when>July 29, 2021 10:00 AM EDT</when>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
+                <iframe src="https://www.youtube.com/embed/gN9LVp4rs9k"
+                        title="YouTube video player of Sheep Show and Showmanship"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
+                <iframe src="https://www.youtube.com/embed/6JE7gCYF18w"
+                        title="YouTube video player of Sheep Show and Showmanship"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
     </activity>
     <activity>
         <name>Cloverbud Stuffed Animal Show</name>
@@ -246,7 +267,19 @@
     <activity>
         <name>Alpaca Show and Showmanship</name>
         <category>Live Events</category>
+        <category>Animals/Alpacas</category>
         <when>July 28, 2021 4:00 PM EDT</when>
+        <html>  
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
+                <iframe src="https://www.youtube.com/embed/OWLlygmqsd4"
+                        title="YouTube video player of the Alpaca Show and Showmanship"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
     </activity>
     <activity>
         <name>Rabbit Hopping</name>
@@ -1249,6 +1282,15 @@
         <html>  
             <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
                 <iframe src="https://www.youtube.com/embed/oONEqlBoxXs"
+                        title="YouTube video player of the 4-H Acres Barn Tour"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
+                <iframe src="https://www.youtube.com/embed/XVxXBs8n7Fw"
                         title="YouTube video player of the 4-H Acres Barn Tour"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
