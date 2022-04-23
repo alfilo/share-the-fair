@@ -30,23 +30,27 @@
         <name>Poultry Show and Showmanship</name>
         <category>Live Events</category>
         <when>July 27, 2021 4:00 PM EDT</when>
+        <when>July 26, 2022 4:00 PM EDT</when>
     </activity>
     <activity>
         <name>Dairy Show and Showmanship</name>
         <category>Live Events</category>
         <description>Attend the Dairy Show and Showmanship competition.</description>
         <when>July 30, 2021 10:00 AM EDT</when>
+        <when>July 29, 2022 10:00 AM EDT</when>
     </activity>
     <activity>
         <name>Dog Show</name>
         <category>Live Events</category>
         <when>July 29, 2021 6:00 PM EDT</when>
+        <when>July 28, 2022 4:00 PM EDT</when>
     </activity>
     <activity>
         <name>Sheep Show and Showmanship</name>
         <category>Live Events</category>
         <category>Animals/Sheep</category>
         <when>July 29, 2021 10:00 AM EDT</when>
+        <when>July 28, 2022 10:00 AM EDT</when>
         <html>
             <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
                 <iframe src="https://www.youtube.com/embed/gN9LVp4rs9k"
@@ -72,19 +76,52 @@
         <name>Cloverbud Stuffed Animal Show</name>
         <category>Live Events</category>
         <when>July 29, 2021 1:00 PM EDT</when>
+        <when>July 28, 2022 1:00 PM EDT</when>
     </activity>
     <activity>
         <name>Goat Show and Showmanship</name>
         <category>Live Events</category>
         <description>Attend the Goat Show and Showmanship competition.</description>
         <when>July 28, 2021 10:00 AM EDT</when>
+        <when>July 27, 2022 10:00 AM EDT</when>
+    </activity>
+    <activity>
+        <name>Meet the Animals</name>
+        <category>Live Events</category>
+        <description>Come to the 4-H Acres to meet the animals that
+        the 4-Hers at Tompkins County show!  There will be dairy
+        cattle, sheep, alpacas, rabbits, goats, and others.  This
+        activity runs all day.</description>
+        <when>July 30, 2022 8:00 AM EDT</when>
     </activity>
     <activity>
         <name>Plant Science Activity</name>
         <category>Live Events</category>
-        <description>The P.E.S.T will be holding a plant science activity.</description>
+        <description>Come to the Fair or watch online as we
+        have fun learning about plant science through Veggie Art!</description>
         <when>July 30, 2021 11:00 AM EDT</when>
         <when>July 31, 2021 11:00 AM EDT</when>
+        <when>July 29, 2022 11:00 AM EDT</when>
+        <when>July 30, 2022 11:00 AM EDT</when>
+        <have-some-fun-with-your-veggies>We picked veggies from our garden and
+        made art with them. You could make a person, a butterfly,or even a Mr.
+        Potatohead! Afterwards, try to reuse the veggies.  This could be making
+        an omlet, a salad, a pizza, or just eating them plain!  Don't worry,
+        you don't need to cook the Mr. Potatohead. He's reusable veggie art!
+        Have some fun with your veggie art, and eat healthy!</have-some-fun-with-your-veggies>
+        <html>
+            <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ44ZJwTM4y9laQa2K6VTzD5klOw5Ga-U1vGLphi_RVfWMUWjV3SMzpWw6uZaBxzEFUTX4V81VCiQzz/embed?delayms=3000"
+                        style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
+                        allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+                </iframe>
+            </div>
+        </html>
+        <images>
+            <image>Veggie Art A</image>
+            <image>Veggie Art B</image>
+            <image>Veggie Art C</image>
+        </images>
     </activity>
     <activity>
         <name>Project Displays</name>
@@ -117,11 +154,55 @@
         <when>July 31, 2021 11:30 AM EDT</when>
     </activity>
     <activity>
+        <name>Pullorum testing for birds</name>
+        <category>Live Events</category>
+        <category>Animals/Poultry</category>
+        <when>June 21, 2022 6:00 PM EDT</when>
+        <overview>Pullorum (also called bacillary white diarrhea) is
+        caused by the bacterium Salmonella pullorum.  Chickens are
+        natural hosts of this disease, but other birds may contract
+        the disease.  There have even been reports of infections in
+        pigs, cattle, cats, dogs, mink, rabbits, and others.  It is
+        a very deadly disease, but animals can be cured by eliminating
+        the bacteria.</overview>
+        <transmission>This disease is transmitted orally and by the
+        respiratory tract.  So, if a bird or other animal places infected
+        feces on a food source, the animal that eats that food will be
+        infected.  For chicks, if they have a wound, they can become
+        infected if the bacteria enters that wound.  It can also be
+        transmitted from hen to chick through the egg.  When a hen has
+        recovered from the pullorum infection, the bacteria usually
+        passes on to one third of her eggs.  Those eggs will also
+        become infected.</transmission>
+        <symptoms>If hatched from eggs, chicks will sicken and die
+        a few weeks after hatching.  They will be weak, with poor
+        appetites and stunted growth.  They also will huddle near
+        the heat source while making shrill chirping and peeping
+        sounds.  Their feces will be chalky and white once clinical
+        symptoms appear.  However, signs that the chicks are infected
+        may not be present for the first 5-10 days.  Most deaths due
+        to pullorum occur in the second or third week after hatching.
+        </symptoms>
+        <prevention-and-control>It's not feasible to treat pullorum, as
+        the birds who recover are likely to become carriers of the
+        bacteria.  Flocks with pullorum should be depopulated.  To
+        prevent pullorum, buy birds or eggs from a hatchery which is
+        tested and part of the NPIP (National Poultry Improvement Plan).
+        Make sure to have a biosecurity system in place that prevents
+        pullorum from entering the flock.  Also, if you think your flock
+        may have pullorum, you should contact the state veterinarian
+        and report it.</prevention-and-control>
+        <images>
+            <image>Chick with Pullorum</image>
+        </images>
+    </activity>
+    <activity>
         <name>4-H Olympics</name>
         <category>Live Events</category>
         <description>Have fun throwing cow pies and running with eggs
         on a spoon at the 4-H Olympics on the front lawn!</description>
         <when>July 31, 2021 1:00 PM EDT</when>
+        <when>July 30, 2022 1:00 PM EDT</when>
     </activity>
     <activity>
         <name>Kahoot Livestock Challenge</name>
@@ -155,6 +236,43 @@
         <when>July 28, 2021 1:00 PM EDT</when>
         <description>Test your knowledge of plant
         sciences in this fun Kahoot for youth!</description>
+    </activity>
+    <activity>
+        <name>Consumer and Family Sciences Challenge</name>
+        <category>Contests</category>
+        <category>Live Events</category>
+        <when>July 26, 2022 2:00 PM EDT</when>
+        <description>Test your knowledge of family and consumer
+        sciences like sewing and cooking in this fun Kahoot
+        for youth!  This contest will be virtual and in-person.
+        </description>
+    </activity>
+    <activity>
+        <name>Plant Science Challenge</name>
+        <category>Contests</category>
+        <category>Live Events</category>
+        <when>July 27, 2022 1:00 PM EDT</when>
+        <description>Test your knowledge of plant
+        sciences in this fun Kahoot for youth!</description>
+    </activity>
+    <activity>
+        <name>Dairy Challenge</name>
+        <category>Contests</category>
+        <category>Live Events</category>
+        <when>July 28, 2022 4:00 PM EDT</when>
+        <description>Test your knowledge of dairy
+        sciences in this fun Kahoot for youth!
+        This fun challenge will be both virtual
+        and in-person.</description>
+    </activity>
+    <activity>
+        <name>Livestock Challenge</name>
+        <category>Contests</category>
+        <category>Live Events</category>
+        <when>July 29, 2022 4:00 PM EDT</when>
+        <description>Test your knowledge of all livestock in
+        this fun Kahoot!  This challenge will be offered
+        virtually and in-person.</description>
     </activity>
     <activity>
         <name>Laughing Goat Fiber Farm Tour</name>
@@ -269,6 +387,7 @@
         <category>Live Events</category>
         <category>Animals/Alpacas</category>
         <when>July 28, 2021 4:00 PM EDT</when>
+        <when>July 27, 2022 4:00 PM EDT</when>
         <html>  
             <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
                 <iframe src="https://www.youtube.com/embed/OWLlygmqsd4"
@@ -284,6 +403,7 @@
     <activity>
         <name>Rabbit Hopping</name>
         <category>Animals/Rabbits and Cavy</category>
+        <category>Live Events</category>
         <summary>Rabbit hopping was first introduced in the 1970s in
         Europe.  The rules are based on the rules of horse show jumping,
         modified to better suit rabbits.  There are several different types
@@ -306,11 +426,14 @@
             </div>
         </html>
         <when>July 31, 2021 12:00 PM EDT</when>
+        <when>July 30, 2022 12:00 PM EDT</when>
     </activity>
     <activity>
         <name>Rabbit and Cavy Show and Showmanship</name>
         <category>Live Events</category>
+        <category>Animals/Rabbits and Cavy</category>
         <when>July 31, 2021 9:00 AM EDT</when>
+        <when>July 30, 2022 8:30 AM EDT</when>
     </activity>
     <activity>
         <name>Chicken Buses</name>
@@ -1153,9 +1276,11 @@
         <category>Live Events</category>
         <description>This activity will take place at the 4-H Acres.  It
         will be presented by the Plant and Environmental Sciences Team
-        (often abbreviated as P.E.S.T) all day.</description>
+        (often abbreviated as P.E.S.T.) all day.</description>
         <when>July 30, 2021 8:00 AM EDT</when>
         <when>July 31, 2021 8:00 AM EDT</when>
+        <when>July 29, 2022 8:00 AM EDT</when>
+        <when>July 30, 2022 8:00 AM EDT</when>
         <images>
             <image>Veggie Art A</image>
             <image>Veggie Art B</image>
@@ -1186,11 +1311,33 @@
         </images>
     </activity>
     <activity>
-        <name>Iron Chef</name>
+        <name>Junior Iron Chef</name>
         <category>Culinary Arts/What's Cookin'</category>
+        <category>Live Events</category>
         <description>Teams of 3-4 kids make a meal in an hour using two secret
         ingredients.  In the past, apple cobbler, apple and chipotle, and spaghetti
         have won the competition.</description>
+        <when>July 28, 2022 11:00 AM EDT</when>
+        <images>
+            <image>Iron Chef A</image>
+            <image>Iron Chef B</image>
+            <image>Iron Chef C</image>
+        </images>
+    </activity>
+    <activity>
+        <name>Adult Iron Chef</name>
+        <category>Culinary Arts/What's Cookin'</category>
+        <category>Live Events</category>
+        <description>This is a new competition for the
+        adults!  Like the kids' Iron Chef competition,
+        there will be two mystery ingredients and they
+        must be included in cooking a complete meal.
+        But, this competition will have a little twist.
+        The mystery ingredients and the meals must be
+        kid-friendly!  Also, the evaluators will be
+        the winning team from the Junior Iron Chef
+        competition last year.</description>
+        <when>July 28, 2022 11:00 AM EDT</when>
         <images>
             <image>Iron Chef A</image>
             <image>Iron Chef B</image>
@@ -1325,7 +1472,7 @@
         <description>4-H appreciates any donations.  The donations will
         be used to support the grounds, membership and supply costs, and
         fund more fun activities for youth in the community.  Please
-        email Brenda Carpenter (btc6@cornell.edu) for more details on
+        email Venda Harris (vmt5@cornell.edu) for more details on
         who to contact for you to make your donation.</description>
     </activity>
     <activity>
