@@ -779,8 +779,9 @@
         <category>Learn with us Online</category>
         <category>Community Service/Helping our Community</category>
         <description>Pick up a craft kit at one of the library pickup
-        locations (Dryden Southworth Library or Tompkins County Public
-        Library at Green Street) and make the craft following the
+        locations (Dryden Southworth Library on Main Street, Tompkins
+        County Public Library at Green Street, or Lansing Community
+        Library on Ridge Road) and make the craft following the
         YouTube videos on this page.  With the kits, we hope for kids
         to have a safe way to experience some of the activities held
         at the 4-H Fair while helping to develop a love for reading. 
@@ -789,8 +790,8 @@
         </description>
         <html>
             <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
-                <iframe src="https://www.youtube.com/embed/Bi7F03XSc2A"
-                        title="YouTube video player of making Animal Bookmarks"
+                <iframe src="https://www.youtube.com/embed/AAl_XdP2ubQ"
+                        title="YouTube video player of making Animal Fortune Tellers"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
@@ -798,8 +799,8 @@
                 </iframe>
             </div>
             <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
-                <iframe src="https://www.youtube.com/embed/A-XnIL-ZW1M"
-                        title="YouTube video player of making Chenille Stem Critters"
+                <iframe src="https://www.youtube.com/embed/RMSfntvSrV0"
+                        title="YouTube video player of making Ribbon Sea Animals"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
@@ -807,8 +808,8 @@
                 </iframe>
             </div>
             <div style="position: relative; width: 100%; height: 0; padding-top: 60%;">
-                <iframe src="https://www.youtube.com/embed/Uy35aPc5LT8"
-                        title="YouTube video player of making Spinners"
+                <iframe src="https://www.youtube.com/embed/i97UkG6fPBw"
+                        title="YouTube video player of making Tissue Paper Sea Animals"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; border: 0;"
@@ -832,9 +833,9 @@
             </div>
         </html>
         <images>
-            <image>Crafting A</image>
-            <image>Crafting B</image>
-            <image>Crafting C</image>
+            <image>Crafting A '22</image>
+            <image>Crafting B '22</image>
+            <image>Crafting C '22</image>
         </images>
     </activity>
     <activity>
