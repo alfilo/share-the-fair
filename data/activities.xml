@@ -29,9 +29,10 @@
     <activity>
         <name>Poultry Show and Showmanship</name>
         <category>Live Events</category>
-        <notice>The poultry will not be at the 4-H Fair
-        this year due to the Avian Flu concerns.</notice>
+        <notice>We're happy to welcome the poultry
+        back to the Fair this year!</notice>
         <when>July 27, 2021 4:00 PM EDT</when>
+        <when>July 25, 2023 4:00 PM EDT</when>
     </activity>
     <activity>
         <name>Dairy Show and Showmanship</name>
@@ -39,12 +40,14 @@
         <description>Attend the Dairy Show and Showmanship competition.</description>
         <when>July 30, 2021 10:00 AM EDT</when>
         <when>July 29, 2022 10:00 AM EDT</when>
+        <when>July 28, 2023 10:00 AM EDT</when>
     </activity>
     <activity>
         <name>Dog Show</name>
         <category>Live Events</category>
         <when>July 29, 2021 6:00 PM EDT</when>
         <when>July 28, 2022 4:00 PM EDT</when>
+        <when>July 29, 2023 10:00 AM EDT</when>
     </activity>
     <activity>
         <name>Sheep Show and Showmanship</name>
@@ -52,6 +55,7 @@
         <category>Animals/Sheep</category>
         <when>July 29, 2021 10:00 AM EDT</when>
         <when>July 28, 2022 10:00 AM EDT</when>
+        <when>July 27, 2023 3:00 PM EDT</when>
         <html>
             <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
                 <iframe src="https://www.youtube.com/embed/gN9LVp4rs9k"
@@ -78,6 +82,12 @@
         <category>Live Events</category>
         <when>July 29, 2021 1:00 PM EDT</when>
         <when>July 28, 2022 1:00 PM EDT</when>
+        <when>July 27, 2023 1:00 PM EDT</when>
+    </activity>
+    <activity>
+        <name>Animal Costume Contest</name>
+        <category>Live Events</category>
+        <when>July 26, 2023 4:00 PM EDT</when>
     </activity>
     <activity>
         <name>Goat Show and Showmanship</name>
@@ -85,6 +95,33 @@
         <description>Attend the Goat Show and Showmanship competition.</description>
         <when>July 28, 2021 10:00 AM EDT</when>
         <when>July 27, 2022 10:00 AM EDT</when>
+        <when>July 26, 2023 10:00 AM EDT</when>
+    </activity>
+    <activity>
+        <name>Youth Round Robin</name>
+        <category>Live Events</category>
+        <category>Animals</category>
+        <description>In the Round Robin contest, youth
+        attempt to show different animals:  Sheep, goats,
+        dairy cows, and dogs.  If a tie needs to be broken,
+        you may also be asked to show a rabbit or a
+        chicken.  The goal is to have the most proficiency
+        in showing all four animals.  Adults can participate
+        in the Adult Round Robin.</description>
+        <when>July 28, 2023 2:00 PM EDT</when>
+    </activity>
+    <activity>
+        <name>Adult Round Robin</name>
+        <category>Live Events</category>
+        <category>Animals</category>
+        <description>In the Round Robin contest, adults
+        attempt to show different animals:  Sheep, goats,
+        dairy cows, and dogs.  If a tie needs to be broken,
+        you may also be asked to show a rabbit or a
+        chicken.  The goal is to have the most proficiency
+        in showing all four animals.  Youth can participate
+        in the Youth Round Robin.</description>
+        <when>July 26, 2023 6:00 PM EDT</when>
     </activity>
     <activity>
         <name>Meet the Animals</name>
@@ -153,6 +190,7 @@
         <description>Eat in or take out chicken BBQ to support the
         Tompkins County 4-H.  Dinners are $10 or $8 for chicken only.</description>
         <when>July 31, 2021 11:30 AM EDT</when>
+        <when>July 29, 2023 11:30 AM EDT</when>
     </activity>
     <activity>
         <name>Pullorum testing for birds</name>
@@ -204,20 +242,23 @@
         on a spoon at the 4-H Olympics on the front lawn!</description>
         <when>July 31, 2021 1:00 PM EDT</when>
         <when>July 30, 2022 1:00 PM EDT</when>
+        <when>July 29, 2023 1:00 PM EDT</when>
     </activity>
     <activity>
         <name>Kahoot Livestock Challenge</name>
         <category>Contests</category>
         <category>Live Events</category>
-        <when>July 30, 2021 4:00 PM EDT</when>
         <description>Test your knowledge of all livestock in
         this fun, online Kahoot!</description>
+        <when>July 30, 2021 4:00 PM EDT</when>
+        <when>July 28, 2023 4:00 PM EDT</when>
     </activity>
     <activity>
         <name>Kahoot Dairy Challenge</name>
         <category>Contests</category>
         <category>Live Events</category>
         <when>July 29, 2021 4:00 PM EDT</when>
+        <when>July 27, 2023 4:00 PM EDT</when>
         <description>Test your knowledge of dairy
         sciences in this fun Kahoot for youth!</description>
     </activity>
@@ -243,6 +284,7 @@
         <category>Contests</category>
         <category>Live Events</category>
         <when>July 26, 2022 2:00 PM EDT</when>
+        <when>July 25, 2023 2:30 PM EDT</when>
         <description>Test your knowledge of family and consumer
         sciences like sewing and cooking in this fun Kahoot
         for youth!  This contest will be virtual and in-person.
@@ -253,6 +295,7 @@
         <category>Contests</category>
         <category>Live Events</category>
         <when>July 27, 2022 1:00 PM EDT</when>
+        <when>July 25, 2023 12:30 PM EDT</when>
         <description>Test your knowledge of plant
         sciences in this fun Kahoot for youth!</description>
     </activity>
@@ -435,6 +478,7 @@
         <category>Animals/Rabbits and Cavy</category>
         <when>July 31, 2021 9:00 AM EDT</when>
         <when>July 30, 2022 8:30 AM EDT</when>
+        <when>July 29, 2023 8:30 AM EDT</when>
     </activity>
     <activity>
         <name>Chicken Buses</name>
@@ -1266,6 +1310,7 @@
             </div>
         </html>
         <when>July 30, 2021 11:00 AM EDT</when>
+        <when>July 28, 2023 11:00 AM EDT</when>
         <images>
             <image>Veggie Art A</image>
             <image>Veggie Art B</image>
@@ -1283,6 +1328,30 @@
         <when>July 31, 2021 8:00 AM EDT</when>
         <when>July 29, 2022 8:00 AM EDT</when>
         <when>July 30, 2022 8:00 AM EDT</when>
+        <when>July 28, 2023 8:00 AM EDT</when>
+        <when>July 29, 2023 11:00 AM EDT</when>
+        <images>
+            <image>Veggie Art A</image>
+            <image>Veggie Art B</image>
+            <image>Veggie Art C</image>
+        </images>
+    </activity>
+    <activity>
+        <name>Live P.E.S.T Activity</name>
+        <category>Culinary Arts/Healthy Eating</category>
+        <category>Live Events</category>
+        <description>This activity will take place at the 4-H Acres.  It
+        will be presented by the Plant and Environmental Sciences Team
+        (often abbreviated as P.E.S.T.).</description>
+        <when>July 30, 2021 8:00 AM EDT</when>
+        <when>July 31, 2021 8:00 AM EDT</when>
+        <when>July 29, 2022 8:00 AM EDT</when>
+        <when>July 30, 2022 8:00 AM EDT</when>
+        <when>July 26, 2023 11:00 AM EDT</when>
+        <when>July 26, 2023 2:30 PM EDT</when>
+        <when>July 27, 2023 11:00 AM EDT</when>
+        <when>July 27, 2023 2:30 PM EDT</when>
+        <when>July 28, 2023 1:00 PM EDT</when>
         <images>
             <image>Veggie Art A</image>
             <image>Veggie Art B</image>
@@ -1313,6 +1382,21 @@
         </images>
     </activity>
     <activity>
+        <name>Country Kitchen</name>
+        <category>Culinary Arts</category>
+        <summary>Come visit the Country Kitchen for a
+        fun meal at the Fair!  The Country Kitchen is
+        open Tuesday through Friday from 11:30am to
+        3:00pm.  On Saturday, only beverages will be
+        available.</summary>
+        <when>July 25, 2023 11:30 AM EDT</when>
+        <when>July 26, 2023 11:30 AM EDT</when>
+        <when>July 27, 2023 11:30 AM EDT</when>
+        <when>July 27, 2023 5:00 PM EDT</when>
+        <when>July 28, 2023 11:30 AM EDT</when>
+        <when>July 29, 2023 11:00 AM EDT</when>
+    </activity>
+    <activity>
         <name>Junior Iron Chef</name>
         <category>Culinary Arts/What's Cookin'</category>
         <category>Live Events</category>
@@ -1320,6 +1404,8 @@
         ingredients.  In the past, apple cobbler, apple and chipotle, and spaghetti
         have won the competition.</description>
         <when>July 28, 2022 11:00 AM EDT</when>
+        <when>July 26, 2023 10:00 AM EDT</when>
+        <when>July 27, 2023 11:00 AM EDT</when>
         <images>
             <image>Iron Chef A</image>
             <image>Iron Chef B</image>
@@ -1332,14 +1418,15 @@
         <category>Live Events</category>
         <description>This is a new competition for the
         adults!  Like the kids' Iron Chef competition,
-        there will be two mystery ingredients and they
-        must be included in cooking a complete meal.
-        But, this competition will have a little twist.
-        The mystery ingredients and the meals must be
-        kid-friendly!  Also, the evaluators will be
-        the winning team from the Junior Iron Chef
-        competition last year.</description>
+        there will be three mystery ingredients (chosen
+        by the 4-H Fair Board) and they must be included
+        in cooking a complete meal.  But, this competition
+        will have a little twist.  The mystery ingredients
+        and the meals must be kid-friendly!  Also, the
+        evaluators will be the winning team from the
+        Junior Iron Chef competition last year.</description>
         <when>July 28, 2022 11:00 AM EDT</when>
+        <when>July 27, 2023 6:30 PM EDT</when>
         <images>
             <image>Iron Chef A</image>
             <image>Iron Chef B</image>
