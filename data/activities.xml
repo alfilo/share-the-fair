@@ -88,6 +88,10 @@
         <name>Animal Costume Contest</name>
         <category>Live Events</category>
         <when>July 26, 2023 4:00 PM EDT</when>
+        <image>Costume Contest A</image>
+        <image>Costume Contest B</image>
+        <image>Costume Contest C</image>
+        <image>Costume Contest D</image>
     </activity>
     <activity>
         <name>Goat Show and Showmanship</name>
@@ -832,6 +836,18 @@
         <r>Tompkins County Healthy Food For All: http://ccetompkins.org/food/healthy-food-for-all</r>
     </activity>
     <activity>
+        <name>Berm Garden Cleanup</name>
+        <category>Community Service/Helping our Community</category>
+        <summary>4-H members have taken it upon themselves to help
+        clean up the berm garden near the entrance to the 4-H Acres.
+        Over the years, kids have removed the goldenrod, planted annuals,
+        mulched, and weeded.</summary>
+        <images>
+            <image>Berm Garden A</image>
+            <image>Berm Garden B</image>
+        </images>
+    </activity>
+    <activity>
         <name>Crafting</name>
         <category>Learn with us Online</category>
         <category>Community Service/Helping our Community</category>
@@ -1466,9 +1482,11 @@
         <name>Junior Iron Chef</name>
         <category>Culinary Arts/What's Cookin'</category>
         <category>Live Events</category>
-        <description>Teams of 3-4 kids make a meal in an hour using two secret
-        ingredients.  In the past, apple cobbler, apple and chipotle, and spaghetti
-        have won the competition.</description>
+        <description>Teams of 3-4 kids make a meal in an hour and a half
+        using two secret ingredients.  In the past, apple cobbler, apple
+        and chipotle, and spaghetti have won the competition.  This year's
+        winning teams made fried bananas with ramen noodles and ramen
+        noodles with vegetables and coconut curd ice cream.</description>
         <when>July 28, 2022 11:00 AM EDT</when>
         <when>July 26, 2023 10:00 AM EDT</when>
         <when>July 27, 2023 11:00 AM EDT</when>
@@ -1476,6 +1494,8 @@
             <image>Iron Chef A</image>
             <image>Iron Chef B</image>
             <image>Iron Chef C</image>
+            <image>Iron Chef D</image>
+            <image>Iron Chef e</image>
         </images>
     </activity>
     <activity>
@@ -1494,9 +1514,11 @@
         <when>July 28, 2022 11:00 AM EDT</when>
         <when>July 27, 2023 6:30 PM EDT</when>
         <images>
-            <image>Iron Chef A</image>
-            <image>Iron Chef B</image>
-            <image>Iron Chef C</image>
+            <image>Adult Iron Chef A</image>
+            <image>Adult Iron Chef B</image>
+            <image>Adult Iron Chef C</image>
+            <image>Adult Iron Chef D</image>
+            <image>Adult Iron Chef E</image>
         </images>
     </activity>
     <activity>
@@ -1601,6 +1623,16 @@
                 </iframe>
             </div>
         </html>
+        <images>
+            <image>Gallery A</image>
+            <image>Gallery B</image>
+            <image>Gallery C</image>
+            <image>Gallery D</image>
+            <image>Gallery E</image>
+            <image>Gallery F</image>
+            <image>Gallery G</image>
+            <image>Gallery H</image>
+        </images>
     </activity>
     <activity>
         <name>Winning Wednesdays</name>
