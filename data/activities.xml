@@ -29,10 +29,46 @@
     <activity>
         <name>Poultry Show and Showmanship</name>
         <category>Live Events</category>
-        <notice>We're happy to welcome the poultry
-        back to the Fair this year!</notice>
+        <classifying-chickens>At poultry shows, poultry are grouped into specific
+        classes based on physical characteristics.  Large fowl are grouped
+        according to where they originated.  Small birds, such as
+        chickens, are classified as bantams, and are grouped according to
+        a specific set of physical characteristics.  The majority of poultry
+        showed at Tompkins County 4-H are bantam breeds, or breeds of small
+        fowl recognized by the American Poultry Association.  These bantam
+        breeds are classified into game bantams, single comb clean legged,
+        rose comb clean legged, all other comb clean legged, and feather
+        legged.  Most chickens don't have feathers on their legs, but some
+        breeds, like silkies, have a soft, downy covering on their legs.
+        Other chicken breeds have different combs, which are the rubbery
+        ridges atop a chicken's head.  Take a look at the picture below
+        to see examples of each type of comb.</classifying-chickens>
+        <chicken-showmanship>During a chicken showmanship class, both
+        the chicken and the 4-Her showing their chicken are judged
+        by a complex set of criteria.  The showman must know about
+        their bird, be able to handle their bird appropriately, and
+        present their bird.  Of course, there are many tricks along
+        the way; a judge may ask how old a duck is knowing you're showing
+        a chicken, or may hand you the bird facing sideways instead of
+        forwards.  To present the bird, showmen must hold the bird
+        in the "home position" (see picture below), set the bird
+        into the coop, and pose the bird according to the Bantam Standard
+        (this best shows off the bird's assets to the judge).  Then,
+        the judge will ask questions, the 4-Her will remove the bird
+        from the coop and hand it to the judge for the judge to check
+        over the bird's appearance and ability to handle, then receive
+        the bird, and calmly place it back in the coop until judging
+        has finished.  Sounds complicated, right?  It requires a
+        huge amount of practice and commitment to achieve a good
+        score on showmanship, which many of the Tompkins
+        County 4-Hers have mastered and excelled at.</chicken-showmanship>
         <when>July 27, 2021 4:00 PM EDT</when>
         <when>July 25, 2023 4:00 PM EDT</when>
+        <when>July 23, 2024 4:00 PM EDT</when>
+        <images>
+            <image>Chicken combs</image>
+            <image>Home position</image>
+        </images>
     </activity>
     <activity>
         <name>Dairy Show and Showmanship</name>
@@ -41,13 +77,55 @@
         <when>July 30, 2021 10:00 AM EDT</when>
         <when>July 29, 2022 10:00 AM EDT</when>
         <when>July 28, 2023 10:00 AM EDT</when>
+        <when>July 26, 2024 10:00 AM EDT</when>
     </activity>
     <activity>
         <name>Dog Show</name>
         <category>Live Events</category>
+        <types-of-show>Exhibitors and their dogs can compete in multiple types
+        of shows, including obedience, showmanship, and rally obedience.</types-of-show>
+        <obedience>Those showing their dog in obedience fall into one of three
+        classes:  Novice, open, or utility.  In the novice level, dogs should
+        be able to come, stand, sit, lie down, and heel off-leash.  In the open
+        level, on the other hand, dogs must be able to perform all the novice
+        skills off-leash, retrieve, and jump.  For utility, dogs must be able
+        to do directed jumping (jump over an item specified by the exhibitor)
+        and find an item in a pile with their exhibitor's scent.  In addition,
+        they must perform all off-leash skills by hand signal only, with no vocal
+        commands.</obedience>
+        <showmanship>In showmanship, exhibitors must demonstrate that they know
+        about their dog's breed and what's required of them, as well as be able
+        to pose and gait their dog.  After the exhibitor walks into the ring,
+        they should gait their dog (move at a speed such that their dog trots
+        between the exhibitor and the judge in a large circle.  For small dogs,
+        this may be more like a brisk walk; for large dogs, this may be a jog
+        or even running.  The judge will then ask the exhibitors to line up
+        their dogs head to tail and pose them, such that all four legs are
+        visible and the dog's head is positioned according to breed standard.
+        The exhibitor will show the judge the dog's teeth, eyes, and ears.
+        The judge is likely to ask breed-specific questions or test your knowledge
+        on your dog's anatomy, health, or any other dog-related topics.</showmanship>
+        <rally-obedience>Rally is much more difficult than obedience.  It, too,
+        includes 3 levels, though these are novice, intermediate/advanced, and
+        excellent.  The dog and exhibitor are given signs to follow that are
+        propped on the ground, including about face right, sit down, and others.
+        In novice, the dog performs all the exercises (or challenges)
+        on-leash during a course, using 10-15 signs.  In Intermediate/Advanced,
+        the dogs must use 12-17 signs.  Exhibitors may choose to compete in
+        Intermediate (on-leash only, no jump required), or Advanced (off-leash,
+        with one jump required).  In Excellent, exhibitors perform all the
+        exercises off-leash, and may not use any sort of patting or clapping
+        on their legs to encourage the dog.  The dog must use 15-20 signs
+        and jump twice.  There is one step further, master/choice, which
+        is very similar to Excellent.  In Master, dogs have to jump once,
+        but don't have to jump in Choice; there are the same number
+        of signs.  However, rather than needing three qualifying scores
+        for a title (the ribbons or winning a championship), these dogs
+        and their exhibitors need to get ten qualifying scores.</rally-obedience>
         <when>July 29, 2021 6:00 PM EDT</when>
         <when>July 28, 2022 4:00 PM EDT</when>
         <when>July 29, 2023 10:00 AM EDT</when>
+        <when>July 27, 2024 8:30 AM EDT</when>
     </activity>
     <activity>
         <name>Sheep Show and Showmanship</name>
@@ -56,6 +134,7 @@
         <when>July 29, 2021 10:00 AM EDT</when>
         <when>July 28, 2022 10:00 AM EDT</when>
         <when>July 27, 2023 3:00 PM EDT</when>
+        <when>July 25, 2024 9:30 AM EDT</when>
         <html>
             <div style="position: relative; width: 100%; height: 0; padding-top: 60%; padding-bottom: 10px;">
                 <iframe src="https://www.youtube.com/embed/gN9LVp4rs9k"
@@ -83,11 +162,20 @@
         <when>July 29, 2021 1:00 PM EDT</when>
         <when>July 28, 2022 1:00 PM EDT</when>
         <when>July 27, 2023 1:00 PM EDT</when>
+        <when>July 25, 2024 1:00 PM EDT</when>
+    </activity>
+    <activity>
+        <name>Hobby Horse Barrel Races</name>
+        <category>Live Events</category>
+        <description>Get a chance to race a hobby horse around barrels
+        just as you would in a real barrel race!</description>
+        <when>July 25, 2024 3:00 PM EDT</when>
     </activity>
     <activity>
         <name>Animal Costume Contest</name>
         <category>Live Events</category>
         <when>July 26, 2023 4:00 PM EDT</when>
+        <when>July 24, 2024 4:00 PM EDT</when>
         <image>Costume Contest A</image>
         <image>Costume Contest B</image>
         <image>Costume Contest C</image>
@@ -100,6 +188,7 @@
         <when>July 28, 2021 10:00 AM EDT</when>
         <when>July 27, 2022 10:00 AM EDT</when>
         <when>July 26, 2023 10:00 AM EDT</when>
+        <when>July 24, 2024 10:00 AM EDT</when>
     </activity>
     <activity>
         <name>Youth Round Robin</name>
@@ -113,6 +202,7 @@
         in showing all four animals.  Adults can participate
         in the Adult Round Robin.</description>
         <when>July 28, 2023 2:00 PM EDT</when>
+        <when>July 26, 2024 2:00 PM EDT</when>
     </activity>
     <activity>
         <name>Adult Round Robin</name>
@@ -126,6 +216,7 @@
         in showing all four animals.  Youth can participate
         in the Youth Round Robin.</description>
         <when>July 26, 2023 6:00 PM EDT</when>
+        <when>July 24, 2024 6:00 PM EDT</when>
     </activity>
     <activity>
         <name>Meet the Animals</name>
@@ -192,9 +283,14 @@
         <name>Chicken BBQ</name>
         <category>Live Events</category>
         <description>Eat in or take out chicken BBQ to support the
-        Tompkins County 4-H.  Dinners are $10 or $8 for chicken only.</description>
+        Tompkins County 4-H.  Dinners are $12 or $10 for a half
+        chicken only.  Dinners include baked beans, butter potatos,
+        a roll, sweet butter, and a dessert (cookie or brownie) in
+        addition to a half chicken.  Come get your chicken before
+        it's gone!</description>
         <when>July 31, 2021 11:30 AM EDT</when>
         <when>July 29, 2023 11:30 AM EDT</when>
+        <when>July 27, 2024 11:30 AM EDT</when>
     </activity>
     <activity>
         <name>Pullorum testing for birds</name>
@@ -256,6 +352,7 @@
         this fun, online Kahoot!</description>
         <when>July 30, 2021 4:00 PM EDT</when>
         <when>July 28, 2023 4:00 PM EDT</when>
+        <when>July 23, 2024 2:30 PM EDT</when>
     </activity>
     <activity>
         <name>Kahoot Dairy Challenge</name>
@@ -263,6 +360,7 @@
         <category>Live Events</category>
         <when>July 29, 2021 4:00 PM EDT</when>
         <when>July 27, 2023 4:00 PM EDT</when>
+        <when>July 25, 2024 4:00 PM EDT</when>
         <description>Test your knowledge of dairy
         sciences in this fun Kahoot for youth!</description>
     </activity>
@@ -271,6 +369,7 @@
         <category>Contests</category>
         <category>Live Events</category>
         <when>July 27, 2021 2:00 PM EDT</when>
+        <when>July 26, 2024 4:00 PM EDT</when>
         <description>Test your knowledge of family and consumer
         sciences like sewing and cooking in this fun Kahoot
         for youth!</description>
@@ -280,8 +379,11 @@
         <category>Contests</category>
         <category>Live Events</category>
         <when>July 28, 2021 1:00 PM EDT</when>
+        <when>July 23, 2024 12:30 PM EDT</when>
         <description>Test your knowledge of plant
-        sciences in this fun Kahoot for youth!</description>
+        sciences in this fun Kahoot for youth!
+        Adults, feel free to join in for the
+        Senior round.</description>
     </activity>
     <activity>
         <name>Consumer and Family Sciences Challenge</name>
@@ -457,6 +559,8 @@
         modified to better suit rabbits.  There are several different types
         of courses to compete in.  The youth at 4-H assembled this video
         to demonstrate a straight course.</summary>
+        <note>The rabbits will be hopped in between the showmanship and
+        shows they (and their exhibitors) participate in.</note>
         <html>
             <p>For more information on rabbit hopping (or showjumping),
             take a look at this link:</p>
@@ -475,14 +579,35 @@
         </html>
         <when>July 31, 2021 12:00 PM EDT</when>
         <when>July 30, 2022 12:00 PM EDT</when>
+        <when>July 27, 2024 8:30 AM EDT</when>
     </activity>
     <activity>
         <name>Rabbit and Cavy Show and Showmanship</name>
         <category>Live Events</category>
         <category>Animals/Rabbits and Cavy</category>
+        <description>Rabbit and cavy showmanship is very involve, and
+        requires a well-trained, calm animal to succeed.  The rabbit must
+        be checked over from head to toe (or rather, from ears to tail).
+        First, the exhibitor must correctly pose their rabbit for the
+        appropriate breed, aligning the front feet, hind feet, and toes
+        their hind feet with the eyes and hips of the rabbit.  Then, they
+        must check the rabbits ears and read the tatoo on the inside of
+        the ear aloud (this is used to identify the rabbit and is given
+        to all registered rabbits).  Then, the exhibitor flips the rabbit
+        over onto its back, and checks the rest of the rabbit in this
+        position.  They must check the eyes, nose, and teeth before
+        checking over the front feet and legs.  They evaluate the
+        straightness of the legs, the toenails, pad, and dewclaws, before
+        doing the same on the hind legs, but also checking the hock.
+        After this, the exhibitor checks the belly of the rabbit and
+        demonstrates the sex of the rabbit, before extending the tail
+        and moving it side to side.  Finally, they must return the
+        rabbit to an upright position and pose the rabbit once more,
+        showing the fur type.</description>
         <when>July 31, 2021 9:00 AM EDT</when>
         <when>July 30, 2022 8:30 AM EDT</when>
         <when>July 29, 2023 8:30 AM EDT</when>
+        <when>July 27, 2024 8:30 AM EDT</when>
     </activity>
     <activity>
         <name>Chicken Buses</name>
@@ -1405,13 +1530,16 @@
         <category>Live Events</category>
         <description>This activity will take place at the 4-H Acres.  It
         will be presented by the Plant and Environmental Sciences Team
-        (often abbreviated as P.E.S.T.) all day.</description>
+        (often abbreviated as P.E.S.T.) all day, and starting at 11:00
+        AM on Saturday.</description>
         <when>July 30, 2021 8:00 AM EDT</when>
         <when>July 31, 2021 8:00 AM EDT</when>
         <when>July 29, 2022 8:00 AM EDT</when>
         <when>July 30, 2022 8:00 AM EDT</when>
         <when>July 28, 2023 8:00 AM EDT</when>
         <when>July 29, 2023 11:00 AM EDT</when>
+        <when>July 26, 2024 8:00 AM EDT</when>
+        <when>July 27, 2024 11:00 AM EDT</when>
         <images>
             <image>Veggie Art A</image>
             <image>Veggie Art B</image>
@@ -1422,7 +1550,8 @@
         <name>Live P.E.S.T Activity</name>
         <category>Culinary Arts/Healthy Eating</category>
         <category>Live Events</category>
-        <description>This activity will take place at the 4-H Acres.  It
+        <description>This activity will take place at the 4-H Acres in
+        the plant science tent (the white tent near the entrance).  It
         will be presented by the Plant and Environmental Sciences Team
         (often abbreviated as P.E.S.T.).</description>
         <when>July 30, 2021 8:00 AM EDT</when>
@@ -1434,6 +1563,12 @@
         <when>July 27, 2023 11:00 AM EDT</when>
         <when>July 27, 2023 2:30 PM EDT</when>
         <when>July 28, 2023 1:00 PM EDT</when>
+        <when>July 24, 2024 11:00 AM EDT</when>
+        <when>July 24, 2024 2:30 PM EDT</when>
+        <when>July 25, 2024 11:00 AM EDT</when>
+        <when>July 25, 2024 2:30 PM EDT</when>
+        <when>July 26, 2024 11:00 AM EDT</when>
+        <when>July 26, 2024 1:00 PM EDT</when>
         <images>
             <image>Veggie Art A</image>
             <image>Veggie Art B</image>
@@ -1477,6 +1612,12 @@
         <when>July 27, 2023 5:00 PM EDT</when>
         <when>July 28, 2023 11:30 AM EDT</when>
         <when>July 29, 2023 11:00 AM EDT</when>
+        <when>July 23, 2024 11:30 AM EDT</when>
+        <when>July 24, 2024 11:30 AM EDT</when>
+        <when>July 25, 2024 11:30 AM EDT</when>
+        <when>July 25, 2024 5:00 PM EDT</when>
+        <when>July 26, 2024 11:30 AM EDT</when>
+        <when>July 27, 2024 11:00 AM EDT</when>
     </activity>
     <activity>
         <name>Junior Iron Chef</name>
@@ -1490,6 +1631,8 @@
         <when>July 28, 2022 11:00 AM EDT</when>
         <when>July 26, 2023 10:00 AM EDT</when>
         <when>July 27, 2023 11:00 AM EDT</when>
+        <when>July 24, 2024 10:00 AM EDT</when>
+        <when>July 25, 2024 11:00 AM EDT</when>
         <images>
             <image>Iron Chef A</image>
             <image>Iron Chef B</image>
@@ -1513,6 +1656,7 @@
         Junior Iron Chef competition last year.</description>
         <when>July 28, 2022 11:00 AM EDT</when>
         <when>July 27, 2023 6:30 PM EDT</when>
+        <when>July 25, 2024 6:30 PM EDT</when>
         <images>
             <image>Adult Iron Chef A</image>
             <image>Adult Iron Chef B</image>

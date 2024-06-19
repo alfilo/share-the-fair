@@ -91,3 +91,9 @@ a {
     background-image: none;
   }
 }
+
+@media only screen and (max-width: 460px), (min-width: 540px) {
+  #topnav-year {
+    float: right;
+  }
+}
