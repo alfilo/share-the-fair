@@ -40,6 +40,10 @@ a {
   border: 5px solid var(--btngrp-a-btn--background-color);
 }
 
+#topnav-shared {
+  overflow: hidden;
+}
+
 /* Make all cat-div buttons and links full width of their cat-divs */
 .button-group.dropdown,
 .button-group.dropdown button,
@@ -89,11 +93,5 @@ a {
   #header {
     /* Skip the background image to avoid covering the image with a header */
     background-image: none;
-  }
-}
-
-@media only screen and (max-width: 460px), (min-width: 540px) {
-  #topnav-year {
-    float: right;
   }
 }
