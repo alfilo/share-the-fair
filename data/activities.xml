@@ -78,6 +78,10 @@
         <when>July 29, 2022 10:00 AM EDT</when>
         <when>July 28, 2023 10:00 AM EDT</when>
         <when>July 26, 2024 10:00 AM EDT</when>
+        <images>
+            <image>Allie's Jersey</image>
+            <image>Cuykendall Cows</image>
+        </images>
     </activity>
     <activity>
         <name>Dog Show</name>
@@ -155,6 +159,10 @@
                 </iframe>
             </div>
         </html>
+        <images>
+            <image>Snickerdoodle Sheep</image>
+            <image>Gumaer Sheep</image>
+        </images>
     </activity>
     <activity>
         <name>Cloverbud Stuffed Animal Show</name>
@@ -217,6 +225,18 @@
         in the Youth Round Robin.</description>
         <when>July 26, 2023 6:00 PM EDT</when>
         <when>July 24, 2024 6:00 PM EDT</when>
+        <images>
+            <image>Adult Round Robin A</image>
+            <image>Adult Round Robin B</image>
+            <image>Adult Round Robin C</image>
+            <image>Adult Round Robin D</image>
+            <image>Adult Round Robin E</image>
+            <image>Adult Round Robin F</image>
+            <image>Adult Round Robin G</image>
+            <image>Adult Round Robin H</image>
+            <image>Adult Round Robin I</image>
+            <image>Adult Round Robin J</image>
+        </images>
     </activity>
     <activity>
         <name>Meet the Animals</name>
@@ -373,6 +393,9 @@
         <description>Test your knowledge of family and consumer
         sciences like sewing and cooking in this fun Kahoot
         for youth!</description>
+        <images>
+            <image>Tailored Shirt</image>
+        </images>
     </activity>
     <activity>
         <name>Kahoot Plant Science Challenge</name>
@@ -619,6 +642,11 @@
         <name>Poultry Gallery</name>
         <category>Animals/Poultry</category>
         <description>Send in pictures of your chickens!</description>
+        <images>
+            <image>Peyton Chicken Show</image>
+            <image>Evelyn Chickens</image>
+            <image>Chicken Buddies</image>
+        </images>
     </activity>
     <activity>
         <name>Stomach</name>
@@ -1638,7 +1666,8 @@
             <image>Iron Chef B</image>
             <image>Iron Chef C</image>
             <image>Iron Chef D</image>
-            <image>Iron Chef e</image>
+            <image>Iron Chef E</image>
+            <image>Jr. Iron Chef 50/50</image>
         </images>
     </activity>
     <activity>
@@ -1683,6 +1712,15 @@
             <image>Strawberry Cupcakes Evaluation 3</image>
             <image>Volunteer Registration</image>
             <image>Evelyn Plant Science</image>
+            <image>Peyton Exhibits A</image>
+            <image>Peyton Exhibits B</image>
+            <image>Peyton Exhibits C</image>
+            <image>Peyton Exhibits D</image>
+            <image>Peyton Exhibits E</image>
+            <image>Peyton Exhibits F</image>
+            <image>Pressed Flowers A</image>
+            <image>Pressed Flowers B</image>
+            <image>Pressed Flowers C</image>
         </images>
     </activity>
     <activity>
@@ -1776,6 +1814,13 @@
             <image>Gallery F</image>
             <image>Gallery G</image>
             <image>Gallery H</image>
+            <image>Fair Friends</image>
+            <image>Cardboard Car A</image>
+            <image>Cardboard Car B</image>
+            <image>Cardboard Car C</image>
+            <image>Unity House A</image>
+            <image>Unity House B</image>
+            <image>Produce Battery</image>
         </images>
     </activity>
     <activity>
