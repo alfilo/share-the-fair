@@ -81,6 +81,7 @@
         <images>
             <image>Allie's Jersey</image>
             <image>Cuykendall Cows</image>
+            <image>Nathaniel Cow</image>
         </images>
     </activity>
     <activity>
@@ -162,6 +163,10 @@
         <images>
             <image>Snickerdoodle Sheep</image>
             <image>Gumaer Sheep</image>
+            <image>Sheep Showmanship A</image>
+            <image>Sheep Showmanship B</image>
+            <image>Sheep Showmanship C</image>
+            <image>Sheep Showmanship D</image>
         </images>
     </activity>
     <activity>
@@ -178,6 +183,15 @@
         <description>Get a chance to race a hobby horse around barrels
         just as you would in a real barrel race!</description>
         <when>July 25, 2024 3:00 PM EDT</when>
+        <images>
+            <image>Hobby Horse A</image>
+            <image>Hobby Horse B</image>
+            <image>Hobby Horse C</image>
+            <image>Hobby Horse D</image>
+            <image>Hobby Horse E</image>
+            <image>Hobby Horse F</image>
+            <image>Hobby Horse G</image>
+        </images>
     </activity>
     <activity>
         <name>Animal Costume Contest</name>
@@ -631,6 +645,9 @@
         <when>July 30, 2022 8:30 AM EDT</when>
         <when>July 29, 2023 8:30 AM EDT</when>
         <when>July 27, 2024 8:30 AM EDT</when>
+        <images>
+            <image>Taryn Rabbit</image>
+        </images>
     </activity>
     <activity>
         <name>Chicken Buses</name>
@@ -646,6 +663,7 @@
             <image>Peyton Chicken Show</image>
             <image>Evelyn Chickens</image>
             <image>Chicken Buddies</image>
+            <image>Nathaniel Chicken</image>
         </images>
     </activity>
     <activity>
@@ -1668,6 +1686,7 @@
             <image>Iron Chef D</image>
             <image>Iron Chef E</image>
             <image>Jr. Iron Chef 50/50</image>
+            <image>Iron Chef F</image>
         </images>
     </activity>
     <activity>
@@ -1692,6 +1711,13 @@
             <image>Adult Iron Chef C</image>
             <image>Adult Iron Chef D</image>
             <image>Adult Iron Chef E</image>
+            <image>Adult Iron Chef F</image>
+            <image>Adult Iron Chef G</image>
+            <image>Adult Iron Chef H</image>
+            <image>Adult Iron Chef I</image>
+            <image>Adult Iron Chef J</image>
+            <image>Adult Iron Chef K</image>
+            <image>Adult Iron Chef L</image>
         </images>
     </activity>
     <activity>
@@ -1721,6 +1747,11 @@
             <image>Pressed Flowers A</image>
             <image>Pressed Flowers B</image>
             <image>Pressed Flowers C</image>
+            <image>Nathaniel Exhibits A</image>
+            <image>Nathaniel Exhibits B</image>
+            <image>Nathaniel Exhibits C</image>
+            <image>Nathaniel Exhibits D</image>
+            <image>Nathaniel Exhibits E</image>
         </images>
     </activity>
     <activity>
@@ -1821,6 +1852,7 @@
             <image>Unity House A</image>
             <image>Unity House B</image>
             <image>Produce Battery</image>
+            <image>Aden and Kennedy</image>
         </images>
     </activity>
     <activity>
