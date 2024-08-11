@@ -1,4 +1,169 @@
 <activities>
+        <activity>
+        <name>Fair Focus July 25, 2023</name>
+        <category>Fair Focus</category>
+        <category>Live Events</category>
+        <when>July 25, 2023 8:00 AM EDT</when>
+        <html>
+            <object data="data/Fair%20Focus%202023%20July%2025.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
+                    type="application/pdf" width="100%" height="750px">
+              <p>You don't have a PDF plugin, but you can download the file.</p>
+              <a href="data/Fair%20Focus%202023%20July%2025.pdf">Fair Focus July 25</a>
+            </object>
+        </html>
+        <description>Read all about our 4-H Fair adventures in the Fair Focus,
+        4-H Fair's daily newspaper for Fair Week!</description>
+    </activity>
+    <activity>
+        <name>Fair Focus July 26, 2023</name>
+        <category>Fair Focus</category>
+        <category>Live Events</category>
+        <when>July 26, 2023 8:00 AM EDT</when>
+        <html>
+            <object data="data/Fair%20Focus%202023%20July%2026.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
+                    type="application/pdf" width="100%" height="750px">
+              <p>You don't have a PDF plugin, but you can download the file.</p>
+              <a href="data/Fair%20Focus%202023%20July%2026.pdf">Fair Focus July 26</a>
+            </object>
+        </html>
+        <description>Read all about our 4-H Fair adventures in the Fair Focus,
+        4-H Fair's daily newspaper for Fair Week!</description>
+    </activity>
+    <activity>
+        <name>Fair Focus July 27, 2023</name>
+        <category>Fair Focus</category>
+        <category>Live Events</category>
+        <when>July 27, 2023 8:00 AM EDT</when>
+        <html>
+            <object data="data/Fair%20Focus%202023%20July%2027.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
+                    type="application/pdf" width="100%" height="750px">
+              <p>You don't have a PDF plugin, but you can download the file.</p>
+              <a href="data/Fair%20Focus%202023%20July%2027.pdf">Fair Focus July 27</a>
+            </object>
+        </html>
+        <description>Read all about our 4-H Fair adventures in the Fair Focus,
+        4-H Fair's daily newspaper for Fair Week!</description>
+    </activity>
+    <activity>
+        <name>Fair Focus July 28, 2023</name>
+        <category>Fair Focus</category>
+        <category>Live Events</category>
+        <when>July 28, 2023 8:00 AM EDT</when>
+        <html>
+            <object data="data/Fair%20Focus%202023%20July%2028.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
+                    type="application/pdf" width="100%" height="750px">
+              <p>You don't have a PDF plugin, but you can download the file.</p>
+              <a href="data/Fair%20Focus%202023%20July%2028.pdf">Fair Focus July 28</a>
+            </object>
+        </html>
+        <description>Read all about our 4-H Fair adventures in the Fair Focus,
+        4-H Fair's daily newspaper for Fair Week!</description>
+    </activity>
+    <activity>
+        <name>Fair Focus July 29, 2023</name>
+        <category>Fair Focus</category>
+        <category>Live Events</category>
+        <when>July 29, 2023 8:00 AM EDT</when>
+        <html>
+            <object data="data/Fair%20Focus%202023%20July%2029.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
+                    type="application/pdf" width="100%" height="750px">
+              <p>You don't have a PDF plugin, but you can download the file.</p>
+              <a href="data/Fair%20Focus%202023%20July%2029.pdf">Fair Focus July 29</a>
+            </object>
+        </html>
+        <description>Read all about our 4-H Fair adventures in the Fair Focus,
+        4-H Fair's daily newspaper for Fair Week!</description>
+    </activity>
+    <activity>
+        <name>Fair Focus July 30, 2023</name>
+        <category>Fair Focus</category>
+        <category>Live Events</category>
+        <when>July 30, 2023 8:00 AM EDT</when>
+        <html>
+            <object data="data/Fair%20Focus%202023%20July%2030.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
+                    type="application/pdf" width="100%" height="750px">
+              <p>You don't have a PDF plugin, but you can download the file.</p>
+              <a href="data/Fair%20Focus%202023%20July%2030.pdf">Fair Focus July 30</a>
+            </object>
+        </html>
+        <description>Read all about our 4-H Fair adventures in the Fair Focus,
+        4-H Fair's daily newspaper for Fair Week!</description>
+    </activity>
+    <activity>
+        <name>Fair Focus July 23, 2024</name>
+        <category>Fair Focus</category>
+        <category>Live Events</category>
+        <when>July 23, 2024 8:00 AM EDT</when>
+        <html>
+            <object data="data/Fair%20Focus%202024-1.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
+                    type="application/pdf" width="100%" height="750px">
+              <p>You don't have a PDF plugin, but you can download the file.</p>
+              <a href="data/Fair%20Focus%202024-1.pdf">Fair Focus July 23</a>
+            </object>
+        </html>
+        <description>Read all about our 4-H Fair adventures in the Fair Focus,
+        4-H Fair's daily newspaper for Fair Week!</description>
+    </activity>
+    <activity>
+        <name>Fair Focus July 24, 2024</name>
+        <category>Fair Focus</category>
+        <category>Live Events</category>
+        <when>July 24, 2024 8:00 AM EDT</when>
+        <html>
+            <object data="data/Fair%20Focus%202024-2.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
+                    type="application/pdf" width="100%" height="750px">
+              <p>You don't have a PDF plugin, but you can download the file.</p>
+              <a href="data/Fair%20Focus%202024-2.pdf">Fair Focus July 24</a>
+            </object>
+        </html>
+        <description>Read all about our 4-H Fair adventures in the Fair Focus,
+        4-H Fair's daily newspaper for Fair Week!</description>
+    </activity>
+    <activity>
+        <name>Fair Focus July 25, 2024</name>
+        <category>Fair Focus</category>
+        <category>Live Events</category>
+        <when>July 25, 2024 8:00 AM EDT</when>
+        <html>
+            <object data="data/Fair%20Focus%202024-3.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
+                    type="application/pdf" width="100%" height="750px">
+              <p>You don't have a PDF plugin, but you can download the file.</p>
+              <a href="data/Fair%20Focus%202024-3.pdf">Fair Focus July 25</a>
+            </object>
+        </html>
+        <description>Read all about our 4-H Fair adventures in the Fair Focus,
+        4-H Fair's daily newspaper for Fair Week!</description>
+    </activity>
+    <activity>
+        <name>Fair Focus July 26, 2024</name>
+        <category>Fair Focus</category>
+        <category>Live Events</category>
+        <when>July 26, 2024 8:00 AM EDT</when>
+        <html>
+            <object data="data/Fair%20Focus%202024-4.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
+                    type="application/pdf" width="100%" height="750px">
+              <p>You don't have a PDF plugin, but you can download the file.</p>
+              <a href="data/Fair%20Focus%20%202024-4.pdf">Fair Focus July 26</a>
+            </object>
+        </html>
+        <description>Read all about our 4-H Fair adventures in the Fair Focus,
+        4-H Fair's daily newspaper for Fair Week!</description>
+    </activity>
+    <activity>
+        <name>Fair Focus July 27, 2024</name>
+        <category>Fair Focus</category>
+        <category>Live Events</category>
+        <when>July 27, 2024 8:00 AM EDT</when>
+        <html>
+            <object data="data/Fair%20Focus%202024-5.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
+                    type="application/pdf" width="100%" height="750px">
+              <p>You don't have a PDF plugin, but you can download the file.</p>
+              <a href="data/Fair%20Focus%202024-5.pdf">Fair Focus July 27</a>
+            </object>
+        </html>
+        <description>Read all about our 4-H Fair adventures in the Fair Focus,
+        4-H Fair's daily newspaper for Fair Week!</description>
+    </activity>
     <activity>
         <name>Kritter Kamp</name>
         <category>Animals</category>
@@ -1854,171 +2019,6 @@
             <image>Produce Battery</image>
             <image>Aden and Kennedy</image>
         </images>
-    </activity>
-    <activity>
-        <name>Fair Focus July 25, 2023</name>
-        <category>Fair Focus</category>
-        <category>Live Events</category>
-        <when>July 25, 2023 8:00 AM EDT</when>
-        <html>
-            <object data="data/Fair%20Focus%202023%20July%2025.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
-                    type="application/pdf" width="100%" height="750px">
-              <p>You don't have a PDF plugin, but you can download the file.</p>
-              <a href="data/Fair%20Focus%202023%20July%2025.pdf">Fair Focus July 25</a>
-            </object>
-        </html>
-        <description>Read all about our 4-H Fair adventures in the Fair Focus,
-        4-H Fair's daily newspaper for Fair Week!</description>
-    </activity>
-    <activity>
-        <name>Fair Focus July 26, 2023</name>
-        <category>Fair Focus</category>
-        <category>Live Events</category>
-        <when>July 26, 2023 8:00 AM EDT</when>
-        <html>
-            <object data="data/Fair%20Focus%202023%20July%2026.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
-                    type="application/pdf" width="100%" height="750px">
-              <p>You don't have a PDF plugin, but you can download the file.</p>
-              <a href="data/Fair%20Focus%202023%20July%2026.pdf">Fair Focus July 26</a>
-            </object>
-        </html>
-        <description>Read all about our 4-H Fair adventures in the Fair Focus,
-        4-H Fair's daily newspaper for Fair Week!</description>
-    </activity>
-    <activity>
-        <name>Fair Focus July 27, 2023</name>
-        <category>Fair Focus</category>
-        <category>Live Events</category>
-        <when>July 27, 2023 8:00 AM EDT</when>
-        <html>
-            <object data="data/Fair%20Focus%202023%20July%2027.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
-                    type="application/pdf" width="100%" height="750px">
-              <p>You don't have a PDF plugin, but you can download the file.</p>
-              <a href="data/Fair%20Focus%202023%20July%2027.pdf">Fair Focus July 27</a>
-            </object>
-        </html>
-        <description>Read all about our 4-H Fair adventures in the Fair Focus,
-        4-H Fair's daily newspaper for Fair Week!</description>
-    </activity>
-    <activity>
-        <name>Fair Focus July 28, 2023</name>
-        <category>Fair Focus</category>
-        <category>Live Events</category>
-        <when>July 28, 2023 8:00 AM EDT</when>
-        <html>
-            <object data="data/Fair%20Focus%202023%20July%2028.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
-                    type="application/pdf" width="100%" height="750px">
-              <p>You don't have a PDF plugin, but you can download the file.</p>
-              <a href="data/Fair%20Focus%202023%20July%2028.pdf">Fair Focus July 28</a>
-            </object>
-        </html>
-        <description>Read all about our 4-H Fair adventures in the Fair Focus,
-        4-H Fair's daily newspaper for Fair Week!</description>
-    </activity>
-    <activity>
-        <name>Fair Focus July 29, 2023</name>
-        <category>Fair Focus</category>
-        <category>Live Events</category>
-        <when>July 29, 2023 8:00 AM EDT</when>
-        <html>
-            <object data="data/Fair%20Focus%202023%20July%2029.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
-                    type="application/pdf" width="100%" height="750px">
-              <p>You don't have a PDF plugin, but you can download the file.</p>
-              <a href="data/Fair%20Focus%202023%20July%2029.pdf">Fair Focus July 29</a>
-            </object>
-        </html>
-        <description>Read all about our 4-H Fair adventures in the Fair Focus,
-        4-H Fair's daily newspaper for Fair Week!</description>
-    </activity>
-    <activity>
-        <name>Fair Focus July 30, 2023</name>
-        <category>Fair Focus</category>
-        <category>Live Events</category>
-        <when>July 30, 2023 8:00 AM EDT</when>
-        <html>
-            <object data="data/Fair%20Focus%202023%20July%2030.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
-                    type="application/pdf" width="100%" height="750px">
-              <p>You don't have a PDF plugin, but you can download the file.</p>
-              <a href="data/Fair%20Focus%202023%20July%2030.pdf">Fair Focus July 30</a>
-            </object>
-        </html>
-        <description>Read all about our 4-H Fair adventures in the Fair Focus,
-        4-H Fair's daily newspaper for Fair Week!</description>
-    </activity>
-    <activity>
-        <name>Fair Focus July 23, 2024</name>
-        <category>Fair Focus</category>
-        <category>Live Events</category>
-        <when>July 23, 2024 8:00 AM EDT</when>
-        <html>
-            <object data="data/Fair%20Focus%202024-1.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
-                    type="application/pdf" width="100%" height="750px">
-              <p>You don't have a PDF plugin, but you can download the file.</p>
-              <a href="data/Fair%20Focus%202024-1.pdf">Fair Focus July 23</a>
-            </object>
-        </html>
-        <description>Read all about our 4-H Fair adventures in the Fair Focus,
-        4-H Fair's daily newspaper for Fair Week!</description>
-    </activity>
-    <activity>
-        <name>Fair Focus July 24, 2024</name>
-        <category>Fair Focus</category>
-        <category>Live Events</category>
-        <when>July 24, 2024 8:00 AM EDT</when>
-        <html>
-            <object data="data/Fair%20Focus%202024-2.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
-                    type="application/pdf" width="100%" height="750px">
-              <p>You don't have a PDF plugin, but you can download the file.</p>
-              <a href="data/Fair%20Focus%202024-2.pdf">Fair Focus July 24</a>
-            </object>
-        </html>
-        <description>Read all about our 4-H Fair adventures in the Fair Focus,
-        4-H Fair's daily newspaper for Fair Week!</description>
-    </activity>
-    <activity>
-        <name>Fair Focus July 25, 2024</name>
-        <category>Fair Focus</category>
-        <category>Live Events</category>
-        <when>July 25, 2024 8:00 AM EDT</when>
-        <html>
-            <object data="data/Fair%20Focus%202024-3.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
-                    type="application/pdf" width="100%" height="750px">
-              <p>You don't have a PDF plugin, but you can download the file.</p>
-              <a href="data/Fair%20Focus%202024-3.pdf">Fair Focus July 25</a>
-            </object>
-        </html>
-        <description>Read all about our 4-H Fair adventures in the Fair Focus,
-        4-H Fair's daily newspaper for Fair Week!</description>
-    </activity>
-    <activity>
-        <name>Fair Focus July 26, 2024</name>
-        <category>Fair Focus</category>
-        <category>Live Events</category>
-        <when>July 26, 2024 8:00 AM EDT</when>
-        <html>
-            <object data="data/Fair%20Focus%202024-4.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
-                    type="application/pdf" width="100%" height="750px">
-              <p>You don't have a PDF plugin, but you can download the file.</p>
-              <a href="data/Fair%20Focus%20%202024-4.pdf">Fair Focus July 26</a>
-            </object>
-        </html>
-        <description>Read all about our 4-H Fair adventures in the Fair Focus,
-        4-H Fair's daily newspaper for Fair Week!</description>
-    </activity>
-    <activity>
-        <name>Fair Focus July 27, 2024</name>
-        <category>Fair Focus</category>
-        <category>Live Events</category>
-        <when>July 27, 2024 8:00 AM EDT</when>
-        <html>
-            <object data="data/Fair%20Focus%202024-5.pdf#toolbar=0&amp;navpanes=0&amp;scrollbar=0&amp;view=fitH"
-                    type="application/pdf" width="100%" height="750px">
-              <p>You don't have a PDF plugin, but you can download the file.</p>
-              <a href="data/Fair%20Focus%202024-5.pdf">Fair Focus July 27</a>
-            </object>
-        </html>
-        <description>Read all about our 4-H Fair adventures in the Fair Focus,
-        4-H Fair's daily newspaper for Fair Week!</description>
     </activity>
     <activity>
         <name>Winning Wednesdays</name>
